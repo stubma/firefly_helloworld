@@ -1,0 +1,76 @@
+{
+  "master": {
+    "rootport": 10001,
+    "webport": 10002
+  },
+  "servers": {
+    "gate": {
+      "rootport": 10000,
+      "name": "gate",
+      "db": true,
+      "app": "app.gateserver",
+      "log": "logs/gate.log"
+    },
+    "dbfront": {
+      "name": "dbfront",
+      "db": true,
+      "mem": true,
+      "app": "app.dbfrontserver",
+      "log": "logs/dbfront.log"
+    },
+    "net": {
+      "netport": 11009,
+      "name": "net",
+      "remoteport": [
+        {
+          "rootport": 10000,
+          "rootname": "gate"
+        }
+      ],
+      "app": "app.netserver",
+      "log": "logs/net.log"
+    },
+    "game1": {
+      "remoteport": [
+        {
+          "rootport": 10000,
+          "rootname": "gate"
+        }
+      ],
+      "name": "game1",
+      "db": true,
+      "mem": true,
+      "app": "app.gameserver",
+      "reload": "app.game.doreload",
+      "log": "logs/game1.log"
+    },
+    "game2": {
+      "remoteport": [
+        {
+          "rootport": 10000,
+          "rootname": "gate"
+        }
+      ],
+      "name": "game2",
+      "db": true,
+      "mem": true,
+      "app": "app.gameserver",
+      "reload": "app.game.doreload",
+      "log": "logs/game2.log"
+    }
+  },
+  "db": {
+    "host": "localhost",
+    "user": "root",
+    "passwd": "123456",
+    "port": 3306,
+    "db": "firefly_helloworld",
+    "charset": "utf8"
+  },
+  "memcached": {
+    "urls": [
+      "127.0.0.1:11211"
+    ],
+    "hostname": "firefly_helloworld"
+  }
+}

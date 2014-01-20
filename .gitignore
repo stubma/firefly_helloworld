@@ -9,6 +9,7 @@ cppdoc/
 Debug/
 Release/
 ipch/
+logs/
 doxygen/debug.txt
 *.log
 *.py[cod]
