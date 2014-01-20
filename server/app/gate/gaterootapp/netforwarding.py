@@ -4,12 +4,12 @@ from firefly.server.globalobject import rootserviceHandle, GlobalObject
 from app.gate.gateservice import localservice
 
 @rootserviceHandle
-def forwarding(key,dynamicId,data):
+def forwarding(key, dynamicId, data):
     """
     if a method is registered, forward it to local service
     """
     if localservice._targets.has_key(key):
-        return localservice.callTarget(key,dynamicId,data)
+        return localservice.callTarget(key, dynamicId, data)
     else:
         pass
 

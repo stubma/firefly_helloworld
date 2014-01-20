@@ -15,14 +15,14 @@ class NetCommandService(CommandService):
         try:
             target = self.getTarget(0)
             if not target:
-                log.err('the command '+str(targetKey)+' not Found on service')
+                log.err('the command ' + str(targetKey) + ' not Found on service')
                 return None
             if targetKey not in self.unDisplay:
-                log.msg("call method %s on service[single]"%target.__name__)
-            defer_data = target(targetKey,*args,**kw)
+                log.msg("call method %s on service[single]" % target.__name__)
+            defer_data = target(targetKey, *args, **kw)
             if not defer_data:
                 return None
-            if isinstance(defer_data,defer.Deferred):
+            if isinstance(defer_data, defer.Deferred):
                 return defer_data
             d = defer.Deferred()
             d.callback(defer_data)
@@ -43,7 +43,7 @@ def netserviceHandle(target):
 GlobalObject().netfactory.addServiceChannel(netservice)
 
 @netserviceHandle
-def Forwarding_0(keyname,_conn,data):
+def Forwarding_0(keyname, _conn, data):
     '''
     forward to gate node
     '''
