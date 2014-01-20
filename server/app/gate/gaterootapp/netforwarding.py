@@ -20,6 +20,6 @@ def pushObject(topicID, msg, sendList):
     """
     GlobalObject().root.callChild("net", "pushObject", topicID, msg, sendList)
 
-
-
-
+@rootserviceHandle
+def onNetClientConnectionLost(dynamicId):
+    pass
