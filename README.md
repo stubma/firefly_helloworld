@@ -1,9 +1,9 @@
 What is it
 ==================
 It is a skeleton project based on [firefly][1] game server framework. You can use it as:
-* a start point of real game project
-* a learning material of firefly
-* a testbed of firefly-based game
+* A start point of real game project
+* A learning material of firefly
+* A testbed of firefly-based game
 
 It includes a cocos2d-x client to test the skeleton server. The client just connect the server and send a test command, and the server will return hello world.
 
@@ -11,24 +11,39 @@ How to Run Server
 ==================
 To run the skeleton server:
 
-1. install python 2.x. I use 2.7
-2. install python libraries: twisted, mysqldb, memcached, zope.interface 
-3. install JetBrains PyCharm
-4. install mysql
-5. install memcache
-6. checkout [firefly][1], add it to python library
-7. start memcached with ```memcached -p 11211 -d```, the memcache listening port is determined by config file
-8. start mysql and execute init_db.sql, that will initialize databases
-9. run ```python startmaster.py```
+1. Install python 2.x. I use 2.7
+2. Install python libraries: twisted, mysqldb, memcached, zope.interface 
+3. Install JetBrains PyCharm (if you use IDE)
+4. Install mysql
+5. Install memcache
+6. Checkout [firefly][1], add it to python library
+7. Start memcached with ```memcached -p 11211 -d```, the memcache listening port is determined by config file
+8. Start mysql and execute init_db.sql, that will initialize databases
+9. Run ```python startmaster.py```
 
 How to Run Client
 ===================
 To run the client:
 
-1. check out [cocos2d-x][2]
-2. check out [cocos2dx-better][3]
+1. Check out [cocos2d-x][2]
+2. Check out [cocos2dx-better][3]
 3. cocos2d-x and cocos2dx-better should be in the same PARENT folder as firefly_helloworld. If not, you need fix reference and include path
-4. open client iOS project with Xcode and just run it
+4. Open client iOS project with Xcode and just run it
+
+Basic
+====================
+Firefly is a python game server framework. Generally it has six components:
+
+* A memory cache client, such as memcached. The memory cache client is shared by other components
+* A database front which is shared by other components
+* Network front, which accepts client connections and forward all invocations to gate server. Of course you can do something more than forwarding as long as you think it is necessary
+* Gate server acts as a central dispatcher for client requests. You can add general logic, which means same to all clients, to gate server, such as login, logout, etc.
+* Game server holds all game-specific logic and receives request from gate server. Game server can have more than one instance so that the overload can be balanced. 
+* Master node. Generally it does nothing, but I think it is a good place to install monitor and maintenance tools on it. I will try this in helloworld project
+
+Basically, db front, network, gate and game are sub node of master. Meanwhile, db front, network and game are sub node of gate. They are connected by twisted RPC, which is bidirectional, so they can call each other. That is the way how they interact.
+
+However, above is just a reference structure. It should not the only one and not mandatory. The way you build your game server could be different, but this helloworld project will follow this structure. 
 
 [1]: https://github.com/9miao/firefly
 [2]: https://github.com/cocos2d/cocos2d-x
