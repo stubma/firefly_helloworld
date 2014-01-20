@@ -17,10 +17,11 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := testcpp
-LOCAL_SRC_FILES := $(call all-cpp-files-under,.) \
-	$(call all-cpp-files-under,../../Classes)
+LOCAL_MODULE := game
+LOCAL_CFLAGS += -include $(LOCAL_PATH)/../../proj.ios/iphone_Prefix.pch
+LOCAL_SRC_FILES := $(call all-cpp-files-under,../../Classes) \
+	$(call all-cpp-files-under,.)
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
-LOCAL_STATIC_LIBRARIES += cocos2dx-better
+LOCAL_STATIC_LIBRARIES := cocos2dx-better
 include $(BUILD_SHARED_LIBRARY)
 $(call import-module,cocos2dx-better)
