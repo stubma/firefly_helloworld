@@ -1,0 +1,15 @@
+//
+// Prefix header for all source files of the 'iphone' target in the 'iphone' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
+
+#include "cocos2d.h"
+#include "cocos2d-better.h"
+#include "AppGlobal.h"
+
+USING_NS_CC;
+using namespace std;
