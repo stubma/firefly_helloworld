@@ -41,7 +41,7 @@
       "db": true,
       "mem": true,
       "app": "app.gameserver",
-      "reload": "app.game.doreload",
+      "reload": "app.game.reloaddata",
       "log": "logs/game1.log"
     },
     "game2": {
@@ -55,7 +55,7 @@
       "db": true,
       "mem": true,
       "app": "app.gameserver",
-      "reload": "app.game.doreload",
+      "reload": "app.game.reloaddata",
       "log": "logs/game2.log"
     }
   },
