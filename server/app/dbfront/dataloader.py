@@ -4,12 +4,9 @@ from firefly.dbentrust.mmode import MAdmin
 from firefly.dbentrust.madminanager import MAdminManager
 from twisted.internet import reactor
 
-# reactor
-reactor = reactor
-
 # table admin definition
-# add your table here!
-messageMAdmin = MAdmin('message', 'id', incrkey='id')
+# add your table which is need to be cached
+messageMAdmin = MAdmin('message', 'id', incrkey = 'id')
 messageMAdmin.insert()
 
 def registerMAdmin():

@@ -71,6 +71,6 @@
     "urls": [
       "127.0.0.1:11211"
     ],
-    "hostname": "firefly_helloworld"
+    "hostname": "fh"
   }
 }

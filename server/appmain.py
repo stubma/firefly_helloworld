@@ -54,6 +54,9 @@ if __name__=="__main__":
     # ensure log file exists
     logPath = serverConfig.get('log')
     if logPath:
+        dir = os.path.dirname(logPath)
+        if not os.path.exists(dir):
+            os.makedirs(dir)
         f = open(logPath, 'w')
         f.close()
 
