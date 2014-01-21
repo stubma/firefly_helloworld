@@ -43,8 +43,8 @@ def netserviceHandle(target):
 GlobalObject().netfactory.addServiceChannel(netservice)
 
 @netserviceHandle
-def Forwarding_0(keyname, _conn, data):
+def forwarding_0(keyname, conn, data):
     '''
     forward to gate node
     '''
-    return GlobalObject().remote['gate'].callRemote("forwarding", keyname, _conn.transport.sessionno, data)
+    return GlobalObject().remote['gate'].callRemote("forwarding", keyname, conn.transport.sessionno, data)

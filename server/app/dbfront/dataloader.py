@@ -1,19 +1,7 @@
 #coding:utf8
 
-from firefly.dbentrust.mmode import MAdmin
 from firefly.dbentrust.madminanager import MAdminManager
 from twisted.internet import reactor
-
-# table admin definition
-# add your table which is need to be cached
-messageMAdmin = MAdmin('message', 'id', incrkey = 'id')
-messageMAdmin.insert()
-
-def registerMAdmin():
-    '''
-    register database table to memcached
-    '''
-    MAdminManager().registe(messageMAdmin)
     
 def checkMemDB(delta):
     '''

@@ -12,7 +12,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/server$startmaster.coverage" NAME="startmaster Coverage Results" MODIFIED="1390271768428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/server$startmaster.coverage" NAME="startmaster Coverage Results" MODIFIED="1390273221063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -26,22 +26,100 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="config.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.json">
+      <file leaf-file-name="initconfig.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/game/initconfig.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="28" selection-start="218" selection-end="218" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="1215">
+            <state line="19" column="12" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+              <folding>
+                <element signature="e#14#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="doreload.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/game/doreload.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="10" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dataloader.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="gameserver.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/gameserver.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dataloader.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/game/dataloader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="8" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dataloader.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/dbfront/dataloader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="50" selection-start="271" selection-end="271" vertical-scroll-proportion="0.25104603" vertical-offset="0" max-vertical-offset="510">
+            <state line="2" column="33" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="initconfig.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/dbfront/initconfig.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="22" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="480">
+              <folding>
+                <element signature="e#14#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="memtable.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/share/db/memtable.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="0" selection-start="264" selection-end="264" vertical-scroll-proportion="0.2967033" vertical-offset="0" max-vertical-offset="455">
               <folding>
                 <element signature="e#14#56#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gateservice.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/gate/gateservice.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="0" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="630">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/gate/localservice/login.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <folding>
+                <element signature="e#14#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="initconfig.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/gate/initconfig.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,12 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/net/netapp.py" />
-        <option value="$PROJECT_DIR$/app/gameserver.py" />
-        <option value="$PROJECT_DIR$/app/game/dataloader.py" />
-        <option value="$PROJECT_DIR$/app/game/initconfig.py" />
-        <option value="$PROJECT_DIR$/app/game/doreload.py" />
-        <option value="$PROJECT_DIR$/app/constants.py" />
         <option value="$PROJECT_DIR$/appmain.py" />
         <option value="$PROJECT_DIR$/app/gate/gaterootapp/__init__.py" />
         <option value="$PROJECT_DIR$/app/dbfront/__init__.py" />
@@ -71,7 +143,13 @@
         <option value="$PROJECT_DIR$/app/net/__init__.py" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/config.json" />
+        <option value="$PROJECT_DIR$/app/net/netapp.py" />
+        <option value="$PROJECT_DIR$/app/gate/gateservice.py" />
+        <option value="$PROJECT_DIR$/app/game/dataloader.py" />
+        <option value="$PROJECT_DIR$/app/game/initconfig.py" />
         <option value="$PROJECT_DIR$/app/dbfront/dataloader.py" />
+        <option value="$PROJECT_DIR$/app/dbfront/initconfig.py" />
+        <option value="$PROJECT_DIR$/app/share/db/memtable.py" />
       </list>
     </option>
   </component>
@@ -79,6 +157,25 @@
     <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="874" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Django</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Buildout</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -143,6 +240,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="share" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="share" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -268,18 +405,27 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="fileTemplates" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7" />
     <property name="FullScreen" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings />
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/share/db" />
+      <recent name="$PROJECT_DIR$/app/share" />
       <recent name="$PROJECT_DIR$/app/game" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/net" />
-      <recent name="$PROJECT_DIR$/app/gate/localservice" />
-      <recent name="$PROJECT_DIR$/app/gate/gaterootapp" />
     </key>
   </component>
   <component name="RunManager" selected="Python.startmaster">
@@ -462,6 +608,23 @@
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="019a1548-1dea-4d9e-aa76-ccce4f270265" name="Default" comment="" />
@@ -509,46 +672,37 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/appmain.py">
+    <entry file="file://$PROJECT_DIR$/app/net/netapp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="37" selection-start="1476" selection-end="1476" vertical-scroll-proportion="1.7802198" vertical-offset="0" max-vertical-offset="1065">
+        <state line="45" column="38" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.0" vertical-offset="317" max-vertical-offset="795">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/dbfront/__init__.py">
+    <entry file="file://$PROJECT_DIR$/app/net/gatenodeapp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="478">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/game/__init__.py">
+    <entry file="file://$PROJECT_DIR$/app/gate/gaterootapp/netforwarding.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+        <state line="15" column="18" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/game/initconfig.py">
+    <entry file="file://$PROJECT_DIR$/app/gate/initconfig.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="20" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <folding>
-            <element signature="e#14#67#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/gate/gaterootapp/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="478">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/gate/localservice/__init__.py">
+    <entry file="file://$PROJECT_DIR$/app/gate/gateservice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+        <state line="29" column="0" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="630">
           <folding />
         </state>
       </provider>
@@ -560,65 +714,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/net/__init__.py">
+    <entry file="file://$PROJECT_DIR$/app/gate/localservice/login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+        <state line="11" column="0" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <folding>
+            <element signature="e#14#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/share/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="455">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/constants.py">
+    <entry file="file://$PROJECT_DIR$/app/share/db/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="455">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/dbfrontserver.py">
+    <entry file="file://$PROJECT_DIR$/app/game/dataloader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="455">
+        <state line="3" column="8" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/game/doreload.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="10" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/gameserver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.06593407" vertical-offset="0" max-vertical-offset="455">
+        <state line="4" column="0" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/netserver.py">
+    <entry file="file://$PROJECT_DIR$/app/game/initconfig.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="23" selection-start="65" selection-end="65" vertical-scroll-proportion="0.13186814" vertical-offset="0" max-vertical-offset="455">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/gateserver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="455">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="28" selection-start="218" selection-end="218" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="1215">
-          <folding />
+        <state line="19" column="12" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <folding>
+            <element signature="e#14#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/dbfront/dataloader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="50" selection-start="271" selection-end="271" vertical-scroll-proportion="0.25104603" vertical-offset="0" max-vertical-offset="510">
+        <state line="2" column="33" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dbfront/initconfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="22" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="480">
+          <folding>
+            <element signature="e#14#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/share/db/memtable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="264" selection-end="264" vertical-scroll-proportion="0.2967033" vertical-offset="0" max-vertical-offset="455">
           <folding>
             <element signature="e#14#56#0" expanded="true" />
           </folding>

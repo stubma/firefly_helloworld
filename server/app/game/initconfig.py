@@ -1,6 +1,7 @@
 #coding:utf8
 
-from dataloader import loadConfigData, registerMAdmin
+from app.share.db import memtable
+import dataloader
 from firefly.server.globalobject import GlobalObject
 
 def doWhenStop():
@@ -15,5 +16,5 @@ def loadModule():
     """
     init game server
     """
-    loadConfigData()
-    registerMAdmin()
+    dataloader.loadConfigData()
+    memtable.registerMAdmin()
