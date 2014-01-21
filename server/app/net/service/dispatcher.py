@@ -1,17 +1,19 @@
 #coding:utf8
 
+from firefly.server.globalobject import GlobalObject
 from firefly.utils.services import CommandService
 from twisted.python import log
 from twisted.internet import defer
 
-class LocalService(CommandService):
-    def callTargetSingle(self, targetKey, *args, **kw):
-        '''
-        call method by method key, the method key is split from method name
-        '''
+class ServiceDispatcher(CommandService):
+    '''
+    Dispatcher of client command, it always forward client invocation to gate server
+    '''
+
+    def callTargetSingle(self,targetKey,*args,**kw):
         self._lock.acquire()
         try:
-            target = self.getTarget(targetKey)
+            target = self.getTarget(0)
             if not target:
                 log.err('the command ' + str(targetKey) + ' not found on service')
                 return None
@@ -28,11 +30,12 @@ class LocalService(CommandService):
             self._lock.release()
         return d
 
-# local service instance
-localservice = LocalService('localservice')
+# create dispatcher instance and set it
+dispatcher = ServiceDispatcher("dispatcher")
+GlobalObject().netfactory.addServiceChannel(dispatcher)
 
-def localserviceHandle(target):
+def netserviceHandle(target):
     '''
-    decorator of gate local service api
+    the decorator register method in service
     '''
-    localservice.mapTarget(target)
+    dispatcher.mapTarget(target)

@@ -17,8 +17,4 @@ static Resource _mediumResource = {
 static Resource& R = _mediumResource;
 static CCSize designResolutionSize = CCSizeMake(480, 800);
 
-// shared tcp hub
-extern CCTCPSocketHub* gHub;
-extern void initHub();
-
 #endif /* __AppGlobal_h__ */

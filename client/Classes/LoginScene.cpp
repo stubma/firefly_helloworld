@@ -1,8 +1,8 @@
 #include "LoginScene.h"
-#include "AppGlobal.h"
+#include "Client.h"
 
 Login::~Login() {
-    gHub->unregisterCallback(1);
+    Client::sharedClient()->getHub()->unregisterCallback(1);
 }
 
 CCScene* Login::scene() {
@@ -90,15 +90,15 @@ bool Login::init() {
     }
     
     // connect to server
-    gHub->registerCallback(1, this);
-    gHub->createSocket("172.16.96.60", 11009, 1, kCCSocketDefaultTimeout, true);
-    addChild(gHub);
+    CCTCPSocketHub* hub = Client::sharedClient()->getHub();
+    hub->registerCallback(1, this);
+    hub->createSocket("172.16.96.60", 11009, 1, kCCSocketDefaultTimeout, true);
+    addChild(hub);
     
     return true;
 }
 
 void Login::onTCPSocketConnected(int tag) {
-    CCLOG("connected");
 }
 
 void Login::onTCPSocketDisconnected(int tag) {
@@ -110,5 +110,8 @@ void Login::onTCPSocketData(int tag, CCByteBuffer& bb) {
 }
 
 void Login::onLoginClicked(CCObject *sender) {
-    
+    CCJSONObject* json = CCJSONObject::create();
+    json->addString("username", m_usernameEdit->getText());
+    json->addString("password", m_passwordEdit->getText());
+    Client::sharedClient()->send(1, json, Client::LOGIN);
 }

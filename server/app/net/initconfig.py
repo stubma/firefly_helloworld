@@ -3,6 +3,7 @@
 from firefly.server.globalobject import GlobalObject
 from firefly.netconnect.datapack import DataPackProtoc
 
+
 def onNetClientConnectionLost(conn):
     '''
     handle when connection lost, forward to gate node
@@ -22,5 +23,4 @@ def loadModule():
     '''
     setup net server
     '''
-    import netapp
-    import gatenodeapp
+    from service import *

@@ -1,19 +1,18 @@
 #coding:utf8
 
-from firefly.server.globalobject import GlobalObject
 from firefly.utils.services import CommandService
 from twisted.python import log
 from twisted.internet import defer
 
-class NetCommandService(CommandService):
-    '''
-    this service always forward invocation to gate node
-    '''
-
-    def callTargetSingle(self,targetKey,*args,**kw):
+class ServiceDispatcher(CommandService):
+    def callTargetSingle(self, targetKey, *args, **kw):
+        '''
+        call method by method key, the method key is split from method name,
+        so it acts as a dispatcher of remote calling
+        '''
         self._lock.acquire()
         try:
-            target = self.getTarget(0)
+            target = self.getTarget(targetKey)
             if not target:
                 log.err('the command ' + str(targetKey) + ' not found on service')
                 return None
@@ -30,21 +29,11 @@ class NetCommandService(CommandService):
             self._lock.release()
         return d
 
-# create net service instance
-netservice = NetCommandService("loginService")
+# dispatcher instance
+dispatcher = ServiceDispatcher('dispatcher')
 
-def netserviceHandle(target):
+def gateserviceHandle(target):
     '''
-    the decorator register method in service
+    decorator of gate service api
     '''
-    netservice.mapTarget(target)
-
-# set service instance
-GlobalObject().netfactory.addServiceChannel(netservice)
-
-@netserviceHandle
-def forwarding_0(keyname, conn, data):
-    '''
-    forward to gate node
-    '''
-    return GlobalObject().remote['gate'].callRemote("forwarding", keyname, conn.transport.sessionno, data)
+    dispatcher.mapTarget(target)

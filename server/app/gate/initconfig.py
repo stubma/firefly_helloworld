@@ -4,6 +4,5 @@ def loadModule():
     '''
     setup gate server
     '''
-    import gateservice
-    from gaterootapp import *
-    from localservice import *
+    from service import *
+    from local import *

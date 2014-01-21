@@ -12,7 +12,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/server$startmaster.coverage" NAME="startmaster Coverage Results" MODIFIED="1390283852748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/server$startmaster.coverage" NAME="startmaster Coverage Results" MODIFIED="1390291032283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -26,10 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="netapp.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/net/netapp.py">
+      <file leaf-file-name="globalobject.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../firefly/firefly/firefly/server/globalobject.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="65" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="795">
+            <state line="65" column="4" selection-start="1496" selection-end="1496" vertical-scroll-proportion="0.0" vertical-offset="797" max-vertical-offset="1275">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="netservice.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/net/service/netservice.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="52" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
               <folding />
             </state>
           </provider>
@@ -38,8 +47,50 @@
       <file leaf-file-name="initconfig.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/net/initconfig.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="53" selection-start="714" selection-end="714" vertical-scroll-proportion="0.5334728" vertical-offset="0" max-vertical-offset="478">
+            <state line="20" column="0" selection-start="716" selection-end="716" vertical-scroll-proportion="0.62761503" vertical-offset="0" max-vertical-offset="478">
+              <folding>
+                <element signature="e#14#66#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="netserver.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/netserver.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="23" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dispatcher.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/net/service/dispatcher.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="13" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+              <folding>
+                <element signature="e#14#66#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/net/service/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="17" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gateservice.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/gate/service/gateservice.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="36" selection-start="765" selection-end="765" vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="600">
+              <folding>
+                <element signature="e#14#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,21 +105,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/__init__.py" />
-        <option value="$PROJECT_DIR$/app/gate/gateservice.py" />
-        <option value="$PROJECT_DIR$/app/game/dataloader.py" />
-        <option value="$PROJECT_DIR$/app/dbfront/dataloader.py" />
-        <option value="$PROJECT_DIR$/app/dbfront/initconfig.py" />
-        <option value="$PROJECT_DIR$/app/share/db/memtable.py" />
-        <option value="$PROJECT_DIR$/config.json" />
-        <option value="$PROJECT_DIR$/app/game/initconfig.py" />
-        <option value="$PROJECT_DIR$/app/game/reloaddata.py" />
-        <option value="$PROJECT_DIR$/app/net/netapp.py" />
-        <option value="$PROJECT_DIR$/../../firefly/firefly/firefly/server/globalobject.py" />
-        <option value="$PROJECT_DIR$/app/gate/initconfig.py" />
-        <option value="$PROJECT_DIR$/app/gate/gaterootapp/netforwarding.py" />
-        <option value="$PROJECT_DIR$/app/gate/localservice/__init__.py" />
         <option value="$PROJECT_DIR$/app/gate/gaterootapp/__init__.py" />
+        <option value="$PROJECT_DIR$/../../firefly/firefly/firefly/netconnect/datapack.py" />
+        <option value="$PROJECT_DIR$/app/gate/localservice/login.py" />
+        <option value="$PROJECT_DIR$/app/gate/gateservice.py" />
+        <option value="$PROJECT_DIR$/app/gate/local/login.py" />
+        <option value="$PROJECT_DIR$/app/gate/service/gateservice.py" />
+        <option value="$PROJECT_DIR$/app/gate/initconfig.py" />
+        <option value="$PROJECT_DIR$/app/gate/service/__init__.py" />
+        <option value="$PROJECT_DIR$/app/gate/service/dispatcher.py" />
+        <option value="$PROJECT_DIR$/app/net/netapp.py" />
+        <option value="$PROJECT_DIR$/app/net/service/netapp.py" />
+        <option value="$PROJECT_DIR$/app/net/service/dispatcher.py" />
+        <option value="$PROJECT_DIR$/app/net/gatenodeapp.py" />
+        <option value="$PROJECT_DIR$/app/net/service/netservice.py" />
+        <option value="$PROJECT_DIR$/app/net/service/__init__.py" />
         <option value="$PROJECT_DIR$/app/net/initconfig.py" />
       </list>
     </option>
@@ -227,6 +278,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="gate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -249,7 +322,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="localservice" />
+              <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -271,7 +344,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="gaterootapp" />
+              <option name="myItemId" value="local" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -333,11 +406,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/net/service" />
       <recent name="$PROJECT_DIR$/app/share/db" />
       <recent name="$PROJECT_DIR$/app/share" />
       <recent name="$PROJECT_DIR$/app/game" />
       <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/app/net" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/net/service" />
+      <recent name="$PROJECT_DIR$/app/gate/service" />
     </key>
   </component>
   <component name="RunManager" selected="Python.startmaster">
@@ -584,64 +661,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../firefly/firefly/firefly/distributed/node.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="8" selection-start="1427" selection-end="1427" vertical-scroll-proportion="0.5714286" vertical-offset="610" max-vertical-offset="1065">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../firefly/firefly/firefly/utils/services.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="42" selection-start="881" selection-end="881" vertical-scroll-proportion="0.36483517" vertical-offset="359" max-vertical-offset="2520">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../firefly/firefly/firefly/distributed/root.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="11" selection-start="2296" selection-end="2296" vertical-scroll-proportion="-6.04" vertical-offset="1079" max-vertical-offset="1575">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/net/gatenodeapp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="455">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appmain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="23" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/gate/gaterootapp/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="20" selection-start="34" selection-end="34" vertical-scroll-proportion="0.06593407" vertical-offset="0" max-vertical-offset="455">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/gate/gaterootapp/netforwarding.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="18" selection-start="595" selection-end="595" vertical-scroll-proportion="0.72527474" vertical-offset="0" max-vertical-offset="495">
-          <folding>
-            <element signature="e#14#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../firefly/firefly/firefly/server/globalobject.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="7" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.3978022" vertical-offset="464" max-vertical-offset="1275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/gateserver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="17" selection-start="60" selection-end="60" vertical-scroll-proportion="0.12552302" vertical-offset="0" max-vertical-offset="478">
@@ -649,52 +668,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/gate/initconfig.py">
+    <entry file="file://$PROJECT_DIR$/../../firefly/firefly/firefly/netconnect/protoc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="30" selection-start="153" selection-end="153" vertical-scroll-proportion="0.25104603" vertical-offset="0" max-vertical-offset="478">
+        <state line="56" column="55" selection-start="1694" selection-end="1694" vertical-scroll-proportion="-9.04" vertical-offset="569" max-vertical-offset="2070">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/gate/localservice/login.py">
+    <entry file="file://$PROJECT_DIR$/../../firefly/firefly/firefly/netconnect/datapack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="455">
+        <state line="74" column="29" selection-start="1910" selection-end="1910" vertical-scroll-proportion="0.0" vertical-offset="917" max-vertical-offset="1590">
+          <folding>
+            <element signature="e#71#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/gate/local/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.06593407" vertical-offset="0" max-vertical-offset="455">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/gate/localservice/__init__.py">
+    <entry file="file://$PROJECT_DIR$/app/gate/service/dispatcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="21" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.7175732" vertical-offset="197" max-vertical-offset="675">
+          <folding>
+            <element signature="e#14#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/gate/service/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="18" selection-start="50" selection-end="50" vertical-scroll-proportion="0.09414226" vertical-offset="0" max-vertical-offset="478">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/gate/local/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="12" selection-start="26" selection-end="26" vertical-scroll-proportion="0.06276151" vertical-offset="0" max-vertical-offset="478">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/gate/gateservice.py">
+    <entry file="file://$PROJECT_DIR$/app/gate/initconfig.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="27" selection-start="791" selection-end="791" vertical-scroll-proportion="0.5962343" vertical-offset="0" max-vertical-offset="630">
+        <state line="8" column="0" selection-start="120" selection-end="120" vertical-scroll-proportion="0.25104603" vertical-offset="0" max-vertical-offset="478">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/net/netapp.py">
+    <entry file="file://$PROJECT_DIR$/../../firefly/firefly/firefly/server/globalobject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="65" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="795">
+        <state line="65" column="4" selection-start="1496" selection-end="1496" vertical-scroll-proportion="0.0" vertical-offset="797" max-vertical-offset="1275">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../firefly/firefly/firefly/netconnect/protoc.py">
+    <entry file="file://$PROJECT_DIR$/app/net/service/netservice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="8" selection-start="3065" selection-end="3065" vertical-scroll-proportion="0.458159" vertical-offset="1206" max-vertical-offset="2070">
+        <state line="3" column="52" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/netserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="23" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/net/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="478">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/gate/service/gateservice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="36" selection-start="765" selection-end="765" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <folding>
+            <element signature="e#14#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/net/service/dispatcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="13" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+          <folding>
+            <element signature="e#14#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/net/service/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="17" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/net/initconfig.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="53" selection-start="714" selection-end="714" vertical-scroll-proportion="0.5334728" vertical-offset="0" max-vertical-offset="478">
-          <folding />
+        <state line="20" column="0" selection-start="716" selection-end="716" vertical-scroll-proportion="0.62761503" vertical-offset="0" max-vertical-offset="478">
+          <folding>
+            <element signature="e#14#66#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
