@@ -29,9 +29,9 @@ def onNetClientConnectionLost(dynamicId):
     print '##############################################'
 
 @gateserviceHandle
-def loginToServer_101(key, dynamicId, request_proto):
+def loginToServer_101(key, dynamicId, request):
     # get user name and password
-    args = json.loads(request_proto)
+    args = json.loads(request)
     username = args.get('username')
     password = args.get('password')
 
@@ -42,5 +42,4 @@ def loginToServer_101(key, dynamicId, request_proto):
     response = {}
     response['result'] = data.get('result', False)
     response['data'] = data['data']
-    print json.dumps(response)
     return json.dumps(response)

@@ -34,6 +34,10 @@ def loginToServer(dynamicId, username, password):
     if user.isBlocked():
         return { 'result' : False, 'message' : 'blocked' }
 
+    # if password is error
+    if user.password != password:
+        return { 'result' : False, 'message' : 'wrong_password' }
+
     # add user model and success
     UserManager().addUser(user)
     return { 'result' : True, 'message' : 'login_success', 'data' : user.getLoginExtraData() }
