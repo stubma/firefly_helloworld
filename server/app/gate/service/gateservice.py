@@ -1,6 +1,7 @@
 #coding:utf8
 
 import json
+from app.gate.local import login
 from firefly.server.globalobject import rootserviceHandle, GlobalObject
 from app.gate.service.dispatcher import gateserviceHandle, dispatcher
 
@@ -33,3 +34,13 @@ def loginToServer_101(key, dynamicId, request_proto):
     args = json.loads(request_proto)
     username = args.get('username')
     password = args.get('password')
+
+    # login
+    data = login.loginToServer(dynamicId, username, password)
+
+    # construct response in json format and return
+    response = {}
+    response['result'] = data.get('result', False)
+    response['data'] = data['data']
+    print json.dumps(response)
+    return json.dumps(response)
