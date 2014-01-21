@@ -14,7 +14,8 @@ def onNetClientConnectionLost(conn):
 GlobalObject().netfactory.doConnectionLost = onNetClientConnectionLost
 
 # define the protocol which operates between client and net server
-netProtocol = DataPackProtoc(78, 37, 38, 48, 0, 0)
+# the magic number is 'HELO', change it for your game
+netProtocol = DataPackProtoc(ord('H'), ord('E'), ord('L'), ord('O'), 0, 0)
 GlobalObject().netfactory.setDataProtocl(netProtocol)
 
 def loadModule():
