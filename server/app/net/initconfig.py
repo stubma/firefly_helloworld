@@ -14,8 +14,8 @@ def onNetClientConnectionLost(conn):
 GlobalObject().netfactory.doConnectionLost = onNetClientConnectionLost
 
 # define the protocol which operates between client and net server
-dataprotocl = DataPackProtoc(78, 37, 38, 48, 0, 0)
-GlobalObject().netfactory.setDataProtocl(dataprotocl)
+netProtocol = DataPackProtoc(78, 37, 38, 48, 0, 0)
+GlobalObject().netfactory.setDataProtocl(netProtocol)
 
 def loadModule():
     '''
