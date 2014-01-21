@@ -15,7 +15,7 @@ class NetCommandService(CommandService):
         try:
             target = self.getTarget(0)
             if not target:
-                log.err('the command ' + str(targetKey) + ' not Found on service')
+                log.err('the command ' + str(targetKey) + ' not found on service')
                 return None
             if targetKey not in self.unDisplay:
                 log.msg("call method %s on service[single]" % target.__name__)

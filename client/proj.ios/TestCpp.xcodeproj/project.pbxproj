@@ -14,7 +14,7 @@
 		923E3E8318892CDC00ABC5A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 923E3E7F18892CDC00ABC5A0 /* main.m */; };
 		923E3E8418892CDC00ABC5A0 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 923E3E8118892CDC00ABC5A0 /* RootViewController.mm */; };
 		923E3E8818892D0400ABC5A0 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923E3E8618892D0400ABC5A0 /* AppDelegate.cpp */; };
-		924C8917188CEC0600F66828 /* FirstScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 924C8915188CEC0600F66828 /* FirstScene.cpp */; };
+		924C8917188CEC0600F66828 /* LoginScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 924C8915188CEC0600F66828 /* LoginScene.cpp */; };
 		924C891C188CFE5200F66828 /* AppGlobal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 924C891A188CFE5200F66828 /* AppGlobal.cpp */; };
 		924C891D188CFEEB00F66828 /* libcocos2dx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 923E3E7418892C1600ABC5A0 /* libcocos2dx.a */; };
 		924C891E188CFEEF00F66828 /* libcocos2dx-better.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 923E3E7C18892C2000ABC5A0 /* libcocos2dx-better.a */; };
@@ -23,6 +23,18 @@
 		9255B8B118556E2000797255 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9255B8B018556E2000797255 /* AudioToolbox.framework */; };
 		9255B8B318556E2800797255 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9255B8B218556E2800797255 /* OpenAL.framework */; };
 		92984F3E175D9B0700E63472 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92984F3D175D9B0700E63472 /* CoreText.framework */; };
+		92A1ADC0188E1F3C00298F4F /* CCEditBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1AD9D188E1F3C00298F4F /* CCEditBox.cpp */; };
+		92A1ADC1188E1F3C00298F4F /* CCEditBoxImplAndroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADA0188E1F3C00298F4F /* CCEditBoxImplAndroid.cpp */; };
+		92A1ADC2188E1F3C00298F4F /* CCEditBoxImplIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADA3188E1F3C00298F4F /* CCEditBoxImplIOS.mm */; };
+		92A1ADC3188E1F3C00298F4F /* CCEditBoxImplMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADA5188E1F3C00298F4F /* CCEditBoxImplMac.mm */; };
+		92A1ADC4188E1F3C00298F4F /* CCEditBoxImplNone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADA6188E1F3C00298F4F /* CCEditBoxImplNone.cpp */; };
+		92A1ADC5188E1F3C00298F4F /* CCEditBoxImplTizen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADA7188E1F3C00298F4F /* CCEditBoxImplTizen.cpp */; };
+		92A1ADC6188E1F3C00298F4F /* CCEditBoxImplWin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADA9188E1F3C00298F4F /* CCEditBoxImplWin.cpp */; };
+		92A1ADE5188E1F6300298F4F /* CCControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADCC188E1F6300298F4F /* CCControl.cpp */; };
+		92A1ADEF188E1F6300298F4F /* CCInvocation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADE1188E1F6300298F4F /* CCInvocation.cpp */; };
+		92A1ADF3188E1F8D00298F4F /* CCControlButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADF1188E1F8D00298F4F /* CCControlButton.cpp */; };
+		92A1ADF6188E21BB00298F4F /* CCScale9Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADF4188E21BB00298F4F /* CCScale9Sprite.cpp */; };
+		92A1ADF8188E23BF00298F4F /* images in Resources */ = {isa = PBXBuildFile; fileRef = 92A1ADF7188E23BF00298F4F /* images */; };
 		92A6710316E89667008BE79D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A6710216E89667008BE79D /* libz.dylib */; };
 		92A6712116E8BA5F008BE79D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A6712016E8BA5F008BE79D /* libsqlite3.dylib */; };
 		92DFF091182F12E6006C4ECD /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DFF090182F12E6006C4ECD /* MediaPlayer.framework */; };
@@ -76,8 +88,8 @@
 		923E3E8118892CDC00ABC5A0 /* RootViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RootViewController.mm; sourceTree = "<group>"; };
 		923E3E8618892D0400ABC5A0 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
 		923E3E8718892D0400ABC5A0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		924C8915188CEC0600F66828 /* FirstScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FirstScene.cpp; sourceTree = "<group>"; };
-		924C8916188CEC0600F66828 /* FirstScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstScene.h; sourceTree = "<group>"; };
+		924C8915188CEC0600F66828 /* LoginScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoginScene.cpp; sourceTree = "<group>"; };
+		924C8916188CEC0600F66828 /* LoginScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginScene.h; sourceTree = "<group>"; };
 		924C891A188CFE5200F66828 /* AppGlobal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppGlobal.cpp; sourceTree = "<group>"; };
 		924C891B188CFE5200F66828 /* AppGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGlobal.h; sourceTree = "<group>"; };
 		924C8923188D006300F66828 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TestCpp/Images.xcassets; sourceTree = SOURCE_ROOT; };
@@ -85,6 +97,30 @@
 		9255B8B018556E2000797255 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		9255B8B218556E2800797255 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		92984F3D175D9B0700E63472 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		92A1AD9D188E1F3C00298F4F /* CCEditBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCEditBox.cpp; sourceTree = "<group>"; };
+		92A1AD9E188E1F3C00298F4F /* CCEditBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEditBox.h; sourceTree = "<group>"; };
+		92A1AD9F188E1F3C00298F4F /* CCEditBoxImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEditBoxImpl.h; sourceTree = "<group>"; };
+		92A1ADA0188E1F3C00298F4F /* CCEditBoxImplAndroid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCEditBoxImplAndroid.cpp; sourceTree = "<group>"; };
+		92A1ADA1188E1F3C00298F4F /* CCEditBoxImplAndroid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEditBoxImplAndroid.h; sourceTree = "<group>"; };
+		92A1ADA2188E1F3C00298F4F /* CCEditBoxImplIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEditBoxImplIOS.h; sourceTree = "<group>"; };
+		92A1ADA3188E1F3C00298F4F /* CCEditBoxImplIOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCEditBoxImplIOS.mm; sourceTree = "<group>"; };
+		92A1ADA4188E1F3C00298F4F /* CCEditBoxImplMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEditBoxImplMac.h; sourceTree = "<group>"; };
+		92A1ADA5188E1F3C00298F4F /* CCEditBoxImplMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCEditBoxImplMac.mm; sourceTree = "<group>"; };
+		92A1ADA6188E1F3C00298F4F /* CCEditBoxImplNone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCEditBoxImplNone.cpp; sourceTree = "<group>"; };
+		92A1ADA7188E1F3C00298F4F /* CCEditBoxImplTizen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCEditBoxImplTizen.cpp; sourceTree = "<group>"; };
+		92A1ADA8188E1F3C00298F4F /* CCEditBoxImplTizen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEditBoxImplTizen.h; sourceTree = "<group>"; };
+		92A1ADA9188E1F3C00298F4F /* CCEditBoxImplWin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCEditBoxImplWin.cpp; sourceTree = "<group>"; };
+		92A1ADAA188E1F3C00298F4F /* CCEditBoxImplWin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEditBoxImplWin.h; sourceTree = "<group>"; };
+		92A1ADCC188E1F6300298F4F /* CCControl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCControl.cpp; sourceTree = "<group>"; };
+		92A1ADCD188E1F6300298F4F /* CCControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCControl.h; sourceTree = "<group>"; };
+		92A1ADD2188E1F6300298F4F /* CCControlExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCControlExtensions.h; sourceTree = "<group>"; };
+		92A1ADE1188E1F6300298F4F /* CCInvocation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCInvocation.cpp; sourceTree = "<group>"; };
+		92A1ADE2188E1F6300298F4F /* CCInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCInvocation.h; sourceTree = "<group>"; };
+		92A1ADF1188E1F8D00298F4F /* CCControlButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCControlButton.cpp; sourceTree = "<group>"; };
+		92A1ADF2188E1F8D00298F4F /* CCControlButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCControlButton.h; sourceTree = "<group>"; };
+		92A1ADF4188E21BB00298F4F /* CCScale9Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCScale9Sprite.cpp; sourceTree = "<group>"; };
+		92A1ADF5188E21BB00298F4F /* CCScale9Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCScale9Sprite.h; sourceTree = "<group>"; };
+		92A1ADF7188E23BF00298F4F /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		92A6710216E89667008BE79D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		92A6712016E8BA5F008BE79D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		92DFF090182F12E6006C4ECD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -144,6 +180,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				92A1AD81188E1F3C00298F4F /* GUI */,
 				923E3E8518892D0400ABC5A0 /* Classes */,
 				080E96DDFE201D6D7F000001 /* ios */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -178,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				924C8923188D006300F66828 /* Images.xcassets */,
+				92A1ADF7188E23BF00298F4F /* images */,
 			);
 			name = Resources;
 			path = ../Resources;
@@ -206,11 +244,58 @@
 				924C891B188CFE5200F66828 /* AppGlobal.h */,
 				923E3E8618892D0400ABC5A0 /* AppDelegate.cpp */,
 				923E3E8718892D0400ABC5A0 /* AppDelegate.h */,
-				924C8915188CEC0600F66828 /* FirstScene.cpp */,
-				924C8916188CEC0600F66828 /* FirstScene.h */,
+				924C8915188CEC0600F66828 /* LoginScene.cpp */,
+				924C8916188CEC0600F66828 /* LoginScene.h */,
 			);
 			name = Classes;
 			path = ../Classes;
+			sourceTree = "<group>";
+		};
+		92A1AD81188E1F3C00298F4F /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				92A1ADCB188E1F6300298F4F /* CCControlExtension */,
+				92A1AD9C188E1F3C00298F4F /* CCEditBox */,
+			);
+			name = GUI;
+			path = "../../../cocos2d-x/extensions/GUI";
+			sourceTree = "<group>";
+		};
+		92A1AD9C188E1F3C00298F4F /* CCEditBox */ = {
+			isa = PBXGroup;
+			children = (
+				92A1AD9D188E1F3C00298F4F /* CCEditBox.cpp */,
+				92A1AD9E188E1F3C00298F4F /* CCEditBox.h */,
+				92A1AD9F188E1F3C00298F4F /* CCEditBoxImpl.h */,
+				92A1ADA0188E1F3C00298F4F /* CCEditBoxImplAndroid.cpp */,
+				92A1ADA1188E1F3C00298F4F /* CCEditBoxImplAndroid.h */,
+				92A1ADA2188E1F3C00298F4F /* CCEditBoxImplIOS.h */,
+				92A1ADA3188E1F3C00298F4F /* CCEditBoxImplIOS.mm */,
+				92A1ADA4188E1F3C00298F4F /* CCEditBoxImplMac.h */,
+				92A1ADA5188E1F3C00298F4F /* CCEditBoxImplMac.mm */,
+				92A1ADA6188E1F3C00298F4F /* CCEditBoxImplNone.cpp */,
+				92A1ADA7188E1F3C00298F4F /* CCEditBoxImplTizen.cpp */,
+				92A1ADA8188E1F3C00298F4F /* CCEditBoxImplTizen.h */,
+				92A1ADA9188E1F3C00298F4F /* CCEditBoxImplWin.cpp */,
+				92A1ADAA188E1F3C00298F4F /* CCEditBoxImplWin.h */,
+			);
+			path = CCEditBox;
+			sourceTree = "<group>";
+		};
+		92A1ADCB188E1F6300298F4F /* CCControlExtension */ = {
+			isa = PBXGroup;
+			children = (
+				92A1ADCC188E1F6300298F4F /* CCControl.cpp */,
+				92A1ADCD188E1F6300298F4F /* CCControl.h */,
+				92A1ADF1188E1F8D00298F4F /* CCControlButton.cpp */,
+				92A1ADF2188E1F8D00298F4F /* CCControlButton.h */,
+				92A1ADD2188E1F6300298F4F /* CCControlExtensions.h */,
+				92A1ADF4188E21BB00298F4F /* CCScale9Sprite.cpp */,
+				92A1ADF5188E21BB00298F4F /* CCScale9Sprite.h */,
+				92A1ADE1188E1F6300298F4F /* CCInvocation.cpp */,
+				92A1ADE2188E1F6300298F4F /* CCInvocation.h */,
+			);
+			path = CCControlExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A1ADF8188E23BF00298F4F /* images in Resources */,
 				924C8924188D006300F66828 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,10 +391,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A1ADC3188E1F3C00298F4F /* CCEditBoxImplMac.mm in Sources */,
 				923E3E8818892D0400ABC5A0 /* AppDelegate.cpp in Sources */,
-				924C8917188CEC0600F66828 /* FirstScene.cpp in Sources */,
+				92A1ADC6188E1F3C00298F4F /* CCEditBoxImplWin.cpp in Sources */,
+				924C8917188CEC0600F66828 /* LoginScene.cpp in Sources */,
+				92A1ADEF188E1F6300298F4F /* CCInvocation.cpp in Sources */,
 				923E3E8318892CDC00ABC5A0 /* main.m in Sources */,
+				92A1ADC2188E1F3C00298F4F /* CCEditBoxImplIOS.mm in Sources */,
+				92A1ADF3188E1F8D00298F4F /* CCControlButton.cpp in Sources */,
+				92A1ADC5188E1F3C00298F4F /* CCEditBoxImplTizen.cpp in Sources */,
+				92A1ADC4188E1F3C00298F4F /* CCEditBoxImplNone.cpp in Sources */,
+				92A1ADC0188E1F3C00298F4F /* CCEditBox.cpp in Sources */,
 				923E3E8418892CDC00ABC5A0 /* RootViewController.mm in Sources */,
+				92A1ADF6188E21BB00298F4F /* CCScale9Sprite.cpp in Sources */,
+				92A1ADC1188E1F3C00298F4F /* CCEditBoxImplAndroid.cpp in Sources */,
+				92A1ADE5188E1F6300298F4F /* CCControl.cpp in Sources */,
 				924C891C188CFE5200F66828 /* AppGlobal.cpp in Sources */,
 				923E3E8218892CDC00ABC5A0 /* AppController.mm in Sources */,
 			);
@@ -361,6 +458,8 @@
 					"$(SRCROOT)/../../../cocos2dx-better/cocos2dx-better/include",
 					"$(SRCROOT)/../../../cocos2d-x/extensions",
 					"$(SRCROOT)/../../../cocos2d-x/extensions/GUI/CCControlExtension",
+					"$(SRCROOT)/../../../cocos2d-x/extensions/GUI/CCEditBox",
+					"$(SRCROOT)/../../../cocos2d-x/external/chipmunk/include/chipmunk",
 				);
 				INFOPLIST_FILE = "Test-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
@@ -402,6 +501,8 @@
 					"$(SRCROOT)/../../../cocos2dx-better/cocos2dx-better/include",
 					"$(SRCROOT)/../../../cocos2d-x/extensions",
 					"$(SRCROOT)/../../../cocos2d-x/extensions/GUI/CCControlExtension",
+					"$(SRCROOT)/../../../cocos2d-x/extensions/GUI/CCEditBox",
+					"$(SRCROOT)/../../../cocos2d-x/external/chipmunk/include/chipmunk",
 				);
 				INFOPLIST_FILE = "Test-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;

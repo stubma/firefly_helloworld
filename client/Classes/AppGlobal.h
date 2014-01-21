@@ -10,11 +10,15 @@ typedef struct {
 } Resource;
 
 static Resource _mediumResource = {
-	CCSizeMake(800, 480),
-	"800x480"
+	CCSizeMake(480, 800),
+	"480x800"
 };
 
 static Resource& R = _mediumResource;
-static CCSize designResolutionSize = CCSizeMake(800, 480);
+static CCSize designResolutionSize = CCSizeMake(480, 800);
+
+// shared tcp hub
+extern CCTCPSocketHub* gHub;
+extern void initHub();
 
 #endif /* __AppGlobal_h__ */

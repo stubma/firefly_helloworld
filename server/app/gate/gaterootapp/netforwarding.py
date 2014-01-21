@@ -22,4 +22,6 @@ def pushObject(topicID, msg, sendList):
 
 @rootserviceHandle
 def onNetClientConnectionLost(dynamicId):
-    pass
+    print '##############################################'
+    print '# client %d disconnected' % dynamicId
+    print '##############################################'

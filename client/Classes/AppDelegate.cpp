@@ -1,10 +1,13 @@
 #include "AppDelegate.h"
-#include "FirstScene.h"
+#include "LoginScene.h"
+#include "AppGlobal.h"
 
 AppDelegate::AppDelegate() {
 }
 
 AppDelegate::~AppDelegate() {
+    CC_SAFE_RELEASE(gHub);
+    gHub = NULL;
 }
 
 bool AppDelegate::applicationDidFinishLaunching() {
@@ -26,9 +29,12 @@ bool AppDelegate::applicationDidFinishLaunching() {
 //    pDirector->setDisplayStats(true);
 //    Helper::setHelpShown(false);
 #endif
+    
+    // init
+    initHub();
 
     // create a scene. it's an autorelease object
-    CCScene* pScene = First::scene();
+    CCScene* pScene = Login::scene();
 
     // run
     pDirector->runWithScene(pScene);
