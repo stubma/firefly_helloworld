@@ -92,6 +92,7 @@ bool Login::init() {
     // connect to server
     gHub->registerCallback(1, this);
     gHub->createSocket("172.16.96.60", 11009, 1, kCCSocketDefaultTimeout, true);
+    addChild(gHub);
     
     return true;
 }
