@@ -12,7 +12,7 @@ How to Run Server
 To run the skeleton server:
 
 1. Install python 2.x. I use 2.7
-2. Install python libraries: twisted, mysqldb, memcached, zope.interface 
+2. Install python libraries: twisted, MySQL-python, python-memcache, zope.interface, affinity, DBUtils
 3. Install JetBrains PyCharm (if you use IDE)
 4. Install mysql
 5. Install memcache
