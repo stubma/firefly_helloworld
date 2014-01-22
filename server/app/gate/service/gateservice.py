@@ -4,6 +4,7 @@ import json
 from app.gate.local import login
 from firefly.server.globalobject import rootserviceHandle, GlobalObject
 from app.gate.service.dispatcher import gateserviceHandle, dispatcher
+from app.gate.model.usermanager import UserManager
 
 @rootserviceHandle
 def forwarding(key, dynamicId, data):
@@ -27,6 +28,10 @@ def onNetClientConnectionLost(dynamicId):
     print '##############################################'
     print '# client %d disconnected' % dynamicId
     print '##############################################'
+
+    # drop user from manager
+    # extend the logic as you need
+    UserManager().dropUserByDynamicID(dynamicId)
 
 @gateserviceHandle
 def loginToServer_101(key, dynamicId, request):
