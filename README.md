@@ -16,10 +16,11 @@ To run the skeleton server:
 3. Install JetBrains PyCharm (if you use IDE)
 4. Install mysql, set root password to 123456. If you want use different username or password, change config.json
 5. Install memcache
-6. Checkout [firefly][1], add it to python library
-7. Start memcached with ```memcached -p 11211 -d```, the memcache listening port is determined by config file
-8. Start mysql and execute init_db.sql, that will initialize databases
-9. Run ```python startmaster.py```
+6. Start memcached with ```memcached -p 11211 -d```, the memcache listening port is determined by config file
+7. Start mysql and execute init_db.sql, that will initialize databases
+8. Run ```python startmaster.py```
+
+For customization purpose, I include firefly source code in project. So no need to clone firefly.
 
 How to Run Client
 ===================
