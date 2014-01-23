@@ -53,8 +53,10 @@ void Client::send(int socketTag, CCJSONObject* body, Command cmd) {
     
     // send
     CCTCPSocket* s = m_hub->getSocket(socketTag);
-    s->sendData((void*)m_sendBuf.getBuffer(), m_sendBuf.available());
-    s->flush();
+    if(s) {
+        s->sendData((void*)m_sendBuf.getBuffer(), m_sendBuf.available());
+        s->flush();
+    }
 }
 
 const CCArray& Client::addData(CCByteBuffer& buf) {
