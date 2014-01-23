@@ -22,6 +22,7 @@
 		9255B8AD18556E1800797255 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9255B8AC18556E1800797255 /* AVFoundation.framework */; };
 		9255B8B118556E2000797255 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9255B8B018556E2000797255 /* AudioToolbox.framework */; };
 		9255B8B318556E2800797255 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9255B8B218556E2800797255 /* OpenAL.framework */; };
+		927B227F189111A6002AE193 /* SendMsgScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 927B227D189111A6002AE193 /* SendMsgScene.cpp */; };
 		92984F3E175D9B0700E63472 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92984F3D175D9B0700E63472 /* CoreText.framework */; };
 		92A1ADC0188E1F3C00298F4F /* CCEditBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1AD9D188E1F3C00298F4F /* CCEditBox.cpp */; };
 		92A1ADC1188E1F3C00298F4F /* CCEditBoxImplAndroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADA0188E1F3C00298F4F /* CCEditBoxImplAndroid.cpp */; };
@@ -98,6 +99,8 @@
 		9255B8AC18556E1800797255 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9255B8B018556E2000797255 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		9255B8B218556E2800797255 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		927B227D189111A6002AE193 /* SendMsgScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SendMsgScene.cpp; sourceTree = "<group>"; };
+		927B227E189111A6002AE193 /* SendMsgScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMsgScene.h; sourceTree = "<group>"; };
 		92984F3D175D9B0700E63472 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		92A1AD9D188E1F3C00298F4F /* CCEditBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCEditBox.cpp; sourceTree = "<group>"; };
 		92A1AD9E188E1F3C00298F4F /* CCEditBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEditBox.h; sourceTree = "<group>"; };
@@ -256,6 +259,8 @@
 				923E3E8718892D0400ABC5A0 /* AppDelegate.h */,
 				924C8915188CEC0600F66828 /* LoginScene.cpp */,
 				924C8916188CEC0600F66828 /* LoginScene.h */,
+				927B227D189111A6002AE193 /* SendMsgScene.cpp */,
+				927B227E189111A6002AE193 /* SendMsgScene.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -401,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				927B227F189111A6002AE193 /* SendMsgScene.cpp in Sources */,
 				92A1ADC3188E1F3C00298F4F /* CCEditBoxImplMac.mm in Sources */,
 				923E3E8818892D0400ABC5A0 /* AppDelegate.cpp in Sources */,
 				92A1ADC6188E1F3C00298F4F /* CCEditBoxImplWin.cpp in Sources */,

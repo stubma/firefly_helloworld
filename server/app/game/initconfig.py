@@ -18,3 +18,4 @@ def loadModule():
     """
     reloaddata.loadConfigData()
     memtable.registerMAdmin()
+    from service import *

@@ -1,8 +1,8 @@
 #include "LoginScene.h"
 #include "Client.h"
+#include "SendMsgScene.h"
 
 Login::~Login() {
-    Client::sharedClient()->getHub()->unregisterCallback(1);
 }
 
 CCScene* Login::scene() {
@@ -29,7 +29,7 @@ bool Login::init() {
     CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
     CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
     
-    // login title
+    // login item
     CCLabelTTF* label = CCLabelTTF::create("Login", "Helvetica", 40 / CC_CONTENT_SCALE_FACTOR());
     CCMenuItemLabel* loginItem = CCMenuItemLabel::create(label, this, menu_selector(Login::onLoginClicked));
     loginItem->setPosition(ccp(origin.x + visibleSize.width / 2,
@@ -111,11 +111,22 @@ void Login::onTCPSocketData(int tag, CCByteBuffer& bb) {
     CCARRAY_FOREACH(&packets, obj) {
         Packet* p = (Packet*)obj;
         CCLOG("cmd: %d, data: %s", p->getHeader().command, p->getBody());
-        CCJSONObject* json = CCJSONObject::create(p->getBody(), p->getBodyLength());
-        Client::ErrCode err = (Client::ErrCode)json->optInt("errno");
-        if(err != Client::E_OK) {
-            string errMsg = json->optString("errmsg");
-            CCLOG("error message: %s", errMsg.c_str());
+        if(p->getHeader().command == Client::LOGIN) {
+            CCJSONObject* json = CCJSONObject::create(p->getBody(), p->getBodyLength());
+            Client::ErrCode err = (Client::ErrCode)json->optInt("errno");
+            if(err != Client::E_OK) {
+                string errMsg = json->optString("errmsg");
+                CCLOG("error message: %s", errMsg.c_str());
+                break;
+            } else {
+                // remove self from callback
+                CCTCPSocketHub* hub = Client::sharedClient()->getHub();
+                hub->unregisterCallback(1);
+                hub->removeFromParent();
+                
+                // to send msg scene
+                CCDirector::sharedDirector()->replaceScene(SendMsg::scene());
+            }
         }
     }
 }
