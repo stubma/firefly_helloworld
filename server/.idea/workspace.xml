@@ -12,7 +12,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/server$startmaster.coverage" NAME="startmaster Coverage Results" MODIFIED="1390449784047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/server$startmaster.coverage" NAME="startmaster Coverage Results" MODIFIED="1390457175648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -26,20 +26,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dataloader.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/dbfront/dataloader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="memtable.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/share/db/memtable.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="14" column="14" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.po" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/share/locale/zh/LC_MESSAGES/strings.po">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="34" selection-start="615" selection-end="615" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="i18n.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/share/locale/i18n.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="171" selection-end="171" vertical-scroll-proportion="0.34375" vertical-offset="0" max-vertical-offset="480">
+              <folding>
+                <element signature="e#14#23#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,66 +64,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gateservice.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/gate/service/gateservice.py">
+      <file leaf-file-name="initconfig.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/gate/initconfig.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="48" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="900">
-              <folding>
-                <element signature="e#14#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="netserver.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/netserver.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="13" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gateserver.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/gateserver.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gameserver.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/gameserver.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dbfrontserver.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="dbfrontserver.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/dbfrontserver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="23" selection-start="69" selection-end="69" vertical-scroll-proportion="0.13129103" vertical-offset="0" max-vertical-offset="457">
+            <state line="4" column="23" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="initconfig.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/net/initconfig.py">
+      <file leaf-file-name="constants.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/share/constants.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="40" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="protoc.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firefly/netconnect/protoc.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="36" selection-start="3184" selection-end="3184" vertical-scroll-proportion="0.0" vertical-offset="1213" max-vertical-offset="2070">
+            <state line="12" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
               <folding />
             </state>
           </provider>
@@ -128,22 +101,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/net/service/dispatcher.py" />
-        <option value="$PROJECT_DIR$/app/net/gatenodeapp.py" />
-        <option value="$PROJECT_DIR$/app/net/service/netservice.py" />
-        <option value="$PROJECT_DIR$/app/net/service/__init__.py" />
         <option value="$PROJECT_DIR$/app/gate/local/usermanager.py" />
         <option value="$PROJECT_DIR$/init_db.sql" />
         <option value="$PROJECT_DIR$/app/gate/local/user.py" />
         <option value="$PROJECT_DIR$/app/share/db/table_user.py" />
         <option value="$PROJECT_DIR$/app/gate/model/user.py" />
         <option value="$PROJECT_DIR$/app/share/constants.py" />
-        <option value="$PROJECT_DIR$/app/gate/local/login.py" />
         <option value="$PROJECT_DIR$/app/gate/service/gateservice.py" />
         <option value="$PROJECT_DIR$/app/net/initconfig.py" />
         <option value="$PROJECT_DIR$/firefly/netconnect/protoc.py" />
         <option value="$PROJECT_DIR$/firefly/dbentrust/madminanager.py" />
         <option value="$PROJECT_DIR$/app/share/db/memtable.py" />
+        <option value="$PROJECT_DIR$/app/share/locale/gettext.py" />
+        <option value="$PROJECT_DIR$/app/gate/local/login.py" />
+        <option value="$PROJECT_DIR$/app/share/locale/en/LC_MESSAGES/strings.po" />
+        <option value="$PROJECT_DIR$/app/share/locale/zh/LC_MESSAGES/strings.po" />
+        <option value="$PROJECT_DIR$/app/share/locale/i18n.py" />
       </list>
     </option>
   </component>
@@ -203,6 +176,14 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 2.7.5 (/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -279,6 +260,88 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="locale" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="share" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="locale" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LC_MESSAGES" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="share" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="locale" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="en" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LC_MESSAGES" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="share" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -297,7 +360,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="net" />
+              <option name="myItemId" value="gate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -315,25 +378,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
+              <option name="myItemId" value="gate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dbfront" />
+              <option name="myItemId" value="local" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -359,13 +408,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/share/locale/zh/LC_MESSAGES" />
+      <recent name="$PROJECT_DIR$/app/share/locale" />
       <recent name="$PROJECT_DIR$/app/gate/local" />
       <recent name="$PROJECT_DIR$/app/net/service" />
       <recent name="$PROJECT_DIR$/app/share/db" />
-      <recent name="$PROJECT_DIR$/app/share" />
-      <recent name="$PROJECT_DIR$/app/game" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/share/locale/en/LC_MESSAGES" />
       <recent name="$PROJECT_DIR$/app/share" />
       <recent name="$PROJECT_DIR$/app/gate/model" />
       <recent name="$PROJECT_DIR$/app/net/service" />
@@ -388,7 +438,9 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/startmaster.py" />
       <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
@@ -588,7 +640,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26040173" sideWeight="0.6719577" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994709" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32804233" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -612,72 +664,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/net/service/netservice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="45" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/share/constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/DBUtils/Tests/TestSteadyDB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="13" selection-start="3040" selection-end="3040" vertical-scroll-proportion="0.0" vertical-offset="1693" max-vertical-offset="10710">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/MySQLdb/connections.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="233" column="19" selection-start="7433" selection-end="7433" vertical-scroll-proportion="0.33260393" vertical-offset="3268" max-vertical-offset="5070">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/share/db/table_user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="38" selection-start="96" selection-end="96" vertical-scroll-proportion="0.098468274" vertical-offset="0" max-vertical-offset="555">
-          <folding>
-            <element signature="e#14#57#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/gate/local/login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="40" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.0" vertical-offset="98" max-vertical-offset="780">
-          <folding>
-            <element signature="e#14#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/gate/service/gateservice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="48" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="900">
-          <folding>
-            <element signature="e#14#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/netserver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/gateserver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="457">
@@ -720,6 +710,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/dbfrontserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="23" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/share/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/gate/initconfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="457">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/share/locale/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="457">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/share/locale/en/LC_MESSAGES/strings.po">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="43" selection-start="543" selection-end="543" vertical-scroll-proportion="0.5251641" vertical-offset="0" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/gate/local/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="32" selection-start="813" selection-end="813" vertical-scroll-proportion="0.78125" vertical-offset="0" max-vertical-offset="795">
+          <folding>
+            <element signature="e#14#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/gettext.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="336" column="0" selection-start="11876" selection-end="11876" vertical-scroll-proportion="2.0637362" vertical-offset="4086" max-vertical-offset="8940">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/share/db/memtable.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="14" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
@@ -727,10 +768,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/dbfrontserver.py">
+    <entry file="file://$PROJECT_DIR$/app/share/locale/zh/LC_MESSAGES/strings.po">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="23" selection-start="69" selection-end="69" vertical-scroll-proportion="0.13129103" vertical-offset="0" max-vertical-offset="457">
+        <state line="19" column="34" selection-start="615" selection-end="615" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/share/locale/i18n.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="171" selection-end="171" vertical-scroll-proportion="0.34375" vertical-offset="0" max-vertical-offset="480">
+          <folding>
+            <element signature="e#14#23#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

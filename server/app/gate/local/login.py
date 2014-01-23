@@ -4,6 +4,7 @@ from app.gate.model.usermanager import UserManager
 from app.gate.model.user import User
 from app.share.db import table_user
 from app.share.constants import *
+from app.share.locale.i18n import *
 
 def loginToServer(dynamicId, username, password):
     '''
@@ -29,15 +30,15 @@ def loginToServer(dynamicId, username, password):
 
     # zero id means error
     if user.id == 0:
-        return { 'errno' : E_DB_ERROR, 'errmsg' : 'db_error' }
+        return { 'errno' : E_DB_ERROR, 'errmsg' : L('Database error') }
 
     # if user is blocked
     if user.isBlocked():
-        return { 'errno' : E_BLOCKED, 'errmsg' : 'blocked' }
+        return { 'errno' : E_BLOCKED, 'errmsg' : L('User is blocked') }
 
     # if password is error
     if userInfo['password'] != password:
-        return { 'errno' : E_WRONG_PASSWORD, 'errmsg' : 'wrong_password' }
+        return { 'errno' : E_WRONG_PASSWORD, 'errmsg' : L('Wrong password') }
 
     # add user model and success
     UserManager().addUser(user)

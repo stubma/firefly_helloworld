@@ -21,6 +21,9 @@ public:
     // allocate memory for body
     void allocateBody(size_t len);
     
+    // body length
+    int getBodyLength() { return m_header.length - 4; }
+    
     CC_SYNTHESIZE_PASS_BY_REF_NC(Header, m_header, Header);
     CC_SYNTHESIZE(char*, m_body, Body);
 };
