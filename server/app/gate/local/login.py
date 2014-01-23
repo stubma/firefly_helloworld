@@ -27,7 +27,7 @@ def loginToServer(dynamicId, username, password):
     # if user is already logged in, update dynamic id
     oldUser = UserManager().getUserByName(username)
     if oldUser:
-        oldUser.setDynamicID(dynamicId)
+        oldUser.dynamicId = dynamicId
         return { 'errno' : E_OK, 'data' : oldUser.getLoginExtraData() }
 
     # if user is not logged in, create user model
@@ -38,7 +38,7 @@ def loginToServer(dynamicId, username, password):
         return { 'errno' : E_DB_ERROR, 'errmsg' : L('Database error') }
 
     # if user is blocked
-    if user.isBlocked():
+    if user.blocked:
         return { 'errno' : E_BLOCKED, 'errmsg' : L('User is blocked') }
 
     # if password is error

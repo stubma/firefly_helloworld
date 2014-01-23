@@ -6,6 +6,8 @@ from firefly.server.globalobject import rootserviceHandle, GlobalObject
 from app.gate.service.dispatcher import GateServiceHandle, dispatcher
 from app.gate.model.usermanager import UserManager
 from app.share.constants import *
+from app.gate.util.loadbalance import GameRouter
+from app.share.locale.i18n import L
 
 @rootserviceHandle
 def forwarding(key, dynamicId, data):
@@ -19,8 +21,20 @@ def forwarding(key, dynamicId, data):
         # find user model by dynamic id
         user = UserManager().getUserByDynamicID(dynamicId)
         if not user:
-            return
+            response = {}
+            response['errno'] = E_NOT_LOGGED_IN
+            response['errmsg'] = L('Not logged in')
+            return json.dumps(response)
 
+        # if user doesn't have a game node allocated, choose one
+        if user.gameNode is None:
+            serverName = GameRouter().pickLeastPressureServer()
+            server = GameRouter().getServerByName(serverName)
+            server.addClient(dynamicId)
+            user.gameNode = serverName
+
+        # now forward request to game node
+        return GlobalObject().root.callChild(user.gameNode, key, dynamicId, data)
 
 @rootserviceHandle
 def pushObject(topicID, msg, sendList):
@@ -35,9 +49,12 @@ def onNetClientConnectionLost(dynamicId):
     print '# client %d disconnected' % dynamicId
     print '##############################################'
 
-    # drop user from manager
+    # drop user from some registry
     # extend the logic as you need
-    UserManager().dropUserByDynamicID(dynamicId)
+    user = UserManager().getUserByDynamicID(dynamicId)
+    if user and user.gameNode:
+        GameRouter().dropClient(user.gameNode, dynamicId)
+        UserManager().dropUserByDynamicID(dynamicId)
 
 @GateServiceHandle(COMMAND_LOGIN)
 def loginToServer(key, dynamicId, request):

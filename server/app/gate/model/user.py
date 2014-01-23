@@ -13,6 +13,7 @@ class User:
         self.password = password
         self.dynamicId = dynamicId
         self.blocked = False
+        self.gameNode = None
         self.initUser()
     
     def initUser(self):
@@ -29,21 +30,6 @@ class User:
         '''
         extra = { 'id' : self.id }
         return extra
-
-    def getName(self):
-        return self.name
-        
-    def isBlocked(self):
-        return self.blocked
-    
-    def checkClient(self,dynamicId):
-        return self.dynamicId == dynamicId
-    
-    def setDynamicID(self,dynamicId):
-        self.dynamicId = dynamicId
-    
-    def getDynamicID(self):
-        return self.dynamicId
     
     def disconnectClient(self):
         pass

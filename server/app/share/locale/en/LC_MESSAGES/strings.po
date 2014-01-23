@@ -28,3 +28,6 @@ msgstr ""
 #: ../../../../gate/local/login.py:41
 msgid "Wrong password"
 msgstr ""
+
+msgid "Not logged in"
+msgstr ""

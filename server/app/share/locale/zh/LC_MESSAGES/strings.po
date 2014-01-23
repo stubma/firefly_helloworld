@@ -28,3 +28,6 @@ msgstr "用户被屏蔽"
 #: ../../../../gate/local/login.py:41
 msgid "Wrong password"
 msgstr "密码错误"
+
+msgid "Not logged in"
+msgstr "用户未登录"

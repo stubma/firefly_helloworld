@@ -29,7 +29,7 @@ class UserManager:
 
     def getUserByName(self, username):
         for k in self.users.values():
-            if k.getName() == username:
+            if k.name == username:
                 return k
         return None
 

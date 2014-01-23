@@ -6,6 +6,7 @@
 class Client : public CCObject {
 public:
     typedef enum {
+        TEST = 1,
         LOGIN = 101
     } Command;
     
