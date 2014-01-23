@@ -10,6 +10,11 @@ def loginToServer(dynamicId, username, password):
     '''
     perform login operation, by username and password,
     if user name doesn't exist, new user will be added
+
+    a dict will be returned, and keys can be:
+    errno: the error code, defined in constants.py, E_OK means no error
+    errmsg: the error message, only exists when errno is not E_OK
+    data: extra info of user, only exists when errno is E_OK, you can add anything you want
     '''
 
     # get user record from db

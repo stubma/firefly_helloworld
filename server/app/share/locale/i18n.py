@@ -5,7 +5,7 @@ import locale
 import gettext
 
 # get current language code
-_tuple = locale.getlocale()
+_tuple = locale.getdefaultlocale()
 lan = 'en'
 if _tuple[0] is not None:
     lan = _tuple[0][:2]
