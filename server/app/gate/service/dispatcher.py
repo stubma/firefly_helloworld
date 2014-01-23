@@ -32,8 +32,10 @@ class ServiceDispatcher(CommandService):
 # dispatcher instance
 dispatcher = ServiceDispatcher('dispatcher')
 
-def gateserviceHandle(target):
-    '''
-    decorator of gate service api
-    '''
-    dispatcher.mapTarget(target)
+# decorator of gate service api
+class GateServiceHandle(object):
+    def __init__(self, cmd):
+        self.cmd = cmd
+
+    def __call__(self, target):
+        dispatcher.mapTarget(target, self.cmd)

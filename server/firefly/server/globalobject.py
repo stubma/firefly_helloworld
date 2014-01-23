@@ -43,37 +43,23 @@ def rootserviceHandle(target):
     """
     """
     GlobalObject().root.service.mapTarget(target)
-    
-class webserviceHandle:
-    """这是一个修饰符对象
-    """
-    
+
+# decorator of web service
+class WebServiceHandle:
     def __init__(self,url=None):
-        """
-        @param url: str http 访问的路径
-        """
         self._url = url
         
     def __call__(self,cls):
-        """
-        """
         if self._url:
             GlobalObject().webroot.putChild(self._url, cls())
         else:
             GlobalObject().webroot.putChild(cls.__name__, cls())
-    
 
-    
-class remoteserviceHandle:
-    """
-    """
+# decorator of remote peer api
+class RemoteServiceHandle:
     def __init__(self,remotename):
-        """
-        """
         self.remotename = remotename
         
     def __call__(self,target):
-        """
-        """
         GlobalObject().remote[self.remotename]._reference._service.mapTarget(target)
         

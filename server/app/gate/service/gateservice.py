@@ -3,7 +3,7 @@
 import json
 from app.gate.local import login
 from firefly.server.globalobject import rootserviceHandle, GlobalObject
-from app.gate.service.dispatcher import gateserviceHandle, dispatcher
+from app.gate.service.dispatcher import GateServiceHandle, dispatcher
 from app.gate.model.usermanager import UserManager
 from app.share.constants import *
 
@@ -11,11 +11,16 @@ from app.share.constants import *
 def forwarding(key, dynamicId, data):
     """
     if a method is registered, forward it to local service
+    if not, forward to game server
     """
     if dispatcher._targets.has_key(key):
         return dispatcher.callTarget(key, dynamicId, data)
     else:
-        pass
+        # find user model by dynamic id
+        user = UserManager().getUserByDynamicID(dynamicId)
+        if not user:
+            return
+
 
 @rootserviceHandle
 def pushObject(topicID, msg, sendList):
@@ -34,8 +39,8 @@ def onNetClientConnectionLost(dynamicId):
     # extend the logic as you need
     UserManager().dropUserByDynamicID(dynamicId)
 
-@gateserviceHandle
-def loginToServer_101(key, dynamicId, request):
+@GateServiceHandle(COMMAND_LOGIN)
+def loginToServer(key, dynamicId, request):
     # get user name and password
     args = json.loads(request)
     username = args.get('username')

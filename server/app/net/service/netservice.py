@@ -1,17 +1,18 @@
 #coding:utf8
 
-from dispatcher import netserviceHandle
-from firefly.server.globalobject import GlobalObject, remoteserviceHandle
+from dispatcher import NetServiceHandle
+from firefly.server.globalobject import GlobalObject, RemoteServiceHandle
+from app.share.constants import *
 
-@netserviceHandle
-def forwarding_0(keyname, conn, data):
+@NetServiceHandle(COMMAND_FORWARD)
+def forwarding(keyname, conn, data):
     '''
     forward to gate node
     '''
     return GlobalObject().remote['gate'].callRemote("forwarding", keyname, conn.transport.sessionno, data)
 
 # the decorator register this method in gate side
-@remoteserviceHandle('gate')
+@RemoteServiceHandle('gate')
 def pushObject(topicID, msg, sendList):
     '''
     push message to client connected to this net server

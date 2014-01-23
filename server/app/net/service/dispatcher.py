@@ -34,8 +34,10 @@ class ServiceDispatcher(CommandService):
 dispatcher = ServiceDispatcher("dispatcher")
 GlobalObject().netfactory.addServiceChannel(dispatcher)
 
-def netserviceHandle(target):
-    '''
-    the decorator register method in service
-    '''
-    dispatcher.mapTarget(target)
+# decorator of net service api
+class NetServiceHandle(object):
+    def __init__(self, cmd):
+        self.cmd = cmd
+
+    def __call__(self, target):
+        dispatcher.mapTarget(target, self.cmd)

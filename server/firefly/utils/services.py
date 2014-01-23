@@ -47,7 +47,7 @@ class Service(object):
         finally:
             self._lock.release()
 
-    def unMapTarget(self, target):
+    def unmapTarget(self, target):
         """Remove a target from the service."""
         self._lock.acquire()
         try:
@@ -135,30 +135,39 @@ class CommandService(Service):
     """A remoting service 
     According to Command ID search target
     """
-    def mapTarget(self, target):
-        """Add a target to the service."""
+    def mapTarget(self, target, cmd = None):
+        '''
+        add a target to the service. if cmd is None, the target name must match pattern "name_cmd",
+        if cmd is not None, it is used as key
+        '''
         self._lock.acquire()
         try:
-            key = int((target.__name__).split('_')[-1])
+            if cmd is None:
+                key = int((target.__name__).split('_')[-1])
+            else:
+                key = cmd
             if self._targets.has_key(key):
                 exist_target = self._targets.get(key)
-                raise "target [%d] Already exists,\
-                Conflict between the %s and %s"%(key,exist_target.__name__,target.__name__)
+                raise "target [%d] Already exists, Conflict between the %s and %s"%(key,exist_target.__name__,target.__name__)
             self._targets[key] = target
         finally:
             self._lock.release()
             
-    def unMapTarget(self, target):
-        """Remove a target from the service."""
+    def unmapTarget(self, target, cmd = None):
+        '''
+        remove a target from the service. if cmd is None, the target name must match pattern "name_cmd",
+        if cmd is not None, it is used as key
+        '''
         self._lock.acquire()
         try:
-            key = int((target.__name__).split('_')[-1])
+            if cmd is None:
+                key = int((target.__name__).split('_')[-1])
+            else:
+                key = cmd
             if key in self._targets:
                 del self._targets[key]
         finally:
             self._lock.release()
-    
-
     
     
     
