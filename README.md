@@ -14,7 +14,7 @@ To run the skeleton server:
 1. Install python 2.x. I use 2.7
 2. Install python libraries: twisted, MySQL-python, python-memcache, zope.interface, affinity, DBUtils
 3. Install JetBrains PyCharm (if you use IDE)
-4. Install mysql
+4. Install mysql, set root password to 123456. If you want use different username or password, change config.json
 5. Install memcache
 6. Checkout [firefly][1], add it to python library
 7. Start memcached with ```memcached -p 11211 -d```, the memcache listening port is determined by config file
