@@ -12,4 +12,4 @@ def registerMAdmin():
     '''
     connect table and memory cache
     '''
-    MAdminManager().registe(messageMAdmin)
+    MAdminManager().register(messageMAdmin)
