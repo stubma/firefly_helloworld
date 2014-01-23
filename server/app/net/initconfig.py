@@ -1,7 +1,7 @@
 #coding:utf8
 
 from firefly.server.globalobject import GlobalObject
-from firefly.netconnect.datapack import DataPackProtoc
+from firefly.netconnect.datapack import DataPackProtocol
 
 
 def onNetClientConnectionLost(conn):
@@ -16,7 +16,7 @@ GlobalObject().netfactory.doConnectionLost = onNetClientConnectionLost
 
 # define the protocol which operates between client and net server
 # the magic number is 'HELO', change it for your game
-netProtocol = DataPackProtoc(ord('H'), ord('E'), ord('L'), ord('O'), 0, 0)
+netProtocol = DataPackProtocol(ord('H'), ord('E'), ord('L'), ord('O'), 0, 0)
 GlobalObject().netfactory.setDataProtocol(netProtocol)
 
 def loadModule():

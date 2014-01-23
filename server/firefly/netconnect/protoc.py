@@ -7,7 +7,7 @@ Created on 2011-9-20
 from twisted.internet import protocol,reactor
 from twisted.python import log
 from manager import ConnectionManager
-from datapack import DataPackProtoc
+from datapack import DataPackProtocol
 reactor = reactor
 
 def DefferedErrorHandle(e):
@@ -49,23 +49,23 @@ class LiberateProtocol(protocol.Protocol):
     def dataHandleCoroutine(self):
         """
         """
-        lenght = self.factory.dataprotocl.getHeadLenght()#获取协议头的长度
+        lenght = self.factory.dataprotocol.getHeadLenght()#获取协议头的长度
         while True:
             data = yield
             self.buff += data
             while self.buff.__len__() >= lenght: 
-                unpackdata = self.factory.dataprotocl.unpack(self.buff[:lenght])
+                unpackdata = self.factory.dataprotocol.unpack(self.buff[:lenght])
                 if not unpackdata.get('result'):
                     log.msg('illegal data package --')
                     self.transport.loseConnection()
                     break
                 command = unpackdata.get('command')
-                rlenght = unpackdata.get('lenght')
-                request = self.buff[lenght:lenght+rlenght]
-                if request.__len__()< rlenght:
+                rlength = unpackdata.get('lenght')
+                request = self.buff[lenght:lenght+rlength]
+                if request.__len__()< rlength:
                     log.msg('some data lose')
                     break
-                self.buff = self.buff[lenght+rlenght:]
+                self.buff = self.buff[lenght+rlength:]
                 d = self.factory.doDataReceived(self,command,request)
                 if not d:
                     continue
@@ -85,17 +85,17 @@ class LiberateFactory(protocol.ServerFactory):
     
     protocol = LiberateProtocol
     
-    def __init__(self,dataprotocl=DataPackProtoc()):
+    def __init__(self,dataprotocol=DataPackProtocol()):
         '''初始化
         '''
         self.service = None
         self.connmanager = ConnectionManager()
-        self.dataprotocl = dataprotocl
+        self.dataprotocol = dataprotocol
         
     def setDataProtocol(self,dataprotocol):
         '''
         '''
-        self.dataprotocl = dataprotocol
+        self.dataprotocol = dataprotocol
         
     def doConnectionMade(self,conn):
         '''当连接建立时的处理'''
@@ -118,7 +118,7 @@ class LiberateFactory(protocol.ServerFactory):
         '''产生客户端需要的最终结果
         @param response: str 分布式客户端获取的结果
         '''
-        return self.dataprotocl.pack(command,response)
+        return self.dataprotocol.pack(command,response)
     
     def loseConnection(self,connID):
         """主动端口与客户端的连接

@@ -8,7 +8,7 @@ from __future__ import division, absolute_import
 from zope.interface import Interface
 
 
-class IDataPackProtoc(Interface):
+class IDataPackProtocol(Interface):
     
     def getHeadLenght():
         """获取数据包的长度

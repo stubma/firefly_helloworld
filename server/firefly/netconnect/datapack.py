@@ -17,7 +17,7 @@ class DataPackError(Exception):
         s = '%s.' % s
         return s
 
-class DataPackProtoc:
+class DataPackProtocol:
     """数据包协议
     """
     def __init__(self,HEAD_0 = 0,HEAD_1=0,HEAD_2=0,HEAD_3=0,protoVersion= 0,serverVersion=0):
@@ -66,20 +66,20 @@ class DataPackProtoc:
             ud = struct.unpack('!sssss3I',dpack)
         except DataPackError,de:
             log.err(de)
-            return {'result':False,'command':0,'lenght':0}
+            return {'result':False,'command':0,'length':0}
         HEAD_0 = ord(ud[0])
         HEAD_1 = ord(ud[1])
         HEAD_2 = ord(ud[2])
         HEAD_3 = ord(ud[3])
         protoVersion = ord(ud[4])
         serverVersion = ud[5]
-        lenght = ud[6]-4
+        length = ud[6]-4
         command = ud[7]
         if HEAD_0 <>self.HEAD_0 or HEAD_1<>self.HEAD_1 or\
              HEAD_2<>self.HEAD_2 or HEAD_3<>self.HEAD_3 or\
               protoVersion<>self.protoVersion or serverVersion<>self.serverVersion:
-            return {'result':False,'command':0,'lenght':0}
-        return {'result':True,'command':command,'lenght':lenght}
+            return {'result':False,'command':0,'length':0}
+        return {'result':True,'command':command,'length':length}
         
     def pack(self,response,command):
         '''打包数据包
@@ -90,10 +90,10 @@ class DataPackProtoc:
         HEAD_3 = chr(self.HEAD_3)
         protoVersion = chr(self.protoVersion)
         serverVersion = self.serverVersion
-        lenght = response.__len__()+4
+        length = response.__len__()+4
         commandID = command
         data = struct.pack('!sssss3I',HEAD_0,HEAD_1,HEAD_2,HEAD_3,\
-                           protoVersion,serverVersion,lenght,commandID)
+                           protoVersion,serverVersion,length,commandID)
         data = data + response
         return data
         
