@@ -3,6 +3,7 @@
 from app.gate.model.usermanager import UserManager
 from app.gate.model.user import User
 from app.share.db import table_user
+from app.share.constants import *
 
 def loginToServer(dynamicId, username, password):
     '''
@@ -21,25 +22,25 @@ def loginToServer(dynamicId, username, password):
     oldUser = UserManager().getUserByName(username)
     if oldUser:
         oldUser.setDynamicID(dynamicId)
-        return { 'result' : True, 'message' : 'login_success', 'data' : oldUser.getLoginExtraData() }
+        return { 'errno' : E_OK, 'data' : oldUser.getLoginExtraData() }
 
     # if user is not logged in, create user model
     user = User(username, password, dynamicId)
 
     # zero id means error
     if user.id == 0:
-        return { 'result' : False, 'message' : 'db_error' }
+        return { 'errno' : E_DB_ERROR, 'errmsg' : 'db_error' }
 
     # if user is blocked
     if user.isBlocked():
-        return { 'result' : False, 'message' : 'blocked' }
+        return { 'errno' : E_BLOCKED, 'errmsg' : 'blocked' }
 
     # if password is error
-    if user.password != password:
-        return { 'result' : False, 'message' : 'wrong_password' }
+    if userInfo['password'] != password:
+        return { 'errno' : E_WRONG_PASSWORD, 'errmsg' : 'wrong_password' }
 
     # add user model and success
     UserManager().addUser(user)
-    return { 'result' : True, 'message' : 'login_success', 'data' : user.getLoginExtraData() }
+    return { 'errno' : E_OK, 'data' : user.getLoginExtraData() }
 
 

@@ -106,7 +106,12 @@ void Login::onTCPSocketDisconnected(int tag) {
 }
 
 void Login::onTCPSocketData(int tag, CCByteBuffer& bb) {
-    
+    const CCArray& packets = Client::sharedClient()->addData(bb);
+    CCObject* obj = NULL;
+    CCARRAY_FOREACH(&packets, obj) {
+        Packet* p = (Packet*)obj;
+        CCLOG("p data: %s", p->getBody());
+    }
 }
 
 void Login::onLoginClicked(CCObject *sender) {

@@ -39,6 +39,7 @@
 		92A6710316E89667008BE79D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A6710216E89667008BE79D /* libz.dylib */; };
 		92A6712116E8BA5F008BE79D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A6712016E8BA5F008BE79D /* libsqlite3.dylib */; };
 		92DFF091182F12E6006C4ECD /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DFF090182F12E6006C4ECD /* MediaPlayer.framework */; };
+		92FB939C1890BE67009476D7 /* Packet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92FB939A1890BE67009476D7 /* Packet.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -127,6 +128,8 @@
 		92A6710216E89667008BE79D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		92A6712016E8BA5F008BE79D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		92DFF090182F12E6006C4ECD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		92FB939A1890BE67009476D7 /* Packet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Packet.cpp; sourceTree = "<group>"; };
+		92FB939B1890BE67009476D7 /* Packet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Packet.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D4F9F37B12E54555005CA6D2 /* Test-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Test-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -247,6 +250,8 @@
 				924C891B188CFE5200F66828 /* AppGlobal.h */,
 				92A1ADFD188E477C00298F4F /* Client.cpp */,
 				92A1ADFE188E477C00298F4F /* Client.h */,
+				92FB939A1890BE67009476D7 /* Packet.cpp */,
+				92FB939B1890BE67009476D7 /* Packet.h */,
 				923E3E8618892D0400ABC5A0 /* AppDelegate.cpp */,
 				923E3E8718892D0400ABC5A0 /* AppDelegate.h */,
 				924C8915188CEC0600F66828 /* LoginScene.cpp */,
@@ -401,6 +406,7 @@
 				92A1ADC6188E1F3C00298F4F /* CCEditBoxImplWin.cpp in Sources */,
 				924C8917188CEC0600F66828 /* LoginScene.cpp in Sources */,
 				92A1ADEF188E1F6300298F4F /* CCInvocation.cpp in Sources */,
+				92FB939C1890BE67009476D7 /* Packet.cpp in Sources */,
 				923E3E8318892CDC00ABC5A0 /* main.m in Sources */,
 				92A1ADC2188E1F3C00298F4F /* CCEditBoxImplIOS.mm in Sources */,
 				92A1ADF3188E1F8D00298F4F /* CCControlButton.cpp in Sources */,

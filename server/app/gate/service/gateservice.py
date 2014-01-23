@@ -5,6 +5,7 @@ from app.gate.local import login
 from firefly.server.globalobject import rootserviceHandle, GlobalObject
 from app.gate.service.dispatcher import gateserviceHandle, dispatcher
 from app.gate.model.usermanager import UserManager
+from app.share.constants import *
 
 @rootserviceHandle
 def forwarding(key, dynamicId, data):
@@ -45,6 +46,9 @@ def loginToServer_101(key, dynamicId, request):
 
     # construct response in json format and return
     response = {}
-    response['result'] = data.get('result', False)
-    response['data'] = data['data']
+    response['errno'] = data.get('errno', E_UNKNOWN)
+    if response['errno'] != E_OK:
+        response['errmsg'] = data.get('errmsg')
+    if data.has_key('data'):
+        response['data'] = data['data']
     return json.dumps(response)

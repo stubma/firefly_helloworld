@@ -12,7 +12,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/server$startmaster.coverage" NAME="startmaster Coverage Results" MODIFIED="1390295273304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/server$startmaster.coverage" NAME="startmaster Coverage Results" MODIFIED="1390449024313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -29,7 +29,7 @@
       <file leaf-file-name="login.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/gate/local/login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0" vertical-offset="310" max-vertical-offset="765">
+            <state line="38" column="40" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.0" vertical-offset="98" max-vertical-offset="780">
               <folding>
                 <element signature="e#14#64#0" expanded="true" />
               </folding>
@@ -37,19 +37,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="initconfig.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/gate/initconfig.py">
+      <file leaf-file-name="TestSteadyDB.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///Library/Python/2.7/site-packages/DBUtils/Tests/TestSteadyDB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="23" selection-start="119" selection-end="119" vertical-scroll-proportion="0.23076923" vertical-offset="0" max-vertical-offset="455">
+            <state line="123" column="13" selection-start="3040" selection-end="3040" vertical-scroll-proportion="0.0" vertical-offset="1693" max-vertical-offset="10710">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gateservice.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="constants.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/share/constants.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gateservice.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/gate/service/gateservice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="28" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="765">
+            <state line="45" column="0" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.5733042" vertical-offset="413" max-vertical-offset="900">
               <folding>
                 <element signature="e#14#25#0" expanded="true" />
               </folding>
@@ -57,28 +66,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="master.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../firefly/firefly/firefly/master/master.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="21" selection-start="1635" selection-end="1635" vertical-scroll-proportion="0.0" vertical-offset="700" max-vertical-offset="1440">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="dispatcher.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/net/service/dispatcher.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="32" selection-start="962" selection-end="962" vertical-scroll-proportion="0.0" vertical-offset="205" max-vertical-offset="660">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/net/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+            <state line="27" column="34" selection-start="997" selection-end="997" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
               <folding />
             </state>
           </provider>
@@ -87,7 +78,16 @@
       <file leaf-file-name="netservice.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/net/service/netservice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="39" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+            <state line="10" column="45" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="node.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../firefly/firefly/firefly/distributed/node.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="25" selection-start="1262" selection-end="1262" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1080">
               <folding />
             </state>
           </provider>
@@ -96,27 +96,7 @@
       <file leaf-file-name="dispatcher.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/gate/service/dispatcher.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="12" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="675">
-              <folding>
-                <element signature="e#14#63#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/gate/model/user.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="25" selection-start="573" selection-end="590" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="840">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="usermanager.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/gate/model/usermanager.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="17" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="855">
+            <state line="22" column="27" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="675">
               <folding />
             </state>
           </provider>
@@ -132,7 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/gate/service/__init__.py" />
         <option value="$PROJECT_DIR$/app/gate/service/dispatcher.py" />
         <option value="$PROJECT_DIR$/app/net/netapp.py" />
         <option value="$PROJECT_DIR$/app/net/service/netapp.py" />
@@ -146,8 +125,9 @@
         <option value="$PROJECT_DIR$/app/gate/local/user.py" />
         <option value="$PROJECT_DIR$/app/share/db/table_user.py" />
         <option value="$PROJECT_DIR$/app/gate/model/user.py" />
-        <option value="$PROJECT_DIR$/app/gate/service/gateservice.py" />
+        <option value="$PROJECT_DIR$/app/share/constants.py" />
         <option value="$PROJECT_DIR$/app/gate/local/login.py" />
+        <option value="$PROJECT_DIR$/app/gate/service/gateservice.py" />
       </list>
     </option>
   </component>
@@ -248,28 +228,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -462,6 +420,7 @@
       <recent name="$PROJECT_DIR$/app/game" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/share" />
       <recent name="$PROJECT_DIR$/app/gate/model" />
       <recent name="$PROJECT_DIR$/app/net/service" />
       <recent name="$PROJECT_DIR$/app/gate/service" />
@@ -682,11 +641,11 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25322813" sideWeight="0.6710875" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26040173" sideWeight="0.6719577" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32891247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32804233" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -711,93 +670,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/init_db.sql">
+    <entry file="file://$PROJECT_DIR$/app/gate/model/user.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="54" selection-start="697" selection-end="697" vertical-scroll-proportion="0.5629139" vertical-offset="0" max-vertical-offset="453">
+        <state line="25" column="25" selection-start="573" selection-end="590" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="840">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="17" selection-start="285" selection-end="285" vertical-scroll-proportion="0.4955947" vertical-offset="0" max-vertical-offset="1215">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/gate/model/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="478">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/gate/local/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="12" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/share/db/table_user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="16" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-          <folding>
-            <element signature="e#14#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/startmaster.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../firefly/firefly/firefly/master/master.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="21" selection-start="1635" selection-end="1635" vertical-scroll-proportion="0.0" vertical-offset="700" max-vertical-offset="1440">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/net/service/dispatcher.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="32" selection-start="962" selection-end="962" vertical-scroll-proportion="0.0" vertical-offset="205" max-vertical-offset="660">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/net/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="455">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/net/service/netservice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="39" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/gate/service/dispatcher.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="12" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="675">
-          <folding>
-            <element signature="e#14#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/gate/service/gateservice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="28" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="765">
-          <folding>
-            <element signature="e#14#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -808,26 +684,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/gate/model/user.py">
+    <entry file="file://$PROJECT_DIR$/app/gate/initconfig.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="25" selection-start="573" selection-end="590" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="840">
+        <state line="8" column="0" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dbfront/dataloader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="47" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appmain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1065">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../firefly/firefly/firefly/utils/services.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="52" selection-start="1912" selection-end="1912" vertical-scroll-proportion="0.16312057" vertical-offset="875" max-vertical-offset="2520" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/gate/service/dispatcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="27" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../firefly/firefly/firefly/distributed/node.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="25" selection-start="1262" selection-end="1262" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1065">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/net/service/dispatcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="34" selection-start="997" selection-end="997" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/net/service/netservice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="45" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/share/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/DBUtils/Tests/TestSteadyDB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="13" selection-start="3040" selection-end="3040" vertical-scroll-proportion="0.0" vertical-offset="1693" max-vertical-offset="10710">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/MySQLdb/connections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="233" column="19" selection-start="7433" selection-end="7433" vertical-scroll-proportion="0.33260393" vertical-offset="3268" max-vertical-offset="5070">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/share/db/table_user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="38" selection-start="96" selection-end="96" vertical-scroll-proportion="0.098468274" vertical-offset="0" max-vertical-offset="555">
+          <folding>
+            <element signature="e#14#57#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/gate/local/login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0" vertical-offset="310" max-vertical-offset="765">
+        <state line="38" column="40" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.0" vertical-offset="98" max-vertical-offset="780">
           <folding>
             <element signature="e#14#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/gate/initconfig.py">
+    <entry file="file://$PROJECT_DIR$/app/gate/service/gateservice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="23" selection-start="119" selection-end="119" vertical-scroll-proportion="0.23076923" vertical-offset="0" max-vertical-offset="455">
-          <folding />
+        <state line="45" column="0" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.5733042" vertical-offset="413" max-vertical-offset="900">
+          <folding>
+            <element signature="e#14#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
