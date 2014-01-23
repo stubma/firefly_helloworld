@@ -38,7 +38,7 @@
       <file leaf-file-name="gateservice.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/gate/service/gateservice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="51" selection-start="894" selection-end="894" vertical-scroll-proportion="0.48333332" vertical-offset="143" max-vertical-offset="1230">
+            <state line="26" column="39" selection-start="934" selection-end="934" vertical-scroll-proportion="-0.34375" vertical-offset="555" max-vertical-offset="1230">
               <folding>
                 <element signature="e#14#25#0" expanded="true" />
               </folding>
@@ -872,7 +872,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/gate/service/gateservice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="51" selection-start="894" selection-end="894" vertical-scroll-proportion="0.48333332" vertical-offset="143" max-vertical-offset="1230">
+        <state line="26" column="39" selection-start="934" selection-end="934" vertical-scroll-proportion="-0.34375" vertical-offset="555" max-vertical-offset="1230">
           <folding>
             <element signature="e#14#25#0" expanded="true" />
           </folding>
