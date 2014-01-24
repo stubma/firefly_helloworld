@@ -71,7 +71,6 @@ bool SendMsg::init() {
     // add hub
     CCTCPSocketHub* hub = Client::sharedClient()->getHub();
     hub->registerCallback(1, this);
-    addChild(hub);
     
     return true;
 }

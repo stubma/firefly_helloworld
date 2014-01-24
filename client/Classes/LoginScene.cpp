@@ -93,7 +93,6 @@ bool Login::init() {
     CCTCPSocketHub* hub = Client::sharedClient()->getHub();
     hub->registerCallback(1, this);
     hub->createSocket("172.16.96.60", 11009, 1, kCCSocketDefaultTimeout, true);
-    addChild(hub);
     
     return true;
 }
@@ -122,7 +121,6 @@ void Login::onTCPSocketData(int tag, CCByteBuffer& bb) {
                 // remove self from callback
                 CCTCPSocketHub* hub = Client::sharedClient()->getHub();
                 hub->unregisterCallback(1);
-                hub->removeFromParent();
                 
                 // to send msg scene
                 CCDirector::sharedDirector()->replaceScene(SendMsg::scene());
