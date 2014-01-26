@@ -89,10 +89,9 @@ bool Login::init() {
         addChild(m_passwordEdit);
     }
     
-    // connect to server
+    // add self to callback
     CCTCPSocketHub* hub = Client::sharedClient()->getHub();
     hub->registerCallback(1, this);
-    hub->createSocket("172.16.96.60", 11009, 1, kCCSocketDefaultTimeout, true);
     
     return true;
 }
@@ -109,7 +108,6 @@ void Login::onTCPSocketData(int tag, CCByteBuffer& bb) {
     CCObject* obj = NULL;
     CCARRAY_FOREACH(&packets, obj) {
         Packet* p = (Packet*)obj;
-        CCLOG("cmd: %d, data: %s", p->getHeader().command, p->getBody());
         if(p->getHeader().command == Client::LOGIN) {
             CCJSONObject* json = CCJSONObject::create(p->getBody(), p->getBodyLength());
             Client::ErrCode err = (Client::ErrCode)json->optInt("errno");

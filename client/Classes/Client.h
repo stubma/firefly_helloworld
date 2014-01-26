@@ -37,6 +37,9 @@ private:
 protected:
     Client();
     
+    // ensure socket are all there
+    void checkSocket();
+    
 public:
     virtual ~Client();
     static Client* sharedClient();

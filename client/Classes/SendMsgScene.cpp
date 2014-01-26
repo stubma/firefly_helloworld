@@ -1,5 +1,6 @@
 #include "SendMsgScene.h"
 #include "Client.h"
+#include "LoginScene.h"
 
 SendMsg::~SendMsg() {
 }
@@ -85,6 +86,9 @@ void SendMsg::onTCPSocketConnected(int tag) {
 }
 
 void SendMsg::onTCPSocketDisconnected(int tag) {
+    // socket disconnected, back to login
+    Client::sharedClient()->getHub()->unregisterCallback(1);
+    CCDirector::sharedDirector()->replaceScene(Login::scene());
 }
 
 void SendMsg::onTCPSocketData(int tag, CCByteBuffer& bb) {
@@ -92,12 +96,19 @@ void SendMsg::onTCPSocketData(int tag, CCByteBuffer& bb) {
     CCObject* obj = NULL;
     CCARRAY_FOREACH(&packets, obj) {
         Packet* p = (Packet*)obj;
-        CCLOG("cmd: %d, data: %s", p->getHeader().command, p->getBody());
-        CCJSONObject* json = CCJSONObject::create(p->getBody(), p->getBodyLength());
-        Client::ErrCode err = (Client::ErrCode)json->optInt("errno");
-        if(err != Client::E_OK) {
-            string errMsg = json->optString("errmsg");
-            CCLOG("error message: %s", errMsg.c_str());
+        if(p->getHeader().command == Client::TEST) {
+            CCJSONObject* json = CCJSONObject::create(p->getBody(), p->getBodyLength());
+            Client::ErrCode err = (Client::ErrCode)json->optInt("errno");
+            if(err != Client::E_OK) {
+                string errMsg = json->optString("errmsg");
+                CCLOG("error message: %s", errMsg.c_str());
+            } else {
+                CCJSONObject* data = json->optJSONObject("data");
+                if(data) {
+                    string reply = data->optString("message");
+                    CCLOG("server reply: %s", reply.c_str());
+                }
+            }
         }
     }
 }

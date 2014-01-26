@@ -6,6 +6,17 @@ from dispatcher import GameServiceHandle
 
 @GameServiceHandle(COMMAND_TEST)
 def testMethod(dynamicId, request):
+    '''
+    for test purpose, always return E_OK and a message in data
+    '''
+
+    # get message sent by client
     data = json.loads(request)
     msg = data['message']
-    print msg
+
+    # return response
+    reply = 'I got your message: %s' % msg
+    response = {}
+    response['errno'] = E_OK
+    response['data'] = { 'message' : reply }
+    return json.dumps(response)

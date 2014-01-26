@@ -5,6 +5,8 @@ Client* Client::s_instance = NULL;
 Client::Client() {
     m_hub = CCTCPSocketHub::create();
     CC_SAFE_RETAIN(m_hub);
+    
+    checkSocket();
 }
 
 Client::~Client() {
@@ -16,7 +18,17 @@ Client* Client::sharedClient() {
     if(!s_instance) {
         s_instance = new Client();
     }
+    
+    // ensure socket
+    s_instance->checkSocket();
+    
     return s_instance;
+}
+
+void Client::checkSocket() {
+    if(!m_hub->getSocket(1)) {
+        m_hub->createSocket("172.16.96.60", 11009, 1, kCCSocketDefaultTimeout, true);
+    }
 }
 
 void Client::dispose() {
