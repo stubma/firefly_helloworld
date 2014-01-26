@@ -1,7 +1,8 @@
 {
   "master": {
-    "rootport": 10001,
-    "webport": 10002
+      "rootport": 10001,
+      "webport": 10002,
+      "webroot": "app.master.webroot.MasterDirectory"
   },
   "servers": {
     "gate": {

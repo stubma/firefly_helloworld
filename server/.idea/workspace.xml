@@ -12,7 +12,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/server$startmaster.coverage" NAME="startmaster Coverage Results" MODIFIED="1390718111964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/server$startmaster.coverage" NAME="startmaster Coverage Results" MODIFIED="1390724150069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -26,75 +26,77 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="server.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/server.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="183" column="0" selection-start="4875" selection-end="4875" vertical-scroll-proportion="-5.32" vertical-offset="2567" max-vertical-offset="10560">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="failure.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/python/failure.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="197" column="0" selection-start="7043" selection-end="7043" vertical-scroll-proportion="0.0" vertical-offset="2821" max-vertical-offset="9900">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="server.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firefly/server/server.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1965">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="webapp.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/firefly/master/webapp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0" vertical-offset="478" max-vertical-offset="1065">
+            <state line="32" column="28" selection-start="830" selection-end="852" vertical-scroll-proportion="0.0" vertical-offset="276" max-vertical-offset="735">
               <folding>
-                <element signature="e#71#80#0" expanded="true" />
+                <element signature="e#71#112#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webroot/index.html">
+      <file leaf-file-name="config.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="11" selection-start="175" selection-end="175" vertical-scroll-proportion="0.19650654" vertical-offset="0" max-vertical-offset="458">
+            <state line="4" column="52" selection-start="102" selection-end="117" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="1230">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="resource.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/resource.py">
+      <file leaf-file-name="webroot.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/master/webroot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="185" column="11" selection-start="5802" selection-end="5802" vertical-scroll-proportion="-11.32" vertical-offset="2492" max-vertical-offset="6165">
+            <state line="33" column="44" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0" vertical-offset="291" max-vertical-offset="750">
+              <folding>
+                <element signature="e#14#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webroot/index.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="33" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vhost.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/vhost.py">
+      <file leaf-file-name="template.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/template.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="0" selection-start="2960" selection-end="2960" vertical-scroll-proportion="0.0" vertical-offset="1336" max-vertical-offset="2100">
+            <state line="19" column="3" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="8475">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="master.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="static.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/static.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="150" column="60" selection-start="4226" selection-end="4226" vertical-scroll-proportion="0.0" vertical-offset="1802" max-vertical-offset="15255">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filepath.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/python/filepath.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="586" column="23" selection-start="18287" selection-end="18287" vertical-scroll-proportion="0.0" vertical-offset="8387" max-vertical-offset="23025">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="master.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/firefly/master/master.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="33" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="1650">
+            <state line="63" column="58" selection-start="1676" selection-end="1676" vertical-scroll-proportion="0.29411766" vertical-offset="810" max-vertical-offset="1785">
               <folding>
                 <element signature="e#71#97#0" expanded="true" />
               </folding>
@@ -102,10 +104,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reference.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firefly/distributed/reference.py">
+      <file leaf-file-name="services.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firefly/utils/services.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="8" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0" vertical-offset="37" max-vertical-offset="495">
+            <state line="145" column="59" selection-start="4477" selection-end="4477" vertical-scroll-proportion="0.0" vertical-offset="2027" max-vertical-offset="2685">
+              <folding>
+                <element signature="e#63#79#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__builtin__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Caches/PyCharm30/python_stubs/-2125986627/__builtin__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="230" column="4" selection-start="7696" selection-end="7696" vertical-scroll-proportion="0.0" vertical-offset="3302" max-vertical-offset="76485">
               <folding />
             </state>
           </provider>
@@ -121,9 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/gate/service/gateservice.py" />
-        <option value="$PROJECT_DIR$/app/share/locale/en/LC_MESSAGES/strings.po" />
-        <option value="$PROJECT_DIR$/app/share/locale/zh/LC_MESSAGES/strings.po" />
         <option value="$PROJECT_DIR$/app/game/service/dispatcher.py" />
         <option value="$PROJECT_DIR$/app/game/initconfig.py" />
         <option value="$PROJECT_DIR$/app/game/service/__init__.py" />
@@ -134,9 +144,12 @@
         <option value="$PROJECT_DIR$/firefly/netconnect/protoc.py" />
         <option value="$PROJECT_DIR$/app/game/service/gameservice.py" />
         <option value="$PROJECT_DIR$/firefly/web/delayrequest.py" />
-        <option value="$PROJECT_DIR$/firefly/master/master.py" />
-        <option value="$PROJECT_DIR$/firefly/master/webapp.py" />
         <option value="$PROJECT_DIR$/webroot/index.html" />
+        <option value="$PROJECT_DIR$/webroot/index.xml" />
+        <option value="$PROJECT_DIR$/config.json" />
+        <option value="$PROJECT_DIR$/firefly/master/webapp.py" />
+        <option value="$PROJECT_DIR$/app/master/webroot.py" />
+        <option value="$PROJECT_DIR$/firefly/master/master.py" />
       </list>
     </option>
   </component>
@@ -250,6 +263,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="firefly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="master" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -322,29 +353,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="net" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="net" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
+              <option name="myItemId" value="master" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -472,6 +481,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dbfront" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -494,11 +521,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/master" />
       <recent name="$PROJECT_DIR$/app/game/service" />
       <recent name="$PROJECT_DIR$/app/gate/util" />
       <recent name="$PROJECT_DIR$/app/share/locale/zh/LC_MESSAGES" />
       <recent name="$PROJECT_DIR$/app/share/locale" />
-      <recent name="$PROJECT_DIR$/app/gate/local" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/share/locale/en/LC_MESSAGES" />
@@ -724,12 +751,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32671958" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.223099" sideWeight="0.67460316" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.223099" sideWeight="0.67460316" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2754663" sideWeight="0.67460316" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994709" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32539684" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32539684" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -752,141 +779,142 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/firefly/web/delayrequest.py</url>
-          <line>38</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/server.py</url>
-          <line>183</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
           <url>file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/resource.py</url>
           <line>156</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/firefly/master/master.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="12" />
+      <option name="time" value="14" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/http.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="825" column="0" selection-start="26362" selection-end="26362" vertical-scroll-proportion="0.0" vertical-offset="11296" max-vertical-offset="29055">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firefly/web/delayrequest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0" vertical-offset="316" max-vertical-offset="1935">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firefly/server/globalobject.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="4" selection-start="755" selection-end="755" vertical-scroll-proportion="0.0" vertical-offset="313" max-vertical-offset="1065">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firefly/server/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="73" max-vertical-offset="630">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firefly/distributed/child.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="8" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0" vertical-offset="142" max-vertical-offset="600">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firefly/distributed/reference.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="8" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0" vertical-offset="37" max-vertical-offset="495">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firefly/server/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1965">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/python/failure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="197" column="0" selection-start="7043" selection-end="7043" vertical-scroll-proportion="0.0" vertical-offset="2821" max-vertical-offset="9900">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firefly/master/master.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="33" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="1650">
+        <state line="65" column="57" selection-start="2095" selection-end="2095" vertical-scroll-proportion="0.0" vertical-offset="793" max-vertical-offset="2145">
           <folding>
-            <element signature="e#71#97#0" expanded="true" />
+            <element signature="e#71#124#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/vhost.py">
+    <entry file="file://$PROJECT_DIR$/app/dbfront/initconfig.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="0" selection-start="2960" selection-end="2960" vertical-scroll-proportion="0.0" vertical-offset="1336" max-vertical-offset="2100">
+        <state line="18" column="26" selection-start="524" selection-end="535" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/util.py">
+    <entry file="file://$PROJECT_DIR$/app/game/initconfig.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="61" selection-start="322" selection-end="322" vertical-scroll-proportion="0.33632287" vertical-offset="0" max-vertical-offset="6390">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="458">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/html.py">
+    <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/script.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="50" selection-start="298" selection-end="298" vertical-scroll-proportion="-0.15145229" vertical-offset="253" max-vertical-offset="735">
+        <state line="143" column="32" selection-start="4233" selection-end="4233" vertical-scroll-proportion="0.0" vertical-offset="1892" max-vertical-offset="2640">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/resource.py">
+    <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/_element.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="185" column="11" selection-start="5802" selection-end="5802" vertical-scroll-proportion="-11.32" vertical-offset="2492" max-vertical-offset="6165">
+        <state line="124" column="6" selection-start="3791" selection-end="3791" vertical-scroll-proportion="0.0" vertical-offset="1752" max-vertical-offset="2790">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/server.py">
+    <entry file="file://$PROJECT_DIR$/app/master/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="183" column="0" selection-start="4875" selection-end="4875" vertical-scroll-proportion="-5.32" vertical-offset="2567" max-vertical-offset="10560">
+        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/index.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="33" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/template.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="3" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="8475">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/static.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="60" selection-start="4226" selection-end="4226" vertical-scroll-proportion="0.0" vertical-offset="1802" max-vertical-offset="15255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/python/filepath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="586" column="23" selection-start="18287" selection-end="18287" vertical-scroll-proportion="0.0" vertical-offset="8387" max-vertical-offset="23025">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firefly/utils/services.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="145" column="59" selection-start="4477" selection-end="4477" vertical-scroll-proportion="0.0" vertical-offset="2027" max-vertical-offset="2685">
+          <folding>
+            <element signature="e#63#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="52" selection-start="102" selection-end="117" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="1230">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/firefly/master/webapp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0" vertical-offset="478" max-vertical-offset="1065">
+        <state line="32" column="28" selection-start="830" selection-end="852" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="735">
           <folding>
-            <element signature="e#71#80#0" expanded="true" />
+            <element signature="e#71#112#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/index.html">
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm30/python_stubs/-2125986627/__builtin__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="11" selection-start="175" selection-end="175" vertical-scroll-proportion="0.19650654" vertical-offset="0" max-vertical-offset="458">
+        <state line="230" column="4" selection-start="7696" selection-end="7696" vertical-scroll-proportion="0.0" vertical-offset="3302" max-vertical-offset="76485">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/master/webroot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="44" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0" vertical-offset="291" max-vertical-offset="750">
+          <folding>
+            <element signature="e#14#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firefly/master/master.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="58" selection-start="1676" selection-end="1676" vertical-scroll-proportion="0.29411766" vertical-offset="810" max-vertical-offset="1785">
+          <folding>
+            <element signature="e#71#97#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

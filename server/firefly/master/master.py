@@ -13,7 +13,7 @@ from twisted.web import vhost
 from firefly.web.delayrequest import DelaySite
 from twisted.python import log
 from firefly.server.logobj import loogoo
-from webapp import MasterDirectory
+from webapp import DefaultMasterDirectory
 
 reactor = reactor
 
@@ -49,6 +49,7 @@ class Master:
         rootport = mastercnf.get('rootport')
         webport = mastercnf.get('webport')
         masterlog = mastercnf.get('log')
+        webroot = mastercnf.get('webroot')
 
         # create root and webroot
         self.root = PBRoot()
@@ -60,8 +61,16 @@ class Master:
         GlobalObject().root = self.root
         GlobalObject().webroot = self.webroot
 
-        # add root resource
-        self.webroot.addHost('localhost', MasterDirectory())
+        # add root resource, the webroot can be customized
+        if webroot:
+            parts = webroot.split('.')
+            cls = parts[-1]
+            pkg = '.'.join(parts[0:-1])
+            module = __import__(pkg, fromlist = [cls])
+            clsObj = getattr(module, cls)
+            self.webroot.addHost('localhost', clsObj())
+        else:
+            self.webroot.addHost('localhost', DefaultMasterDirectory())
 
         if masterlog:
             log.addObserver(loogoo(masterlog))#日志处理
