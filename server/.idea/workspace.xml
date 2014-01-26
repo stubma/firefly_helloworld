@@ -12,7 +12,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/server$startmaster.coverage" NAME="startmaster Coverage Results" MODIFIED="1390724150069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/server$startmaster.coverage" NAME="startmaster Coverage Results" MODIFIED="1390724870573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -26,13 +26,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="webapp.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="webapp.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/firefly/master/webapp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="28" selection-start="830" selection-end="852" vertical-scroll-proportion="0.0" vertical-offset="276" max-vertical-offset="735">
+            <state line="18" column="43" selection-start="440" selection-end="440" vertical-scroll-proportion="0.52287585" vertical-offset="30" max-vertical-offset="735">
               <folding>
                 <element signature="e#71#112#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firefly/server/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="13" selection-start="451" selection-end="452" vertical-scroll-proportion="0.0" vertical-offset="127" max-vertical-offset="630">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -49,19 +58,10 @@
       <file leaf-file-name="webroot.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/master/webroot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="44" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0" vertical-offset="291" max-vertical-offset="750">
+            <state line="19" column="28" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="750">
               <folding>
                 <element signature="e#14#48#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webroot/index.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="33" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -93,10 +93,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="master.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="master.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/firefly/master/master.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="58" selection-start="1676" selection-end="1676" vertical-scroll-proportion="0.29411766" vertical-offset="810" max-vertical-offset="1785">
+            <state line="77" column="22" selection-start="2177" selection-end="2177" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1785">
               <folding>
                 <element signature="e#71#97#0" expanded="true" />
               </folding>
@@ -134,7 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/game/service/dispatcher.py" />
         <option value="$PROJECT_DIR$/app/game/initconfig.py" />
         <option value="$PROJECT_DIR$/app/game/service/__init__.py" />
         <option value="$PROJECT_DIR$/app/gate/service/dispatcher.py" />
@@ -147,9 +146,10 @@
         <option value="$PROJECT_DIR$/webroot/index.html" />
         <option value="$PROJECT_DIR$/webroot/index.xml" />
         <option value="$PROJECT_DIR$/config.json" />
-        <option value="$PROJECT_DIR$/firefly/master/webapp.py" />
         <option value="$PROJECT_DIR$/app/master/webroot.py" />
         <option value="$PROJECT_DIR$/firefly/master/master.py" />
+        <option value="$PROJECT_DIR$/firefly/server/admin.py" />
+        <option value="$PROJECT_DIR$/firefly/master/webapp.py" />
       </list>
     </option>
   </component>
@@ -744,7 +744,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -796,15 +796,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/firefly/server/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="57" selection-start="2095" selection-end="2095" vertical-scroll-proportion="0.0" vertical-offset="793" max-vertical-offset="2145">
-          <folding>
-            <element signature="e#71#124#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/dbfront/initconfig.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="26" selection-start="524" selection-end="535" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
@@ -884,15 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firefly/master/webapp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="28" selection-start="830" selection-end="852" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="735">
-          <folding>
-            <element signature="e#71#112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm30/python_stubs/-2125986627/__builtin__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="230" column="4" selection-start="7696" selection-end="7696" vertical-scroll-proportion="0.0" vertical-offset="3302" max-vertical-offset="76485">
@@ -900,20 +882,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/firefly/master/master.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="22" selection-start="2177" selection-end="2177" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1785">
+          <folding>
+            <element signature="e#71#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/master/webroot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="44" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0" vertical-offset="291" max-vertical-offset="750">
+        <state line="19" column="28" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="750">
           <folding>
             <element signature="e#14#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firefly/master/master.py">
+    <entry file="file://$PROJECT_DIR$/firefly/server/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="58" selection-start="1676" selection-end="1676" vertical-scroll-proportion="0.29411766" vertical-offset="810" max-vertical-offset="1785">
+        <state line="24" column="13" selection-start="451" selection-end="452" vertical-scroll-proportion="0.0" vertical-offset="127" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firefly/master/webapp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="43" selection-start="440" selection-end="440" vertical-scroll-proportion="0.52287585" vertical-offset="30" max-vertical-offset="735">
           <folding>
-            <element signature="e#71#97#0" expanded="true" />
+            <element signature="e#71#112#0" expanded="true" />
           </folding>
         </state>
       </provider>

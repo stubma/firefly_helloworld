@@ -16,7 +16,7 @@ class StopHandle(Resource):
     
     def render(self, request):
         for child in GlobalObject().root.childsmanager._childs.values():
-            d = child.callbackChild('serverStop')
+            d = child.callbackChild('stop')
             d.addCallback(ErrorBack)
         reactor.callLater(0.5, reactor.stop)
         return "stop"
@@ -26,7 +26,7 @@ class ReloadHandle(Resource):
     
     def render(self, request):
         for child in GlobalObject().root.childsmanager._childs.values():
-            d = child.callbackChild('sreload')
+            d = child.callbackChild('reload')
             d.addCallback(ErrorBack)
         return "reload"
 

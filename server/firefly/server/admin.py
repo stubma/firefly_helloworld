@@ -12,17 +12,17 @@ reactor = reactor
 
 
 @masterserviceHandle
-def serverStop():
+def stop():
     """
     """
     log.msg('stop')
     if GlobalObject().stophandler:
         GlobalObject().stophandler()
-    reactor.callLater(0.5,reactor.stop)
+    reactor.callLater(0.5, reactor.stop)
     return True
 
 @masterserviceHandle
-def sreload():
+def reload():
     """
     """
     log.msg('reload')
