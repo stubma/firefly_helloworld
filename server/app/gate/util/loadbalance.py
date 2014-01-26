@@ -66,7 +66,7 @@ class GameRouter(object):
                 log.err(msg)
 
     def getAllClientCount(self):
-        return sum([s.getClientCount() for s in self.servers])
+        return sum([s.getClientCount() for s in self.servers.values()])
 
     def pickLeastPressureServer(self):
         '''

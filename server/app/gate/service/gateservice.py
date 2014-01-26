@@ -2,7 +2,7 @@
 
 import json
 from app.gate.local import login
-from firefly.server.globalobject import rootserviceHandle, GlobalObject
+from firefly.server.globalobject import rootserviceHandle, GlobalObject, masterserviceHandle
 from app.gate.service.dispatcher import GateServiceHandle, dispatcher
 from app.gate.model.usermanager import UserManager
 from app.share.constants import *
@@ -74,3 +74,7 @@ def loginToServer(key, dynamicId, request):
     if data.has_key('data'):
         response['data'] = data['data']
     return json.dumps(response)
+
+@masterserviceHandle
+def getClientCount():
+    return GameRouter().getAllClientCount()

@@ -1,9 +1,21 @@
 <html xmlns:t="http://twistedmatrix.com/ns/twisted.web.template/0.1">
+    <head>
+        <title>Firefly Admin Portal</title>
+    </head>
     <body>
-        <div t:render="header" />
-        <div id="content">
-            <p>Content goes here.</p>
-        </div>
-        <div t:render="footer" />
+        <h1>Firefly Admin Portal</h1>
+
+        <table border="1">
+            <tr>
+                <th>Server</th>
+                <th>Client Count</th>
+                <th>Operations</th>
+            </tr>
+            <tr t:render="servers">
+                <td><t:slot name="name"/></td>
+                <td><t:slot name="child_count"/></td>
+                <td><t:slot name="operations"/></td>
+            </tr>
+        </table>
     </body>
 </html>

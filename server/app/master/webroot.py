@@ -2,6 +2,7 @@
 
 from twisted.web.resource import *
 from twisted.web.template import *
+from twisted.internet.defer import DeferredList
 from twisted.python.filepath import *
 from firefly.master.webapp import DefaultMasterDirectory
 from firefly.server.globalobject import GlobalObject
@@ -9,15 +10,35 @@ from firefly.server.globalobject import GlobalObject
 class AdminElement(Element):
     ''' admin page template filler '''
 
-    loader = XMLFile(FilePath('webroot/index.xml'))
+    def __init__(self):
+        super(AdminElement, self).__init__(XMLFile(FilePath('webroot/index.xml')))
+
+    def onChildAllInfoCollected(self, result, tag, child):
+        yield tag.clone().fillSlots(name = child._name,
+                                    child_count = str(self.childCount),
+                                    operations = '')
+
+    def onChildClientCountGot(self, result):
+        if result is None:
+            self.childCount = 0
+        else:
+            self.childCount = result
 
     @renderer
-    def header(self, request, tag):
-        return tag('Header')
+    def servers(self, request, tag):
+        for child in GlobalObject().root.childsmanager._childs.values():
+            # defer of get client count
+            d1 = child.callbackChild('getClientCount')
+            d1.addCallback(self.onChildClientCountGot)
 
-    @renderer
-    def footer(self, request, tag):
-        return tag('Footer')
+            # create defer list
+            dl = DeferredList([d1])
+
+            # final callback
+            dl.addCallback(self.onChildAllInfoCollected, tag, child)
+
+            # return this defer list to fill one row
+            yield dl
 
 class AdminHandle(Resource):
     ''' admin resource '''
@@ -42,4 +63,4 @@ class MasterDirectory(DefaultMasterDirectory):
             return GlobalObject().webroot.getChildWithDefault('admin', request)
 
         # for other, just 404
-        return DefaultMasterDirectory.getChild(path, request)
+        return DefaultMasterDirectory.getChild(self, path, request)
