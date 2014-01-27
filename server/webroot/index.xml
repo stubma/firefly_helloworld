@@ -1,9 +1,15 @@
 <html xmlns:t="http://twistedmatrix.com/ns/twisted.web.template/0.1">
     <head>
         <title>Firefly Admin Portal</title>
+        <script type="text/javascript" src="static/refresh.js"></script>
     </head>
-    <body>
+    <body onload="bodyOnLoad()">
         <h1>Firefly Admin Portal</h1>
+
+        <form>
+            <button onClick="reload()">Reload</button>
+            <input type="checkbox" name="auto" id="auto" onClick="onAutoCheckChanged(this)">Auto Reload</input>
+        </form>
 
         <table border="1">
             <tr>

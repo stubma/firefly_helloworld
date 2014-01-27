@@ -2,6 +2,7 @@
 
 from twisted.web.resource import *
 from twisted.web.template import *
+from twisted.web.static import File
 from twisted.internet.defer import DeferredList
 from twisted.python.filepath import *
 from firefly.master.webapp import DefaultMasterDirectory
@@ -56,6 +57,7 @@ class MasterDirectory(DefaultMasterDirectory):
 
         # add custom mapping
         GlobalObject().webroot.putChild('admin', AdminHandle())
+        GlobalObject().webroot.putChild('static', File('webroot/static'))
 
     def getChild(self, path, request):
         # by default, index.html or empty path redirect to admin
