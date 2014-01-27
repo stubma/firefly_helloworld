@@ -49,3 +49,6 @@ class UserManager:
         user = self.getUserByID(userId)
         if user:
             self.dropUser(user)
+
+    def getUserCount(self):
+        return len(self.users)

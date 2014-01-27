@@ -5,8 +5,8 @@ from app.gate.local import login
 from firefly.server.globalobject import rootserviceHandle, GlobalObject, masterserviceHandle
 from app.gate.service.dispatcher import GateServiceHandle, dispatcher
 from app.gate.model.usermanager import UserManager
-from app.share.constants import *
 from app.gate.util.loadbalance import GameRouter
+from app.share.constants import *
 from app.share.locale.i18n import L
 
 @rootserviceHandle
@@ -52,9 +52,10 @@ def onNetClientConnectionLost(dynamicId):
     # drop user from some registry
     # extend the logic as you need
     user = UserManager().getUserByDynamicID(dynamicId)
-    if user and user.gameNode:
-        GameRouter().dropClient(user.gameNode, dynamicId)
+    if user:
         UserManager().dropUserByDynamicID(dynamicId)
+        if user.gameNode:
+            GameRouter().dropClient(user.gameNode, dynamicId)
 
 @GateServiceHandle(COMMAND_LOGIN)
 def loginToServer(key, dynamicId, request):
@@ -77,4 +78,4 @@ def loginToServer(key, dynamicId, request):
 
 @masterserviceHandle
 def getClientCount():
-    return GameRouter().getAllClientCount()
+    return UserManager().getUserCount()
