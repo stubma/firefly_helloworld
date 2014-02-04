@@ -48,13 +48,13 @@ class DataPackProtocol:
     def setHEAD_3(self, HEAD_3):
         self.HEAD_3 = HEAD_3
         
-    def setprotoVersion(self, protoVersion):
+    def setProtocolVersion(self, protoVersion):
         self.protoVersion = protoVersion
     
-    def setserverVersion(self, serverVersion):
+    def setServerVersion(self, serverVersion):
         self.serverVersion = serverVersion
         
-    def getHeadLenght(self):
+    def getHeadLength(self):
         """获取数据包的长度
         """
         return 20

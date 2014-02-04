@@ -49,7 +49,7 @@ class LiberateProtocol(protocol.Protocol):
     def dataHandleCoroutine(self):
         """
         """
-        length = self.factory.dataprotocol.getHeadLenght()#获取协议头的长度
+        length = self.factory.dataprotocol.getHeadLength()#获取协议头的长度
         while True:
             data = yield
             self.buff += data
