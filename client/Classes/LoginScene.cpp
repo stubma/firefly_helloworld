@@ -113,6 +113,8 @@ void Login::onTCPSocketData(int tag, CCByteBuffer& bb) {
             Client::ErrCode err = (Client::ErrCode)json->optInt("errno");
             if(err != Client::E_OK) {
                 string errMsg = json->optString("errmsg");
+				errMsg = CCUtils::decodeHtmlEntities(errMsg);
+				CCLOG("error message: %s", errMsg.c_str());
 				
 				// show a toast
 				CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
@@ -133,6 +135,8 @@ void Login::onTCPSocketData(int tag, CCByteBuffer& bb) {
 			CCJSONObject* json = CCJSONObject::create(p->getBody(), p->getBodyLength());
 			CCJSONObject* data = json->optJSONObject("data");
 			string msg = data->optString("message");
+			msg = CCUtils::decodeHtmlEntities(msg);
+			CCLOG("server push: %s", msg.c_str());
 
 			// show a toast
 			CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
