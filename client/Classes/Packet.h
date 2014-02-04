@@ -1,7 +1,7 @@
 #ifndef __Packet__
 #define __Packet__
 
-#define HEADER_LENGTH 20
+#define HEADER_LENGTH 24
 
 class Packet : public CCObject {
 public:
@@ -10,6 +10,7 @@ public:
         int protocolVersion;
         int serverVersion;
 		int command;
+		int encryptAlgorithm;
         int length; // data length after header
     } Header;
     

@@ -2,6 +2,7 @@
 
 from firefly.server.globalobject import GlobalObject
 from firefly.netconnect.datapack import DataPackProtocol
+from codec.packcodec import PackCodec
 
 def onNetClientConnectionLost(conn):
     '''
@@ -17,6 +18,9 @@ GlobalObject().netfactory.doConnectionLost = onNetClientConnectionLost
 # the magic number is 'HELO', change it for your game
 netProtocol = DataPackProtocol(ord('H'), ord('E'), ord('L'), ord('O'), 0, 0)
 GlobalObject().netfactory.setDataProtocol(netProtocol)
+
+# set packet codec
+GlobalObject().netfactory.codec = PackCodec()
 
 def loadModule():
     '''

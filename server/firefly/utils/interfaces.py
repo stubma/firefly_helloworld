@@ -22,7 +22,3 @@ class IDataPackProtocol(Interface):
     def pack():
         '''打包数据包
         '''
-        
-    
-    
-

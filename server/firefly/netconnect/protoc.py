@@ -43,7 +43,7 @@ class LiberateProtocol(protocol.Protocol):
         '''
         if not self.transport.connected or data is None:
             return
-        senddata = self.factory.produceResult(data,command)
+        senddata = self.factory.produceResult(command, data)
         reactor.callFromThread(self.transport.write,senddata)
         
     def dataHandleCoroutine(self):
@@ -60,13 +60,18 @@ class LiberateProtocol(protocol.Protocol):
                     self.transport.loseConnection()
                     break
                 command = unpackdata.get('command')
-                rlength = unpackdata.get('length')
-                request = self.buff[length:length+rlength]
-                if request.__len__()< rlength:
+                encryptAlgorithm = unpackdata.get('enc_alg')
+                bodyLength = unpackdata.get('length')
+                request = self.buff[length:length+bodyLength]
+
+                # verify body length
+                if request.__len__() < bodyLength:
                     log.msg('some data lose')
                     break
-                self.buff = self.buff[length+rlength:]
-                d = self.factory.doDataReceived(self,command,request)
+
+                # get body and push to factory
+                self.buff = self.buff[length+bodyLength:]
+                d = self.factory.doDataReceived(self, command, request, encryptAlgorithm)
                 if not d:
                     continue
                 d.addCallback(self.safeToWriteData,command)
@@ -89,6 +94,7 @@ class LiberateFactory(protocol.ServerFactory):
         self.service = None
         self.connmanager = ConnectionManager()
         self.dataprotocol = dataprotocol
+        self.codec = None
         
     def setDataProtocol(self, dataprotocol):
         '''
@@ -107,16 +113,35 @@ class LiberateFactory(protocol.ServerFactory):
         '''添加服务通道'''
         self.service = service
     
-    def doDataReceived(self, conn, commandID, data):
-        '''数据到达时的处理'''
-        defer_tool = self.service.callTarget(commandID, conn, data)
+    def doDataReceived(self, conn, commandID, data, encryptAlgorithm = 0):
+        # verify and decode body
+        decoded = data
+        if self.codec:
+            if not self.codec.verifyAlgorithm(commandID, encryptAlgorithm):
+                log.msg('suspicious packet encrypt algorithm')
+                return None
+            decoded = self.codec.decode(data, encryptAlgorithm)
+
+        # deliver
+        defer_tool = self.service.callTarget(commandID, conn, decoded)
         return defer_tool
     
     def produceResult(self, command, response):
-        '''产生客户端需要的最终结果
-        @param response: str 分布式客户端获取的结果
         '''
-        return self.dataprotocol.pack(command,response)
+        generate packet can be directly sent through socket
+        @param command: command id
+        @param response: body string
+        @return: binary packet to be sent
+        '''
+
+        # encode body
+        encoded = response
+        alg = 0
+        if self.codec:
+            alg = self.codec.selectAlgorithm(command, response)
+            encoded = self.codec.encode(response, alg)
+
+        return self.dataprotocol.pack(command, encoded, encryptAlgorithm = alg)
     
     def loseConnection(self, connID):
         """主动端口与客户端的连接

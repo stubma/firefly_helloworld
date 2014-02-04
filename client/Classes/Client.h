@@ -18,6 +18,11 @@ public:
         E_BLOCKED,
         E_DB_ERROR
     } ErrCode;
+	
+	typedef enum {
+		NONE,
+		NOT
+	} EncryptAlgorithm;
     
 private:
     // singleton
@@ -40,13 +45,19 @@ protected:
     
     // ensure socket are all there
     void checkSocket();
+	
+	// encode
+	char* encode(const char* plain, int plainLen, EncryptAlgorithm alg, int* outEncLen);
+	
+	// decode
+	char* decode(const char* enc, int encLen, EncryptAlgorithm alg, int* outPlainLen);
     
 public:
     virtual ~Client();
     static Client* sharedClient();
     static void dispose();
     
-    void send(int socketTag, CCJSONObject* body, Command cmd);
+	void send(int socketTag, CCJSONObject* body, Command cmd, EncryptAlgorithm encAlg = NONE);
     const CCArray& addData(CCByteBuffer& buf);
     
     CCTCPSocketHub* getHub() { return m_hub; }

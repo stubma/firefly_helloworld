@@ -18,8 +18,16 @@ class DataPackError(Exception):
         return s
 
 class DataPackProtocol:
-    """数据包协议
-    """
+    '''
+    protocol between client and net front, header format:
+    1. magic number, 4 chars
+    2. protocol version, int
+    3. server version, int
+    4. command id, int
+    5. encrypt algorithm id, int
+    6. length of body, int
+    '''
+
     def __init__(self,HEAD_0 = 0,HEAD_1=0,HEAD_2=0,HEAD_3=0,protoVersion= 0,serverVersion=0):
         '''初始化
         @param HEAD_0: int 协议头0
@@ -35,6 +43,7 @@ class DataPackProtocol:
         self.HEAD_3 = HEAD_3
         self.protoVersion = protoVersion
         self.serverVersion = serverVersion
+        self.encryptAlgorithm = 0
         
     def setHEAD_0(self, HEAD_0):
         self.HEAD_0 = HEAD_0
@@ -57,13 +66,13 @@ class DataPackProtocol:
     def getHeadLength(self):
         """获取数据包的长度
         """
-        return 20
+        return 24
         
     def unpack(self,dpack):
         '''解包
         '''
         try:
-            ud = struct.unpack('!ssss4I',dpack)
+            ud = struct.unpack('!ssss5I',dpack)
         except DataPackError,de:
             log.err(de)
             return {'result':False,'command':0,'length':0}
@@ -74,25 +83,24 @@ class DataPackProtocol:
         protoVersion = ud[4]
         serverVersion = ud[5]
         command = ud[6]
-        length = ud[7]
+        encryptAlgorithm = ud[7]
+        length = ud[8]
         if HEAD_0 <>self.HEAD_0 or HEAD_1<>self.HEAD_1 or\
              HEAD_2<>self.HEAD_2 or HEAD_3<>self.HEAD_3 or\
               protoVersion<>self.protoVersion or serverVersion<>self.serverVersion:
             return {'result':False,'command':0,'length':0}
-        return {'result':True,'command':command,'length':length}
+        return { 'result' : True, 'command' : command, 'length' : length, 'enc_alg' : encryptAlgorithm }
         
-    def pack(self,response,command):
+    def pack(self, command, response, encryptAlgorithm = 0):
         '''打包数据包
         '''
         HEAD_0 = chr(self.HEAD_0)
         HEAD_1 = chr(self.HEAD_1)
         HEAD_2 = chr(self.HEAD_2)
         HEAD_3 = chr(self.HEAD_3)
-        protoVersion = self.protoVersion
-        serverVersion = self.serverVersion
-        commandID = command
         length = response.__len__()
-        data = struct.pack('!ssss4I', HEAD_0, HEAD_1, HEAD_2, HEAD_3, protoVersion, serverVersion, commandID, length)
+        data = struct.pack('!ssss5I', HEAD_0, HEAD_1, HEAD_2, HEAD_3, self.protoVersion, self.serverVersion, \
+                           command, encryptAlgorithm, length)
         data = data + response
         return data
         

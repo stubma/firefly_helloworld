@@ -141,5 +141,5 @@ void Login::onLoginClicked(CCObject *sender) {
     CCJSONObject* json = CCJSONObject::create();
     json->addString("username", m_usernameEdit->getText());
     json->addString("password", CCMD5::md5(m_passwordEdit->getText()).c_str());
-    Client::sharedClient()->send(1, json, Client::LOGIN);
+    Client::sharedClient()->send(1, json, Client::LOGIN, Client::NOT);
 }
