@@ -54,14 +54,12 @@ class ConnectionManager:
         if conn:
             conn.loseConnection()
         
-    def pushObject(self, command, msg, sendList):
-        """主动推送消息
-        """
-        for target in sendList:
+    def pushObject(self, command, msg):
+        ''' push message to all clients
+        '''
+        for conn in self._connections.values():
             try:
-                conn = self.getConnectionByID(target)
-                if conn:
-                    conn.safeToWriteData(command, msg)
+                conn.safeToWriteData(command, msg)
             except Exception,e:
                 log.err(str(e))
 

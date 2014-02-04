@@ -125,12 +125,11 @@ class LiberateFactory(protocol.ServerFactory):
         """
         self.connmanager.loseConnection(connID)
     
-    def pushObject(self, command, msg, sendList):
+    def pushObject(self, command, msg):
         '''
-        server push a message to client, with given command
+        server push a message to all clients, with given command
         @param command: command id
         @param msg: json body
-        @param sendList: id of client connection
         '''
-        self.connmanager.pushObject(command, msg, sendList)
+        self.connmanager.pushObject(command, msg)
 

@@ -37,11 +37,11 @@ def forwarding(key, dynamicId, data):
         return GlobalObject().root.callChild(user.gameNode, key, dynamicId, data)
 
 @rootServiceHandle
-def pushObject(command, msg, sendList):
+def pushObject(command, msg):
     """
     push something to client
     """
-    GlobalObject().root.callChild("net", "pushObject", command, msg, sendList)
+    GlobalObject().root.callChild("net", "pushObject", command, msg)
 
 @rootServiceHandle
 def onNetClientConnectionLost(dynamicId):

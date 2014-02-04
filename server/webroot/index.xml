@@ -20,7 +20,7 @@
             <tr t:render="servers">
                 <td><t:slot name="name"/></td>
                 <td><t:slot name="child_count"/></td>
-                <td><t:slot name="operations"/></td>
+                <td><t:transparent t:render="operations"/></td>
             </tr>
         </table>
     </body>

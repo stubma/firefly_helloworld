@@ -109,6 +109,17 @@ void SendMsg::onTCPSocketData(int tag, CCByteBuffer& bb) {
                     CCLOG("server reply: %s", reply.c_str());
                 }
             }
-        }
+        } else if(p->getHeader().command == Client::TEST_PUSH) {
+			CCJSONObject* json = CCJSONObject::create(p->getBody(), p->getBodyLength());
+			CCJSONObject* data = json->optJSONObject("data");
+			string msg = data->optString("message");
+			
+			// show a toast
+			CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
+			CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
+			CCToast* t = CCToast::create(this, CCLabelTTF::create(msg.c_str(), "Helvetica", 40 / CC_CONTENT_SCALE_FACTOR()));
+			t->setPosition(ccp(origin.x + visibleSize.width / 2,
+							   origin.y + visibleSize.height / 5));
+		}
     }
 }
