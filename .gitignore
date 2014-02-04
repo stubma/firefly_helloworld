@@ -11,6 +11,8 @@ Release/
 ipch/
 logs/
 doxygen/debug.txt
+**/.idea/workspace.xml
+**/.idea/tasks.xml
 *.log
 *.py[cod]
 *.aps
