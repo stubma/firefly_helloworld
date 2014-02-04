@@ -113,7 +113,13 @@ void Login::onTCPSocketData(int tag, CCByteBuffer& bb) {
             Client::ErrCode err = (Client::ErrCode)json->optInt("errno");
             if(err != Client::E_OK) {
                 string errMsg = json->optString("errmsg");
-                CCLOG("error message: %s", errMsg.c_str());
+				
+				// show a toast
+				CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
+				CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
+				CCToast* t = CCToast::create(this, CCLabelTTF::create(errMsg.c_str(), "Helvetica", 40 / CC_CONTENT_SCALE_FACTOR()));
+				t->setPosition(ccp(origin.x + visibleSize.width / 2,
+								   origin.y + visibleSize.height / 5));
                 break;
             } else {
                 // remove self from callback
@@ -141,6 +147,6 @@ void Login::onTCPSocketData(int tag, CCByteBuffer& bb) {
 void Login::onLoginClicked(CCObject *sender) {
     CCJSONObject* json = CCJSONObject::create();
     json->addString("username", m_usernameEdit->getText());
-    json->addString("password", m_passwordEdit->getText());
+    json->addString("password", CCMD5::md5(m_passwordEdit->getText()).c_str());
     Client::sharedClient()->send(1, json, Client::LOGIN);
 }

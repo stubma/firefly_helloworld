@@ -42,7 +42,7 @@ def loginToServer(dynamicId, username, password):
         return { 'errno' : E_BLOCKED, 'errmsg' : L('User is blocked') }
 
     # if password is error
-    if userInfo['password'] != password:
+    if userInfo and userInfo['password'] != password:
         return { 'errno' : E_WRONG_PASSWORD, 'errmsg' : L('Wrong password') }
 
     # add user model and success
