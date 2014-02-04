@@ -57,13 +57,13 @@ class DataPackProtocol:
     def getHeadLenght(self):
         """获取数据包的长度
         """
-        return 17
+        return 20
         
     def unpack(self,dpack):
         '''解包
         '''
         try:
-            ud = struct.unpack('!sssss3I',dpack)
+            ud = struct.unpack('!ssss4I',dpack)
         except DataPackError,de:
             log.err(de)
             return {'result':False,'command':0,'length':0}
@@ -71,7 +71,7 @@ class DataPackProtocol:
         HEAD_1 = ord(ud[1])
         HEAD_2 = ord(ud[2])
         HEAD_3 = ord(ud[3])
-        protoVersion = ord(ud[4])
+        protoVersion = ud[4]
         serverVersion = ud[5]
         length = ud[6]-4
         command = ud[7]
@@ -88,11 +88,11 @@ class DataPackProtocol:
         HEAD_1 = chr(self.HEAD_1)
         HEAD_2 = chr(self.HEAD_2)
         HEAD_3 = chr(self.HEAD_3)
-        protoVersion = chr(self.protoVersion)
+        protoVersion = self.protoVersion
         serverVersion = self.serverVersion
         length = response.__len__()+4
         commandID = command
-        data = struct.pack('!sssss3I',HEAD_0,HEAD_1,HEAD_2,HEAD_3,\
+        data = struct.pack('!ssss4I',HEAD_0,HEAD_1,HEAD_2,HEAD_3,\
                            protoVersion,serverVersion,length,commandID)
         data = data + response
         return data

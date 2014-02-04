@@ -101,25 +101,25 @@ void SendMsg::onTCPSocketData(int tag, CCByteBuffer& bb) {
             Client::ErrCode err = (Client::ErrCode)json->optInt("errno");
             if(err != Client::E_OK) {
                 string errMsg = json->optString("errmsg");
+				errMsg = CCUtils::decodeHtmlEntities(errMsg);
                 CCLOG("error message: %s", errMsg.c_str());
+				Helper::showToast(errMsg, this);
             } else {
                 CCJSONObject* data = json->optJSONObject("data");
                 if(data) {
                     string reply = data->optString("message");
+					reply = CCUtils::decodeHtmlEntities(reply);
                     CCLOG("server reply: %s", reply.c_str());
+					Helper::showToast(reply, this);
                 }
             }
         } else if(p->getHeader().command == Client::TEST_PUSH) {
 			CCJSONObject* json = CCJSONObject::create(p->getBody(), p->getBodyLength());
 			CCJSONObject* data = json->optJSONObject("data");
 			string msg = data->optString("message");
-			
-			// show a toast
-			CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
-			CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
-			CCToast* t = CCToast::create(this, CCLabelTTF::create(msg.c_str(), "Helvetica", 40 / CC_CONTENT_SCALE_FACTOR()));
-			t->setPosition(ccp(origin.x + visibleSize.width / 2,
-							   origin.y + visibleSize.height / 5));
+			msg = CCUtils::decodeHtmlEntities(msg);
+			CCLOG("server push: %s", msg.c_str());
+			Helper::showToast(msg, this);
 		}
     }
 }

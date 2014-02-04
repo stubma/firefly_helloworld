@@ -71,8 +71,6 @@ class LiberateProtocol(protocol.Protocol):
                     continue
                 d.addCallback(self.safeToWriteData,command)
                 d.addErrback(DefferedErrorHandle)
-
-            
         
     def dataReceived(self, data):
         '''数据到达处理

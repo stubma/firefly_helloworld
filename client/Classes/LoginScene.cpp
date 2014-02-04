@@ -115,13 +115,8 @@ void Login::onTCPSocketData(int tag, CCByteBuffer& bb) {
                 string errMsg = json->optString("errmsg");
 				errMsg = CCUtils::decodeHtmlEntities(errMsg);
 				CCLOG("error message: %s", errMsg.c_str());
+				Helper::showToast(errMsg, this);
 				
-				// show a toast
-				CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
-				CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
-				CCToast* t = CCToast::create(this, CCLabelTTF::create(errMsg.c_str(), "Helvetica", 40 / CC_CONTENT_SCALE_FACTOR()));
-				t->setPosition(ccp(origin.x + visibleSize.width / 2,
-								   origin.y + visibleSize.height / 5));
                 break;
             } else {
                 // remove self from callback
@@ -137,13 +132,7 @@ void Login::onTCPSocketData(int tag, CCByteBuffer& bb) {
 			string msg = data->optString("message");
 			msg = CCUtils::decodeHtmlEntities(msg);
 			CCLOG("server push: %s", msg.c_str());
-
-			// show a toast
-			CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
-			CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
-			CCToast* t = CCToast::create(this, CCLabelTTF::create(msg.c_str(), "Helvetica", 40 / CC_CONTENT_SCALE_FACTOR()));
-			t->setPosition(ccp(origin.x + visibleSize.width / 2,
-							   origin.y + visibleSize.height / 5));
+			Helper::showToast(msg, this);
 		}
     }
 }

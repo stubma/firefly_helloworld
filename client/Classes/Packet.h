@@ -1,13 +1,13 @@
 #ifndef __Packet__
 #define __Packet__
 
-#define HEADER_LENGTH 17
+#define HEADER_LENGTH 20
 
 class Packet : public CCObject {
 public:
     typedef struct {
         char magic[4];
-        char protocolVersion;
+        int protocolVersion;
         int serverVersion;
         int length;
         int command;

@@ -11,6 +11,7 @@
 #include "cocos2d-better.h"
 #include "AppGlobal.h"
 #include "cocos-ext.h"
+#include "Helper.h"
 
 USING_NS_CC;
 USING_NS_CC_EXT;

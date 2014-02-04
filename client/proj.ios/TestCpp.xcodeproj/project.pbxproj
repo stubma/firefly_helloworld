@@ -10,6 +10,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		923C786318A12DA200DD8D9A /* Helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923C786118A12DA200DD8D9A /* Helper.cpp */; };
 		923E3E8218892CDC00ABC5A0 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 923E3E7E18892CDC00ABC5A0 /* AppController.mm */; };
 		923E3E8318892CDC00ABC5A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 923E3E7F18892CDC00ABC5A0 /* main.m */; };
 		923E3E8418892CDC00ABC5A0 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 923E3E8118892CDC00ABC5A0 /* RootViewController.mm */; };
@@ -82,6 +83,8 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* iphone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iphone_Prefix.pch; path = ../iphone_Prefix.pch; sourceTree = "<group>"; };
+		923C786118A12DA200DD8D9A /* Helper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Helper.cpp; sourceTree = "<group>"; };
+		923C786218A12DA200DD8D9A /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
 		923E3E6F18892C1500ABC5A0 /* cocos2dx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2dx.xcodeproj; path = "../../../cocos2d-x/cocos2dx/proj.ios/cocos2dx.xcodeproj"; sourceTree = "<group>"; };
 		923E3E7518892C1F00ABC5A0 /* cocos2dx-better.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "cocos2dx-better.xcodeproj"; path = "../../../cocos2dx-better/proj.ios/cocos2dx-better.xcodeproj"; sourceTree = "<group>"; };
 		923E3E7D18892CDC00ABC5A0 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
@@ -261,6 +264,8 @@
 				924C8916188CEC0600F66828 /* LoginScene.h */,
 				927B227D189111A6002AE193 /* SendMsgScene.cpp */,
 				927B227E189111A6002AE193 /* SendMsgScene.h */,
+				923C786118A12DA200DD8D9A /* Helper.cpp */,
+				923C786218A12DA200DD8D9A /* Helper.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -417,6 +422,7 @@
 				92A1ADC2188E1F3C00298F4F /* CCEditBoxImplIOS.mm in Sources */,
 				92A1ADF3188E1F8D00298F4F /* CCControlButton.cpp in Sources */,
 				92A1ADFF188E477C00298F4F /* Client.cpp in Sources */,
+				923C786318A12DA200DD8D9A /* Helper.cpp in Sources */,
 				92A1ADC5188E1F3C00298F4F /* CCEditBoxImplTizen.cpp in Sources */,
 				92A1ADC4188E1F3C00298F4F /* CCEditBoxImplNone.cpp in Sources */,
 				92A1ADC0188E1F3C00298F4F /* CCEditBox.cpp in Sources */,

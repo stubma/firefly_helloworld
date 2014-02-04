@@ -49,7 +49,7 @@ void Client::send(int socketTag, CCJSONObject* body, Command cmd) {
     m_sendBuf.write<char>('O');
     
     // protocol version
-    m_sendBuf.write<char>(0);
+    m_sendBuf.write<int>(0);
     
     // server version
     m_sendBuf.write<int>(htobe32(0));
@@ -87,7 +87,7 @@ const CCArray& Client::addData(CCByteBuffer& buf) {
         h.magic[1] = m_recvBuf.read<char>();
         h.magic[2] = m_recvBuf.read<char>();
         h.magic[3] = m_recvBuf.read<char>();
-        h.protocolVersion = m_recvBuf.read<char>();
+        h.protocolVersion = betoh32(m_recvBuf.read<int>());
         h.serverVersion = betoh32(m_recvBuf.read<int>());
         h.length = betoh32(m_recvBuf.read<int>());
         h.command = betoh32(m_recvBuf.read<int>());
