@@ -3,7 +3,7 @@
 import json
 from app.share.constants import *
 from dispatcher import GameServiceHandle
-from firefly.server.globalobject import masterserviceHandle, GlobalObject
+from firefly.server.globalobject import masterServiceHandle, GlobalObject
 
 @GameServiceHandle(COMMAND_TEST)
 def testMethod(dynamicId, request):

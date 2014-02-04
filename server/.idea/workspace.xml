@@ -12,7 +12,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/server$startmaster.coverage" NAME="startmaster Coverage Results" MODIFIED="1390794253091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/server$startmaster.coverage" NAME="startmaster Coverage Results" MODIFIED="1391477890708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -29,32 +29,7 @@
       <file leaf-file-name="webroot.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/master/webroot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="45" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.0" vertical-offset="611" max-vertical-offset="1095">
-              <folding>
-                <element signature="e#14#48#0" expanded="true" />
-                <marker date="1390792166000" expanded="true" signature="345:1407" placeholder="..." />
-                <marker date="1390792166000" expanded="true" signature="941:1407" placeholder="..." />
-                <marker date="1390792166000" expanded="true" signature="1598:2252" placeholder="..." />
-                <marker date="1390792166000" expanded="true" signature="1691:1905" placeholder="..." />
-                <marker date="1390792166000" expanded="true" signature="1945:2252" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="child.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firefly/distributed/child.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0" vertical-offset="116" max-vertical-offset="600">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="refresh.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webroot/static/refresh.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="46" selection-start="390" selection-end="390" vertical-scroll-proportion="0.46487603" vertical-offset="0" max-vertical-offset="484">
+            <state line="57" column="0" selection-start="1739" selection-end="1739" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1095">
               <folding />
             </state>
           </provider>
@@ -63,18 +38,18 @@
       <file leaf-file-name="index.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webroot/index.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="16" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+            <state line="20" column="16" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="480">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="initconfig.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/net/initconfig.py">
+      <file leaf-file-name="netservice.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/net/service/netservice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="71" selection-start="319" selection-end="344" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+            <state line="20" column="1" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
               <folding>
-                <element signature="e#14#66#0" expanded="true" />
+                <element signature="e#14#53#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,7 +58,7 @@
       <file leaf-file-name="gateservice.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/gate/service/gateservice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="34" selection-start="1835" selection-end="1835" vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="1290">
+            <state line="78" column="1" selection-start="2678" selection-end="2678" vertical-scroll-proportion="0.0" vertical-offset="655" max-vertical-offset="1290">
               <folding>
                 <element signature="e#14#25#0" expanded="true" />
               </folding>
@@ -91,10 +66,57 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.json">
+      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firefly/server/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1230">
+            <state line="32" column="1" selection-start="589" selection-end="589" vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="660">
+              <folding>
+                <element signature="e#72#129#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="globalobject.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/firefly/server/globalobject.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="32" selection-start="783" selection-end="783" vertical-scroll-proportion="0.5571205" vertical-offset="109" max-vertical-offset="1065">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gameservice.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/game/service/gameservice.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="40" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="protoc.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firefly/netconnect/protoc.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="84" column="4" selection-start="2714" selection-end="2714" vertical-scroll-proportion="-10.6" vertical-offset="950" max-vertical-offset="2070">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manager.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firefly/netconnect/manager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="32" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0" vertical-offset="222" max-vertical-offset="1095">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connection.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firefly/netconnect/connection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="22" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
               <folding />
             </state>
           </provider>
@@ -110,29 +132,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/webroot/index.html" />
-        <option value="$PROJECT_DIR$/config.json" />
         <option value="$PROJECT_DIR$/firefly/master/master.py" />
-        <option value="$PROJECT_DIR$/firefly/server/admin.py" />
         <option value="$PROJECT_DIR$/firefly/master/webapp.py" />
         <option value="$PROJECT_DIR$/firefly/utils/services.py" />
-        <option value="$PROJECT_DIR$/app/game/service/gameservice.py" />
         <option value="$PROJECT_DIR$/app/gate/util/loadbalance.py" />
         <option value="$PROJECT_DIR$/app/net/initconfig.py" />
-        <option value="$PROJECT_DIR$/app/net/service/netservice.py" />
         <option value="$PROJECT_DIR$/app/gate/model/usermanager.py" />
-        <option value="$PROJECT_DIR$/app/gate/service/gateservice.py" />
         <option value="$PROJECT_DIR$/webroot/scripts/refresh.js" />
         <option value="$PROJECT_DIR$/app/master/webroot.py" />
         <option value="$PROJECT_DIR$/webroot/index.xml" />
         <option value="$PROJECT_DIR$/webroot/static/refresh.js" />
+        <option value="$PROJECT_DIR$/firefly/netconnect/manager.py" />
+        <option value="$PROJECT_DIR$/app/game/service/gameservice.py" />
+        <option value="$PROJECT_DIR$/app/gate/service/gateservice.py" />
+        <option value="$PROJECT_DIR$/app/net/service/netservice.py" />
+        <option value="$PROJECT_DIR$/firefly/server/admin.py" />
+        <option value="$PROJECT_DIR$/firefly/server/globalobject.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1440" />
-    <option name="height" value="874" />
+    <option name="width" value="1920" />
+    <option name="height" value="1102" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -212,6 +234,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -241,24 +264,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webroot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webroot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -376,18 +381,17 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="last_opened_file_path" value="/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -516,6 +520,9 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -537,9 +544,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -618,7 +622,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="874" extended-state="6" />
+    <frame x="0" y="22" width="1920" height="1102" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -627,11 +631,11 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3262195" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22238164" sideWeight="0.6018519" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2826399" sideWeight="0.67724866" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19477054" sideWeight="0.67784554" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39814815" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3227513" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32215446" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -666,94 +670,29 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/gate/model/usermanager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="30" selection-start="1336" selection-end="1336" vertical-scroll-proportion="0.0" vertical-offset="394" max-vertical-offset="900">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/net/service/netservice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="21" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
-          <folding>
-            <element signature="e#14#53#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/net/service/dispatcher.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/net/initconfig.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="71" selection-start="319" selection-end="344" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <folding>
-            <element signature="e#14#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/gate/service/gateservice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="34" selection-start="1835" selection-end="1835" vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="1290">
-          <folding>
-            <element signature="e#14#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1230">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/http.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="643" column="11" selection-start="20299" selection-end="20299" vertical-scroll-proportion="0.25742576" vertical-offset="9541" max-vertical-offset="29055">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="31" selection-start="2495" selection-end="2495" vertical-scroll-proportion="0.25742576" vertical-offset="1291" max-vertical-offset="10560">
-          <folding />
-        </state>
+        <state line="96" column="31" selection-start="2495" selection-end="2495" vertical-scroll-proportion="0.25742576" vertical-offset="1291" max-vertical-offset="10560" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/firefly/web/delayrequest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="23" selection-start="618" selection-end="618" vertical-scroll-proportion="0.52693206" vertical-offset="45" max-vertical-offset="1935">
-          <folding />
-        </state>
+        <state line="26" column="23" selection-start="618" selection-end="618" vertical-scroll-proportion="0.52693206" vertical-offset="45" max-vertical-offset="1935" />
       </provider>
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/_element.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="0" selection-start="3705" selection-end="3705" vertical-scroll-proportion="0.051522247" vertical-offset="1643" max-vertical-offset="2790">
-          <folding />
-        </state>
+        <state line="116" column="0" selection-start="3705" selection-end="3705" vertical-scroll-proportion="0.051522247" vertical-offset="1643" max-vertical-offset="2790" />
       </provider>
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/Twisted-13.2.0-py2.7-macosx-10.9-intel.egg/twisted/web/static.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="626" column="0" selection-start="22112" selection-end="22112" vertical-scroll-proportion="15.210396" vertical-offset="2930" max-vertical-offset="15255">
-          <folding />
-        </state>
+        <state line="626" column="0" selection-start="22112" selection-end="22112" vertical-scroll-proportion="15.210396" vertical-offset="2930" max-vertical-offset="15255" />
       </provider>
     </entry>
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/web/template.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="414" column="63" selection-start="12309" selection-end="12309" vertical-scroll-proportion="0.24355972" vertical-offset="6001" max-vertical-offset="8475">
-          <folding />
-        </state>
+        <state line="414" column="63" selection-start="12309" selection-end="12309" vertical-scroll-proportion="0.24355972" vertical-offset="6001" max-vertical-offset="8475" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/firefly/distributed/child.py">
@@ -765,28 +704,76 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/master/webroot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="45" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.0" vertical-offset="611" max-vertical-offset="1095">
-          <folding>
-            <element signature="e#14#48#0" expanded="true" />
-            <marker date="1390792166000" expanded="true" signature="345:1407" placeholder="..." />
-            <marker date="1390792166000" expanded="true" signature="941:1407" placeholder="..." />
-            <marker date="1390792166000" expanded="true" signature="1598:2252" placeholder="..." />
-            <marker date="1390792166000" expanded="true" signature="1691:1905" placeholder="..." />
-            <marker date="1390792166000" expanded="true" signature="1945:2252" placeholder="..." />
-          </folding>
+        <state line="57" column="0" selection-start="1739" selection-end="1739" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1095">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webroot/index.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="16" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+        <state line="20" column="16" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="480">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/static/refresh.js">
+    <entry file="file://$PROJECT_DIR$/firefly/netconnect/connection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="46" selection-start="390" selection-end="390" vertical-scroll-proportion="0.46487603" vertical-offset="0" max-vertical-offset="484">
+        <state line="26" column="22" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firefly/netconnect/protoc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="4" selection-start="2714" selection-end="2714" vertical-scroll-proportion="-10.6" vertical-offset="950" max-vertical-offset="2070">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firefly/netconnect/manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="32" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0" vertical-offset="222" max-vertical-offset="1095">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/game/service/gameservice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="40" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/gate/service/gateservice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="1" selection-start="2678" selection-end="2678" vertical-scroll-proportion="0.0" vertical-offset="655" max-vertical-offset="1290">
+          <folding>
+            <element signature="e#14#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/net/service/netservice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="1" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <folding>
+            <element signature="e#14#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firefly/server/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="1" selection-start="589" selection-end="589" vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="660">
+          <folding>
+            <element signature="e#72#129#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firefly/server/globalobject.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="32" selection-start="783" selection-end="783" vertical-scroll-proportion="0.5571205" vertical-offset="109" max-vertical-offset="1065">
           <folding />
         </state>
       </provider>

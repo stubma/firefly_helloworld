@@ -1,7 +1,7 @@
 #coding:utf8
 
 from dispatcher import NetServiceHandle
-from firefly.server.globalobject import GlobalObject, RemoteServiceHandle, masterserviceHandle
+from firefly.server.globalobject import GlobalObject, RemoteServiceHandle, masterServiceHandle
 from app.share.constants import *
 
 @NetServiceHandle(COMMAND_FORWARD)
@@ -11,7 +11,6 @@ def forwarding(keyname, conn, data):
     '''
     return GlobalObject().remote['gate'].callRemote("forwarding", keyname, conn.transport.sessionno, data)
 
-# the decorator register this method in gate side
 @RemoteServiceHandle('gate')
 def pushObject(topicID, msg, sendList):
     '''
@@ -19,6 +18,6 @@ def pushObject(topicID, msg, sendList):
     '''
     GlobalObject().netfactory.pushObject(topicID, msg, sendList)
 
-@masterserviceHandle
+@masterServiceHandle
 def getClientCount():
     return GlobalObject().netfactory.connmanager.getNowConnCnt()

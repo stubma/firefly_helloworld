@@ -4,14 +4,14 @@ Created on 2013-8-12
 
 @author: lan (www.9miao.com)
 '''
-from globalobject import GlobalObject,masterserviceHandle
+from globalobject import GlobalObject,masterServiceHandle
 from twisted.internet import reactor
 from twisted.python import log
 
 reactor = reactor
 
 
-@masterserviceHandle
+@masterServiceHandle
 def stop():
     """
     """
@@ -21,7 +21,7 @@ def stop():
     reactor.callLater(0.5, reactor.stop)
     return True
 
-@masterserviceHandle
+@masterServiceHandle
 def reload():
     """
     """
@@ -30,7 +30,7 @@ def reload():
         reload(GlobalObject().reloadmodule)
     return True
 
-@masterserviceHandle
+@masterServiceHandle
 def remote_connect(rname, rhost):
     """
     """

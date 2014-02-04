@@ -29,7 +29,7 @@ class GlobalObject:
         self.remote = remote
         self.db = db
         
-def masterserviceHandle(target):
+def masterServiceHandle(target):
     """
     """
     GlobalObject().masterremote._reference._service.mapTarget(target)

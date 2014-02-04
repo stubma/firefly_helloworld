@@ -27,7 +27,8 @@ Client* Client::sharedClient() {
 
 void Client::checkSocket() {
     if(!m_hub->getSocket(1)) {
-        m_hub->createSocket("172.16.96.60", 11009, 1, kCCSocketDefaultTimeout, true);
+		m_hub->createSocket("192.168.1.104", 11009, 1, kCCSocketDefaultTimeout, true);
+//        m_hub->createSocket("172.16.96.60", 11009, 1, kCCSocketDefaultTimeout, true);
     }
 }
 
