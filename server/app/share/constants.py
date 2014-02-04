@@ -3,6 +3,7 @@
 # command id
 COMMAND_FORWARD = 0
 COMMAND_TEST = 1
+COMMAND_TEST_PUSH = 2
 COMMAND_LOGIN = 101
 
 # error code
