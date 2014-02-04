@@ -2,14 +2,14 @@
 
 import json
 from app.gate.local import login
-from firefly.server.globalobject import rootserviceHandle, GlobalObject, masterServiceHandle
+from firefly.server.globalobject import rootServiceHandle, GlobalObject, masterServiceHandle
 from app.gate.service.dispatcher import GateServiceHandle, dispatcher
 from app.gate.model.usermanager import UserManager
 from app.gate.util.loadbalance import GameRouter
 from app.share.constants import *
 from app.share.locale.i18n import L
 
-@rootserviceHandle
+@rootServiceHandle
 def forwarding(key, dynamicId, data):
     """
     if a method is registered, forward it to local service
@@ -36,14 +36,14 @@ def forwarding(key, dynamicId, data):
         # now forward request to game node
         return GlobalObject().root.callChild(user.gameNode, key, dynamicId, data)
 
-@rootserviceHandle
-def pushObject(topicID, msg, sendList):
+@rootServiceHandle
+def pushObject(command, msg, sendList):
     """
     push something to client
     """
-    GlobalObject().root.callChild("net", "pushObject", topicID, msg, sendList)
+    GlobalObject().root.callChild("net", "pushObject", command, msg, sendList)
 
-@rootserviceHandle
+@rootServiceHandle
 def onNetClientConnectionLost(dynamicId):
     print '##############################################'
     print '# client %d disconnected' % dynamicId

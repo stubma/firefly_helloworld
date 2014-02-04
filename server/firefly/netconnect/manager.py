@@ -54,14 +54,14 @@ class ConnectionManager:
         if conn:
             conn.loseConnection()
         
-    def pushObject(self,topicID , msg, sendList):
+    def pushObject(self, command, msg, sendList):
         """主动推送消息
         """
         for target in sendList:
             try:
                 conn = self.getConnectionByID(target)
                 if conn:
-                    conn.safeToWriteData(topicID,msg)
+                    conn.safeToWriteData(command, msg)
             except Exception,e:
                 log.err(str(e))
 

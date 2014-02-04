@@ -21,9 +21,9 @@ class Connection:
         '''
         self.instance.transport.loseConnection()
     
-    def safeToWriteData(self,topicID,msg):
+    def safeToWriteData(self,command,msg):
         """发送消息
         """
-        self.instance.safeToWriteData(msg,topicID)
+        self.instance.safeToWriteData(msg,command)
         
         

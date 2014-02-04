@@ -39,7 +39,7 @@ def netserviceHandle(target):
     """
     GlobalObject().netfactory.service.mapTarget(target)
         
-def rootserviceHandle(target):
+def rootServiceHandle(target):
     """
     """
     GlobalObject().root.service.mapTarget(target)

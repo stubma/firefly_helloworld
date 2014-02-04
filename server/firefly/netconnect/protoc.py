@@ -85,51 +85,52 @@ class LiberateFactory(protocol.ServerFactory):
     
     protocol = LiberateProtocol
     
-    def __init__(self,dataprotocol=DataPackProtocol()):
+    def __init__(self, dataprotocol=DataPackProtocol()):
         '''初始化
         '''
         self.service = None
         self.connmanager = ConnectionManager()
         self.dataprotocol = dataprotocol
         
-    def setDataProtocol(self,dataprotocol):
+    def setDataProtocol(self, dataprotocol):
         '''
         '''
         self.dataprotocol = dataprotocol
         
-    def doConnectionMade(self,conn):
+    def doConnectionMade(self, conn):
         '''当连接建立时的处理'''
         pass
     
-    def doConnectionLost(self,conn):
+    def doConnectionLost(self, conn):
         '''连接断开时的处理'''
         pass
     
-    def addServiceChannel(self,service):
+    def addServiceChannel(self, service):
         '''添加服务通道'''
         self.service = service
     
-    def doDataReceived(self,conn,commandID,data):
+    def doDataReceived(self, conn, commandID, data):
         '''数据到达时的处理'''
-        defer_tool = self.service.callTarget(commandID,conn,data)
+        defer_tool = self.service.callTarget(commandID, conn, data)
         return defer_tool
     
-    def produceResult(self,command,response):
+    def produceResult(self, command, response):
         '''产生客户端需要的最终结果
         @param response: str 分布式客户端获取的结果
         '''
         return self.dataprotocol.pack(command,response)
     
-    def loseConnection(self,connID):
+    def loseConnection(self, connID):
         """主动端口与客户端的连接
         """
         self.connmanager.loseConnection(connID)
     
-    def pushObject(self,topicID , msg, sendList):
-        '''服务端向客户端推消息
-        @param topicID: int 消息的主题id号
-        @param msg: 消息的类容，protobuf结构类型
-        @param sendList: 推向的目标列表(客户端id 列表)
+    def pushObject(self, command, msg, sendList):
         '''
-        self.connmanager.pushObject(topicID, msg, sendList)
+        server push a message to client, with given command
+        @param command: command id
+        @param msg: json body
+        @param sendList: id of client connection
+        '''
+        self.connmanager.pushObject(command, msg, sendList)
 
