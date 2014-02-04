@@ -9,8 +9,8 @@ public:
         char magic[4];
         int protocolVersion;
         int serverVersion;
-        int length;
-        int command;
+		int command;
+        int length; // data length after header
     } Header;
     
 public:
@@ -22,7 +22,7 @@ public:
     void allocateBody(size_t len);
     
     // body length
-    int getBodyLength() { return m_header.length - 4; }
+    int getBodyLength() { return m_header.length; }
     
     CC_SYNTHESIZE_PASS_BY_REF_NC(Header, m_header, Header);
     CC_SYNTHESIZE(char*, m_body, Body);

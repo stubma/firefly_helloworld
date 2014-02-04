@@ -54,12 +54,12 @@ void Client::send(int socketTag, CCJSONObject* body, Command cmd) {
     // server version
     m_sendBuf.write<int>(htobe32(0));
     
+	// command id
+    m_sendBuf.write<int>(htobe32(cmd));
+	
     // length
     string bodyStr = body->toString();
-    m_sendBuf.write<int>(htobe32(bodyStr.length() + 4));
-    
-    // command id
-    m_sendBuf.write<int>(htobe32(cmd));
+    m_sendBuf.write<int>(htobe32(bodyStr.length()));
     
     // body
     m_sendBuf.write((const uint8*)bodyStr.c_str(), bodyStr.length());
@@ -89,12 +89,12 @@ const CCArray& Client::addData(CCByteBuffer& buf) {
         h.magic[3] = m_recvBuf.read<char>();
         h.protocolVersion = betoh32(m_recvBuf.read<int>());
         h.serverVersion = betoh32(m_recvBuf.read<int>());
+		h.command = betoh32(m_recvBuf.read<int>());
         h.length = betoh32(m_recvBuf.read<int>());
-        h.command = betoh32(m_recvBuf.read<int>());
         
-        if(m_recvBuf.available() >= h.length - 4) {
+        if(m_recvBuf.available() >= h.length) {
             p->allocateBody(h.length - 3); // one more 0 bytes make it a c string
-            m_recvBuf.read((uint8*)p->getBody(), h.length - 4);
+            m_recvBuf.read((uint8*)p->getBody(), h.length);
             m_packets.addObject(p);
         } else {
             m_recvBuf.revoke(HEADER_LENGTH);

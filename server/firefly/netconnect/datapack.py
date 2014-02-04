@@ -73,8 +73,8 @@ class DataPackProtocol:
         HEAD_3 = ord(ud[3])
         protoVersion = ud[4]
         serverVersion = ud[5]
-        length = ud[6]-4
-        command = ud[7]
+        command = ud[6]
+        length = ud[7]
         if HEAD_0 <>self.HEAD_0 or HEAD_1<>self.HEAD_1 or\
              HEAD_2<>self.HEAD_2 or HEAD_3<>self.HEAD_3 or\
               protoVersion<>self.protoVersion or serverVersion<>self.serverVersion:
@@ -90,10 +90,9 @@ class DataPackProtocol:
         HEAD_3 = chr(self.HEAD_3)
         protoVersion = self.protoVersion
         serverVersion = self.serverVersion
-        length = response.__len__()+4
         commandID = command
-        data = struct.pack('!ssss4I',HEAD_0,HEAD_1,HEAD_2,HEAD_3,\
-                           protoVersion,serverVersion,length,commandID)
+        length = response.__len__()
+        data = struct.pack('!ssss4I', HEAD_0, HEAD_1, HEAD_2, HEAD_3, protoVersion, serverVersion, commandID, length)
         data = data + response
         return data
         
