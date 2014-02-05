@@ -17,4 +17,6 @@ static Resource _mediumResource = {
 static Resource& R = _mediumResource;
 static CCSize designResolutionSize = CCSizeMake(480, 800);
 
+extern string gUDID;
+
 #endif /* __AppGlobal_h__ */

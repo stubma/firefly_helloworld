@@ -8,6 +8,7 @@ public:
     typedef enum {
         TEST = 1,
 		TEST_PUSH = 2,
+		QUERY_BIND = 100,
         LOGIN = 101
     } Command;
     

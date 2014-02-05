@@ -23,6 +23,7 @@
 		9255B8AD18556E1800797255 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9255B8AC18556E1800797255 /* AVFoundation.framework */; };
 		9255B8B118556E2000797255 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9255B8B018556E2000797255 /* AudioToolbox.framework */; };
 		9255B8B318556E2800797255 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9255B8B218556E2800797255 /* OpenAL.framework */; };
+		9264B1C718A28AB400C5BE27 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 9264B1C618A28AB400C5BE27 /* OpenUDID.m */; };
 		927B227F189111A6002AE193 /* SendMsgScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 927B227D189111A6002AE193 /* SendMsgScene.cpp */; };
 		92984F3E175D9B0700E63472 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92984F3D175D9B0700E63472 /* CoreText.framework */; };
 		92A1ADC0188E1F3C00298F4F /* CCEditBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1AD9D188E1F3C00298F4F /* CCEditBox.cpp */; };
@@ -102,6 +103,8 @@
 		9255B8AC18556E1800797255 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9255B8B018556E2000797255 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		9255B8B218556E2800797255 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		9264B1C518A28AB400C5BE27 /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
+		9264B1C618A28AB400C5BE27 /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
 		927B227D189111A6002AE193 /* SendMsgScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SendMsgScene.cpp; sourceTree = "<group>"; };
 		927B227E189111A6002AE193 /* SendMsgScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMsgScene.h; sourceTree = "<group>"; };
 		92984F3D175D9B0700E63472 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -252,6 +255,7 @@
 		923E3E8518892D0400ABC5A0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9264B1C418A28AB400C5BE27 /* OpenUDID */,
 				924C891A188CFE5200F66828 /* AppGlobal.cpp */,
 				924C891B188CFE5200F66828 /* AppGlobal.h */,
 				92A1ADFD188E477C00298F4F /* Client.cpp */,
@@ -270,6 +274,16 @@
 			name = Classes;
 			path = ../Classes;
 			sourceTree = "<group>";
+		};
+		9264B1C418A28AB400C5BE27 /* OpenUDID */ = {
+			isa = PBXGroup;
+			children = (
+				9264B1C518A28AB400C5BE27 /* OpenUDID.h */,
+				9264B1C618A28AB400C5BE27 /* OpenUDID.m */,
+			);
+			name = OpenUDID;
+			path = Classes/OpenUDID;
+			sourceTree = SOURCE_ROOT;
 		};
 		92A1AD81188E1F3C00298F4F /* GUI */ = {
 			isa = PBXGroup;
@@ -424,6 +438,7 @@
 				92A1ADFF188E477C00298F4F /* Client.cpp in Sources */,
 				923C786318A12DA200DD8D9A /* Helper.cpp in Sources */,
 				92A1ADC5188E1F3C00298F4F /* CCEditBoxImplTizen.cpp in Sources */,
+				9264B1C718A28AB400C5BE27 /* OpenUDID.m in Sources */,
 				92A1ADC4188E1F3C00298F4F /* CCEditBoxImplNone.cpp in Sources */,
 				92A1ADC0188E1F3C00298F4F /* CCEditBox.cpp in Sources */,
 				923E3E8418892CDC00ABC5A0 /* RootViewController.mm in Sources */,

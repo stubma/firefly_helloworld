@@ -63,15 +63,32 @@ def loginToServer(key, dynamicId, request):
     args = json.loads(request)
     username = args.get(KEY_USERNAME)
     password = args.get(KEY_PASSWORD)
+    deviceId = args.get(KEY_DEVICE_ID)
 
     # login
-    data = login.loginToServer(dynamicId, username, password)
+    data = login.loginToServer(dynamicId, username, password, deviceId)
 
     # construct response in json format and return
     response = {}
     response[KEY_ERRNO] = data.get(KEY_ERRNO, E_UNKNOWN)
     if response[KEY_ERRNO] != E_OK:
         response[KEY_ERRMSG] = data.get(KEY_ERRMSG)
+    if data.has_key(KEY_DATA):
+        response[KEY_DATA] = data[KEY_DATA]
+    return json.dumps(response)
+
+@GateServiceHandle(COMMAND_QUERY_BIND)
+def queryBind(key, dynamicId, request):
+    # get device id
+    args = json.loads(request)
+    deviceId = args.get(KEY_DEVICE_ID)
+
+    # query bind
+    data = login.queryBind(dynamicId, deviceId)
+
+    # construct response
+    response = {}
+    response[KEY_ERRNO] = data.get(KEY_ERRNO, E_UNKNOWN)
     if data.has_key(KEY_DATA):
         response[KEY_DATA] = data[KEY_DATA]
     return json.dumps(response)

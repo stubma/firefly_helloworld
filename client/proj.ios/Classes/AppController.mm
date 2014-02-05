@@ -26,7 +26,7 @@
 #import "cocos2d.h"
 #import "EAGLView.h"
 #import "AppDelegate.h"
-
+#import "OpenUDID.h"
 #import "RootViewController.h"
 
 @implementation AppController
@@ -73,6 +73,11 @@ static AppDelegate s_sharedApplication;
     [[UIApplication sharedApplication] setStatusBarHidden: YES];
     
     cocos2d::CCApplication::sharedApplication()->run();
+	
+	// open udid
+	NSString* udid = [OpenUDID value];
+	gUDID = [udid cStringUsingEncoding:NSUTF8StringEncoding];
+	
     return YES;
 }
 

@@ -6,7 +6,7 @@ from app.share.db import table_user
 from app.share.constants import *
 from app.share.locale.i18n import *
 
-def loginToServer(dynamicId, username, password):
+def loginToServer(dynamicId, username, password, deviceId):
     '''
     perform login operation, by username and password,
     if user name doesn't exist, new user will be added
@@ -21,8 +21,8 @@ def loginToServer(dynamicId, username, password):
     userInfo = table_user.getUserInfoByName(username)
 
     # check user existence, if not exist, create new
-    if not userInfo and username and password:
-        table_user.newUser(username, password)
+    if not userInfo and username and password and deviceId:
+        table_user.newUser(username, password, deviceId)
 
     # if user is already logged in, update dynamic id
     oldUser = UserManager().getUserByName(username)
@@ -49,4 +49,19 @@ def loginToServer(dynamicId, username, password):
     UserManager().addUser(user)
     return { KEY_ERRNO : E_OK, KEY_DATA : user.getLoginExtraData() }
 
+def queryBind(dynamicId, deviceId):
+    '''
+    query whether a deviceId has associated user, if yes, user name list will be returned
+    @param dynamicId: dynamic id of client connection
+    @param deviceId: device id of client device
+    @return: dict, errno will always be E_OK, and data contains user name array
+    '''
 
+    # query user by device id
+    users = table_user.getUserInfosByDeviceId(deviceId)
+
+    # get user name list
+    usernames = [u[KEY_USERNAME] for u in users]
+
+    # return
+    return { KEY_ERRNO : E_OK, KEY_DATA : { KEY_USERNAMES : usernames } }

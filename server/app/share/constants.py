@@ -4,6 +4,7 @@
 COMMAND_FORWARD = 0
 COMMAND_TEST = 1
 COMMAND_TEST_PUSH = 2
+COMMAND_QUERY_BIND = 100
 COMMAND_LOGIN = 101
 
 # error code
@@ -21,3 +22,5 @@ KEY_DATA = 'data'
 KEY_USERNAME = 'username'
 KEY_PASSWORD = 'password'
 KEY_MESSAGE = 'message'
+KEY_DEVICE_ID = 'device_id'
+KEY_USERNAMES = 'usernames'

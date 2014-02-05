@@ -11,6 +11,7 @@ private:
     
 private:
     void onLoginClicked(CCObject* sender);
+	void queryBind();
     
 public:
 	virtual ~Login();

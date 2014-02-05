@@ -16,11 +16,11 @@ def getUserInfoByName(username):
     conn.close()
     return result
 
-def newUser(username, password):
+def newUser(username, password, deviceId):
     '''
     insert a new user record into table, return True if success, or false if failed
     '''
-    sql = "INSERT INTO user(`username`, `password`) VALUES ('%s','%s')" % (username, password)
+    sql = "INSERT INTO user(`username`, `password`, `device_id`) VALUES ('%s','%s', '%s')" % (username, password, deviceId)
     conn = dbpool.connection()
     cursor = conn.cursor()
     count = cursor.execute(sql)
@@ -30,3 +30,18 @@ def newUser(username, password):
     if(count >= 1):
         return True
     return False
+
+def getUserInfosByDeviceId(deviceId):
+    '''
+    get user info list by a device id
+    @param deviceId: device id
+    @return: a list of all matched user info
+    '''
+    sql = "SELECT * FROM user WHERE device_id = '%s'" % deviceId
+    conn = dbpool.connection()
+    cursor = conn.cursor(cursorclass = DictCursor)
+    cursor.execute(sql)
+    result = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return result
