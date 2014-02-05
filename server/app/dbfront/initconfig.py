@@ -16,7 +16,7 @@ def doWhenStop():
     MAdminManager().checkAdmins()
 
 # install stop handler
-GlobalObject().stophandler = doWhenStop
+GlobalObject().stopHandler = doWhenStop
 
 def loadModule():
     '''

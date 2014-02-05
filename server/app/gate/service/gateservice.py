@@ -22,8 +22,8 @@ def forwarding(key, dynamicId, data):
         user = UserManager().getUserByDynamicID(dynamicId)
         if not user:
             response = {}
-            response['errno'] = E_NOT_LOGGED_IN
-            response['errmsg'] = L('Not logged in')
+            response[KEY_ERRNO] = E_NOT_LOGGED_IN
+            response[KEY_ERRMSG] = L('Not logged in')
             return json.dumps(response)
 
         # if user doesn't have a game node allocated, choose one
@@ -61,19 +61,19 @@ def onNetClientConnectionLost(dynamicId):
 def loginToServer(key, dynamicId, request):
     # get user name and password
     args = json.loads(request)
-    username = args.get('username')
-    password = args.get('password')
+    username = args.get(KEY_USERNAME)
+    password = args.get(KEY_PASSWORD)
 
     # login
     data = login.loginToServer(dynamicId, username, password)
 
     # construct response in json format and return
     response = {}
-    response['errno'] = data.get('errno', E_UNKNOWN)
-    if response['errno'] != E_OK:
-        response['errmsg'] = data.get('errmsg')
-    if data.has_key('data'):
-        response['data'] = data['data']
+    response[KEY_ERRNO] = data.get(KEY_ERRNO, E_UNKNOWN)
+    if response[KEY_ERRNO] != E_OK:
+        response[KEY_ERRMSG] = data.get(KEY_ERRMSG)
+    if data.has_key(KEY_DATA):
+        response[KEY_DATA] = data[KEY_DATA]
     return json.dumps(response)
 
 @masterServiceHandle

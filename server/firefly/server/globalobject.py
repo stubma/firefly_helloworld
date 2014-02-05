@@ -11,20 +11,20 @@ class GlobalObject:
     __metaclass__ = Singleton
     
     def __init__(self):
-        self.netfactory = None#net前端
+        self.netFactory = None#net前端
         self.root = None#分布式root节点
         self.remote = {}#remote节点
         self.db = None
-        self.stophandler = None
+        self.stopHandler = None
         self.webroot = None
-        self.masterremote = None
+        self.masterRemote = None
         self.reloadmodule = None
         self.remote_connect = None
         self.json_config = {}
         self.remote_map = {}
         
-    def config(self,netfactory=None,root = None,remote=None,db=None):
-        self.netfactory = netfactory
+    def config(self,netFactory=None,root = None,remote=None,db=None):
+        self.netFactory = netFactory
         self.root = root
         self.remote = remote
         self.db = db
@@ -32,12 +32,12 @@ class GlobalObject:
 def masterServiceHandle(target):
     """
     """
-    GlobalObject().masterremote._reference._service.mapTarget(target)
+    GlobalObject().masterRemote._reference._service.mapTarget(target)
         
 def netserviceHandle(target):
     """
     """
-    GlobalObject().netfactory.service.mapTarget(target)
+    GlobalObject().netFactory.service.mapTarget(target)
         
 def rootServiceHandle(target):
     """

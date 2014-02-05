@@ -16,8 +16,8 @@ def stop():
     """
     """
     log.msg('stop')
-    if GlobalObject().stophandler:
-        GlobalObject().stophandler()
+    if GlobalObject().stopHandler:
+        GlobalObject().stopHandler()
     reactor.callLater(0.5, reactor.stop)
     return True
 

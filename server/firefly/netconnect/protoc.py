@@ -8,7 +8,6 @@ from twisted.internet import protocol,reactor
 from twisted.python import log
 from manager import ConnectionManager
 from datapack import DataPackProtocol
-reactor = reactor
 
 def DefferedErrorHandle(e):
     '''延迟对象的错误处理'''
@@ -16,8 +15,11 @@ def DefferedErrorHandle(e):
     return
 
 class LiberateProtocol(protocol.Protocol):
-    '''协议'''
-    
+    '''
+    protocol between client and net front, a packet consist of header and body.
+    body can be encrypted, and the encryption algorithm is described in header
+    '''
+
     buff = ""
     
     def connectionMade(self):

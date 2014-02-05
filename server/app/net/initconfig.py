@@ -12,15 +12,15 @@ def onNetClientConnectionLost(conn):
     GlobalObject().remote['gate'].callRemote("onNetClientConnectionLost", dynamicId)
 
 # setup the connection lost handler
-GlobalObject().netfactory.doConnectionLost = onNetClientConnectionLost
+GlobalObject().netFactory.doConnectionLost = onNetClientConnectionLost
 
 # define the protocol which operates between client and net server
 # the magic number is 'HELO', change it for your game
 netProtocol = DataPackProtocol(ord('H'), ord('E'), ord('L'), ord('O'), 0, 0)
-GlobalObject().netfactory.setDataProtocol(netProtocol)
+GlobalObject().netFactory.setDataProtocol(netProtocol)
 
 # set packet codec
-GlobalObject().netfactory.codec = PackCodec()
+GlobalObject().netFactory.codec = PackCodec()
 
 def loadModule():
     '''

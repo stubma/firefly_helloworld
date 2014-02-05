@@ -13,11 +13,11 @@ def testMethod(dynamicId, request):
 
     # get message sent by client
     data = json.loads(request)
-    msg = data['message']
+    msg = data[KEY_MESSAGE]
 
     # return response
     reply = 'I got your message: %s' % msg
     response = {}
-    response['errno'] = E_OK
-    response['data'] = { 'message' : reply }
+    response[KEY_ERRNO] = E_OK
+    response[KEY_DATA] = { KEY_MESSAGE : reply }
     return json.dumps(response)

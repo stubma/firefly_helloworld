@@ -28,25 +28,25 @@ def loginToServer(dynamicId, username, password):
     oldUser = UserManager().getUserByName(username)
     if oldUser:
         oldUser.dynamicId = dynamicId
-        return { 'errno' : E_OK, 'data' : oldUser.getLoginExtraData() }
+        return { KEY_ERRNO : E_OK, KEY_DATA : oldUser.getLoginExtraData() }
 
     # if user is not logged in, create user model
     user = User(username, password, dynamicId)
 
     # zero id means error
     if user.id == 0:
-        return { 'errno' : E_DB_ERROR, 'errmsg' : L('Database error') }
+        return { KEY_ERRNO : E_DB_ERROR, KEY_ERRMSG : L('Database error') }
 
     # if user is blocked
     if user.blocked:
-        return { 'errno' : E_BLOCKED, 'errmsg' : L('User is blocked') }
+        return { KEY_ERRNO : E_BLOCKED, KEY_ERRMSG : L('User is blocked') }
 
     # if password is error
-    if userInfo and userInfo['password'] != password:
-        return { 'errno' : E_WRONG_PASSWORD, 'errmsg' : L('Wrong password') }
+    if userInfo and userInfo[KEY_PASSWORD] != password:
+        return { KEY_ERRNO : E_WRONG_PASSWORD, KEY_ERRMSG : L('Wrong password') }
 
     # add user model and success
     UserManager().addUser(user)
-    return { 'errno' : E_OK, 'data' : user.getLoginExtraData() }
+    return { KEY_ERRNO : E_OK, KEY_DATA : user.getLoginExtraData() }
 
 

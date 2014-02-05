@@ -32,7 +32,7 @@ class ServiceDispatcher(CommandService):
 
 # create dispatcher instance and set it
 dispatcher = ServiceDispatcher("dispatcher")
-GlobalObject().netfactory.addServiceChannel(dispatcher)
+GlobalObject().netFactory.addServiceChannel(dispatcher)
 
 # decorator of net service api
 class NetServiceHandle(object):

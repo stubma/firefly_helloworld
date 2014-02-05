@@ -101,5 +101,5 @@ class MasterDirectory(DefaultMasterDirectory):
         if action == 'push':
             child = GlobalObject().root.childsmanager.getChildByName(node)
             if child:
-                msg = { 'errno' : E_OK, 'data' : { 'message' : message } }
+                msg = { KEY_ERRNO : E_OK, KEY_DATA : { KEY_MESSAGE : message } }
                 child.callbackChild('pushObject', COMMAND_TEST_PUSH, json.dumps(msg))

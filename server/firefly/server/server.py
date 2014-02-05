@@ -22,8 +22,8 @@ reactor = reactor
 
 def serverStop():
     log.msg('stop')
-    if GlobalObject().stophandler:
-        GlobalObject().stophandler()
+    if GlobalObject().stopHandler:
+        GlobalObject().stopHandler()
     reactor.callLater(0.5,reactor.stop)
     return True
 
@@ -32,17 +32,17 @@ class FFServer:
     def __init__(self):
         '''
         '''
-        self.netfactory = None#net前端
+        self.netFactory = None#net前端
         self.root = None#分布式root节点
         self.webroot = None#http服务
         self.remote = {}#remote节点
-        self.master_remote = None
+        self.masterRemote = None
         self.db = None
         self.mem = None
-        self.servername = None
-        self.remoteportlist = []
+        self.serverName = None
+        self.remotePortList = []
         
-    def config(self, config, servername=None, dbconfig=None,
+    def config(self, config, serverName=None, dbconfig=None,
                 memconfig=None, masterconf=None):
         '''配置服务器
         '''
@@ -50,29 +50,29 @@ class FFServer:
         netport = config.get('netport')#客户端连接
         webport = config.get('webport')#http连接
         rootport = config.get('rootport')#root节点配置
-        self.remoteportlist = config.get('remoteport',[])#remote节点配置列表
-        if not servername:
-            servername = config.get('name')#服务器名称
+        self.remotePortList = config.get('remoteport',[])#remote节点配置列表
+        if not serverName:
+            serverName = config.get('name')#服务器名称
         logpath = config.get('log')#日志
         hasdb = config.get('db')#数据库连接
         hasmem = config.get('mem')#memcached连接
         app = config.get('app')#入口模块名称
         cpuid = config.get('cpu')#绑定cpu
         mreload = config.get('reload')#重新加载模块名称
-        self.servername = servername
+        self.serverName = serverName
         if masterconf:
             masterport = masterconf.get('rootport')
             masterhost = masterconf.get('roothost')
-            self.master_remote = RemoteObject(servername)
+            self.masterRemote = RemoteObject(serverName)
             addr = ('localhost',masterport) if not masterhost else (masterhost,masterport)
-            self.master_remote.connect(addr)
-            GlobalObject().masterremote = self.master_remote
+            self.masterRemote.connect(addr)
+            GlobalObject().masterRemote = self.masterRemote
             
         if netport:
-            self.netfactory = LiberateFactory()
+            self.netFactory = LiberateFactory()
             netservice = services.CommandService("netservice")
-            self.netfactory.addServiceChannel(netservice)
-            reactor.listenTCP(netport,self.netfactory)
+            self.netFactory.addServiceChannel(netservice)
+            reactor.listenTCP(netport,self.netFactory)
             
         if webport:
             self.webroot = vhost.NameVirtualHost()
@@ -85,9 +85,9 @@ class FFServer:
             self.root.addServiceChannel(rootservice)
             reactor.listenTCP(rootport, BilateralFactory(self.root))
             
-        for cnf in self.remoteportlist:
+        for cnf in self.remotePortList:
             rname = cnf.get('rootname')
-            self.remote[rname] = RemoteObject(self.servername)
+            self.remote[rname] = RemoteObject(self.serverName)
             
         if hasdb and dbconfig:
             log.msg(str(dbconfig))
@@ -104,7 +104,7 @@ class FFServer:
         
         if cpuid:
             affinity.set_process_affinity_mask(os.getpid(), cpuid)
-        GlobalObject().config(netfactory = self.netfactory, root=self.root,
+        GlobalObject().config(netFactory = self.netFactory, root=self.root,
                     remote = self.remote)
         if app:
             __import__(app)
@@ -116,7 +116,7 @@ class FFServer:
     def remote_connect(self, rname, rhost):
         """
         """
-        for cnf in self.remoteportlist:
+        for cnf in self.remotePortList:
             _rname = cnf.get('rootname')
             if rname == _rname:
                 rport = cnf.get('rootport')
@@ -130,8 +130,8 @@ class FFServer:
     def start(self):
         '''启动服务器
         '''
-        log.msg('%s start...'%self.servername)
-        log.msg('%s pid: %s'%(self.servername,os.getpid()))
+        log.msg('%s start...'%self.serverName)
+        log.msg('%s pid: %s'%(self.serverName,os.getpid()))
         reactor.run()
         
         

@@ -16,15 +16,15 @@ def pushObject(command, msg):
     '''
     push message to client connected to this net server
     '''
-    GlobalObject().netfactory.pushObject(command, msg)
+    GlobalObject().netFactory.pushObject(command, msg)
 
 @masterServiceHandle
 def getClientCount():
-    return GlobalObject().netfactory.connmanager.getNowConnCnt()
+    return GlobalObject().netFactory.connmanager.getNowConnCnt()
 
 @masterServiceHandle
 def pushObject(command, msg):
     '''
     push message to all clients connected to this net front
     '''
-    GlobalObject().netfactory.pushObject(command, msg)
+    GlobalObject().netFactory.pushObject(command, msg)

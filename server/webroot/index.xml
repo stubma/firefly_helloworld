@@ -2,6 +2,7 @@
     <head>
         <title>Firefly Admin Portal</title>
         <script type="text/javascript" src="static/refresh.js"></script>
+        <link rel="shortcut icon" href="static/favicon.ico" />
     </head>
     <body onload="bodyOnLoad()">
         <h1>Firefly Admin Portal</h1>

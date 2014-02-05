@@ -10,7 +10,7 @@ def doWhenStop():
     print '#############################################'
 
 # install stop handler
-GlobalObject().stophandler = doWhenStop
+GlobalObject().stopHandler = doWhenStop
 
 def loadModule():
     """
