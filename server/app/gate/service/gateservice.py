@@ -91,6 +91,14 @@ def getClientCount():
     return UserManager().getUserCount()
 
 @masterServiceHandle
+def getUserNames():
+    '''
+    get a name list of all logged user
+    @return: a list of name string
+    '''
+    return [u.name for u in UserManager().users.values()]
+
+@masterServiceHandle
 def pushObject(command, msg, users=[]):
     '''
     push message to clients

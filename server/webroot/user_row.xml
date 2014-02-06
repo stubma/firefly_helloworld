@@ -1,0 +1,13 @@
+<tr xmlns:t="http://twistedmatrix.com/ns/twisted.web.template/0.1" t:render="user">
+    <td>
+        <t:slot name="username"/>
+    </td>
+    <td>
+        <form action="do" method="get">
+            <input type="text" name="message" id="message"></input>
+            <input type="hidden" name="action" value="push"></input>
+            <input type="hidden" name="username"><t:attr name="value"><t:slot name="username"/></t:attr></input>
+            <input type="submit" value="Push"></input>
+        </form>
+    </td>
+</tr>

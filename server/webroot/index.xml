@@ -12,6 +12,8 @@
             <input type="checkbox" name="auto" id="auto" onClick="onAutoCheckChanged(this)">Auto Reload</input>
         </form>
 
+        <hr/>
+        <h2>Server States</h2>
         <table border="1">
             <tr>
                 <th>Server</th>
@@ -23,6 +25,16 @@
                 <td><t:slot name="child_count"/></td>
                 <td><t:transparent t:render="operations"/></td>
             </tr>
+        </table>
+
+        <hr/>
+        <h2>Logged Users</h2>
+        <table border="1">
+            <tr>
+                <th>User</th>
+                <th></th>
+            </tr>
+            <t:transparent t:render="users"/>
         </table>
     </body>
 </html>

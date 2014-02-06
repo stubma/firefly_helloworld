@@ -11,6 +11,26 @@ from firefly.master.webapp import DefaultMasterDirectory
 from firefly.server.globalobject import GlobalObject
 from app.share.constants import *
 
+class UserRowElement(Element):
+    ''' template of one user row '''
+
+    def __init__(self):
+        super(UserRowElement, self).__init__(XMLFile(FilePath('webroot/user_row.xml')))
+
+    def onUserNamesCollected(self, result, tag):
+        if not result:
+            yield ''
+        else:
+            for user in result:
+                yield tag.clone().fillSlots(username=user)
+
+    @renderer
+    def user(self, request, tag):
+        gate = GlobalObject().root.childsmanager.getChildByName('gate')
+        d = gate.callbackChild('getUserNames')
+        d.addCallback(self.onUserNamesCollected, tag)
+        yield d
+
 class NetOperationsElement(Element):
     ''' net server operation sub template '''
 
@@ -59,6 +79,10 @@ class AdminElement(Element):
             yield NetOperationsElement()
         else:
             yield ''
+
+    @renderer
+    def users(self, request, tag):
+        yield UserRowElement()
 
 class AdminHandle(Resource):
     ''' admin resource '''
