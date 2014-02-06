@@ -12,19 +12,19 @@ def forwarding(keyname, conn, data):
     return GlobalObject().remote['gate'].callRemote("forwarding", keyname, conn.transport.sessionno, data)
 
 @RemoteServiceHandle('gate')
-def pushObject(command, msg):
+def pushObject(command, msg, sendList=[]):
     '''
     push message to client connected to this net server
     '''
-    GlobalObject().netFactory.pushObject(command, msg)
+    GlobalObject().netFactory.pushObject(command, msg, sendList)
 
 @masterServiceHandle
 def getClientCount():
     return GlobalObject().netFactory.connmanager.getNowConnCnt()
 
 @masterServiceHandle
-def pushObject(command, msg):
+def pushObject(command, msg, sendList=[]):
     '''
     push message to all clients connected to this net front
     '''
-    GlobalObject().netFactory.pushObject(command, msg)
+    GlobalObject().netFactory.pushObject(command, msg, sendList)

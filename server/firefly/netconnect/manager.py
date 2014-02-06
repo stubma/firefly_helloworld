@@ -54,13 +54,22 @@ class ConnectionManager:
         if conn:
             conn.loseConnection()
         
-    def pushObject(self, command, msg):
+    def pushObject(self, command, msg, sendList=[]):
         ''' push message to all clients
         '''
-        for conn in self._connections.values():
-            try:
-                conn.safeToWriteData(command, msg)
-            except Exception,e:
-                log.err(str(e))
+        if len(sendList) > 0:
+            for cid in sendList:
+                conn = self.getConnectionByID(cid)
+                if conn:
+                    try:
+                        conn.safeToWriteData(command, msg)
+                    except Exception,e:
+                        log.err(str(e))
+        else:
+            for conn in self._connections.values():
+                try:
+                    conn.safeToWriteData(command, msg)
+                except Exception,e:
+                    log.err(str(e))
 
 
