@@ -31,3 +31,12 @@ msgstr "密码错误"
 
 msgid "Not logged in"
 msgstr "用户未登录"
+
+msgid "Empty password"
+msgstr "密码为空"
+
+msgid "Empty username"
+msgstr "用户名为空"
+
+msgid "Not a mobile device"
+msgstr "不是可识别的移动设备"

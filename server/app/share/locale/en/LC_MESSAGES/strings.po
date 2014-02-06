@@ -31,3 +31,12 @@ msgstr ""
 
 msgid "Not logged in"
 msgstr ""
+
+msgid "Empty password"
+msgstr ""
+
+msgid "Empty username"
+msgstr ""
+
+msgid "Not a mobile device"
+msgstr ""

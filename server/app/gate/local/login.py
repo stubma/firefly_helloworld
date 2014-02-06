@@ -10,18 +10,33 @@ def loginToServer(dynamicId, username, password, deviceId):
     '''
     perform login operation, by username and password,
     if user name doesn't exist, new user will be added
-
-    a dict will be returned, and keys can be:
-    errno: the error code, defined in constants.py, E_OK means no error
-    errmsg: the error message, only exists when errno is not E_OK
-    data: extra info of user, only exists when errno is E_OK, you can add anything you want
+    @param dynamicId: connection id
+    @param username: user name
+    @param password: password
+    @param deviceId: device id
+    @return: dict, and keys can be:
+        errno: the error code, defined in constants.py, E_OK means no error
+        errmsg: the error message, only exists when errno is not E_OK
+        data: extra info of user, only exists when errno is E_OK, you can add anything you want
     '''
+
+    # user name can't be empty
+    if not username:
+        return { KEY_ERRNO : E_EMPTY_USERNAME, KEY_ERRMSG : L('Empty username') }
+
+    # device id can't be empty
+    if not deviceId:
+        return { KEY_ERRNO : E_NOT_MOBILE, KEY_ERRMSG : L('Not a mobile device') }
+
+    # password can't be empty
+    if not password:
+        return { KEY_ERRNO : E_EMPTY_PASSWORD, KEY_ERRMSG : L('Empty password') }
 
     # get user record from db
     userInfo = table_user.getUserInfoByName(username)
 
     # check user existence, if not exist, create new
-    if not userInfo and username and password and deviceId:
+    if not userInfo:
         table_user.newUser(username, password, deviceId)
 
     # if user is already logged in, update dynamic id
