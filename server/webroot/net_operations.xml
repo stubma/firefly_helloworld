@@ -1,6 +1,5 @@
 <form action="do" method="get">
     <input type="text" name="message" id="message"></input>
     <input type="hidden" name="action" value="push"></input>
-    <input type="hidden" name="node" value="net"></input>
     <input type="submit" value="Push to All Client"></input>
 </form>

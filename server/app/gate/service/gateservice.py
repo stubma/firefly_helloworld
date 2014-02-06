@@ -37,13 +37,6 @@ def forwarding(key, dynamicId, data):
         return GlobalObject().root.callChild(user.gameNode, key, dynamicId, data)
 
 @rootServiceHandle
-def pushObject(command, msg, sendList=[]):
-    """
-    push something to client
-    """
-    GlobalObject().root.callChild("net", "pushObject", command, msg, sendList)
-
-@rootServiceHandle
 def onNetClientConnectionLost(dynamicId):
     print '##############################################'
     print '# client %d disconnected' % dynamicId
@@ -96,3 +89,14 @@ def queryBind(key, dynamicId, request):
 @masterServiceHandle
 def getClientCount():
     return UserManager().getUserCount()
+
+@masterServiceHandle
+def pushObject(command, msg, users=[]):
+    '''
+    push message to clients
+    @param command: command id
+    @param msg: message string
+    @param users: user name list to who the message will be pushed, if emtpy, push to all clients
+    '''
+    sendList = [UserManager().getDynamicIDByName(name) for name in users]
+    GlobalObject().root.callChild("net", "pushObject", command, msg, sendList)

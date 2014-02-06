@@ -33,6 +33,12 @@ class UserManager:
                 return k
         return None
 
+    def getDynamicIDByName(self, username):
+        for k in self.users.values():
+            if k.name == username:
+                return k.dynamicId
+        return -1
+
     def dropUser(self, user):
         userId = user.id
         try:

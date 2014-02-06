@@ -95,11 +95,13 @@ class MasterDirectory(DefaultMasterDirectory):
         # get parameters
         action = request.args['action'][0]
         message = request.args['message'][0]
-        node = request.args['node'][0]
+        users = []
+        if request.args.has_key('username'):
+            users.append(request.args['username'][0])
 
         # perform action based on action parameter
         if action == 'push':
-            child = GlobalObject().root.childsmanager.getChildByName(node)
+            child = GlobalObject().root.childsmanager.getChildByName('gate')
             if child:
                 msg = { KEY_ERRNO : E_OK, KEY_DATA : { KEY_MESSAGE : message } }
-                child.callbackChild('pushObject', COMMAND_TEST_PUSH, json.dumps(msg))
+                child.callbackChild('pushObject', COMMAND_TEST_PUSH, json.dumps(msg), users)
