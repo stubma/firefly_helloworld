@@ -31,6 +31,10 @@ To run the client:
 3. cocos2d-x and cocos2dx-better should be in the same PARENT folder as firefly_helloworld. If not, you need fix reference and include path
 4. Open client iOS project with Xcode and just run it
 
+Admin Portal
+===================
+Here is a web admin portal can be accessed from http://localhost:10002, the port is configured in config.json and you can change it. The web admin portal uses twisted template, it looks ugly but a good start point to implement your own portal.
+
 Basic
 ====================
 Firefly is a python game server framework. Generally it has six components:
