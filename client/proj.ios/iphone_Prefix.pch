@@ -4,15 +4,17 @@
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
-    #import <UIKit/UIKit.h>
 #endif
 
-#include "cocos2d.h"
-#include "cocos2d-better.h"
-#include "AppGlobal.h"
-#include "cocos-ext.h"
-#include "Helper.h"
+#ifdef __cplusplus
+    #include "cocos2d.h"
+    #include "cocos2d-better.h"
+    #include "AppGlobal.h"
+    #include "cocos-ext.h"
+    #include "Helper.h"
 
-USING_NS_CC;
-USING_NS_CC_EXT;
-using namespace std;
+    USING_NS_CC;
+    USING_NS_CC_EXT;
+    using namespace std;
+    using namespace cocos2d::ui;
+#endif

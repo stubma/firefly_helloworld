@@ -10,6 +10,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		921E29D218D9447D005C6799 /* libcocos2dx-better.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 921E29CF18D9446A005C6799 /* libcocos2dx-better.a */; };
 		923C786318A12DA200DD8D9A /* Helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923C786118A12DA200DD8D9A /* Helper.cpp */; };
 		923E3E8218892CDC00ABC5A0 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 923E3E7E18892CDC00ABC5A0 /* AppController.mm */; };
 		923E3E8318892CDC00ABC5A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 923E3E7F18892CDC00ABC5A0 /* main.m */; };
@@ -17,8 +18,6 @@
 		923E3E8818892D0400ABC5A0 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923E3E8618892D0400ABC5A0 /* AppDelegate.cpp */; };
 		924C8917188CEC0600F66828 /* LoginScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 924C8915188CEC0600F66828 /* LoginScene.cpp */; };
 		924C891C188CFE5200F66828 /* AppGlobal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 924C891A188CFE5200F66828 /* AppGlobal.cpp */; };
-		924C891D188CFEEB00F66828 /* libcocos2dx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 923E3E7418892C1600ABC5A0 /* libcocos2dx.a */; };
-		924C891E188CFEEF00F66828 /* libcocos2dx-better.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 923E3E7C18892C2000ABC5A0 /* libcocos2dx-better.a */; };
 		924C8924188D006300F66828 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924C8923188D006300F66828 /* Images.xcassets */; };
 		9255B8AD18556E1800797255 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9255B8AC18556E1800797255 /* AVFoundation.framework */; };
 		9255B8B118556E2000797255 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9255B8B018556E2000797255 /* AudioToolbox.framework */; };
@@ -26,17 +25,6 @@
 		9264B1C718A28AB400C5BE27 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 9264B1C618A28AB400C5BE27 /* OpenUDID.m */; };
 		927B227F189111A6002AE193 /* SendMsgScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 927B227D189111A6002AE193 /* SendMsgScene.cpp */; };
 		92984F3E175D9B0700E63472 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92984F3D175D9B0700E63472 /* CoreText.framework */; };
-		92A1ADC0188E1F3C00298F4F /* CCEditBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1AD9D188E1F3C00298F4F /* CCEditBox.cpp */; };
-		92A1ADC1188E1F3C00298F4F /* CCEditBoxImplAndroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADA0188E1F3C00298F4F /* CCEditBoxImplAndroid.cpp */; };
-		92A1ADC2188E1F3C00298F4F /* CCEditBoxImplIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADA3188E1F3C00298F4F /* CCEditBoxImplIOS.mm */; };
-		92A1ADC3188E1F3C00298F4F /* CCEditBoxImplMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADA5188E1F3C00298F4F /* CCEditBoxImplMac.mm */; };
-		92A1ADC4188E1F3C00298F4F /* CCEditBoxImplNone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADA6188E1F3C00298F4F /* CCEditBoxImplNone.cpp */; };
-		92A1ADC5188E1F3C00298F4F /* CCEditBoxImplTizen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADA7188E1F3C00298F4F /* CCEditBoxImplTizen.cpp */; };
-		92A1ADC6188E1F3C00298F4F /* CCEditBoxImplWin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADA9188E1F3C00298F4F /* CCEditBoxImplWin.cpp */; };
-		92A1ADE5188E1F6300298F4F /* CCControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADCC188E1F6300298F4F /* CCControl.cpp */; };
-		92A1ADEF188E1F6300298F4F /* CCInvocation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADE1188E1F6300298F4F /* CCInvocation.cpp */; };
-		92A1ADF3188E1F8D00298F4F /* CCControlButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADF1188E1F8D00298F4F /* CCControlButton.cpp */; };
-		92A1ADF6188E21BB00298F4F /* CCScale9Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADF4188E21BB00298F4F /* CCScale9Sprite.cpp */; };
 		92A1ADF8188E23BF00298F4F /* images in Resources */ = {isa = PBXBuildFile; fileRef = 92A1ADF7188E23BF00298F4F /* images */; };
 		92A1ADFF188E477C00298F4F /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92A1ADFD188E477C00298F4F /* Client.cpp */; };
 		92A6710316E89667008BE79D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A6710216E89667008BE79D /* libz.dylib */; };
@@ -48,33 +36,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		923E3E7318892C1600ABC5A0 /* PBXContainerItemProxy */ = {
+		921E29CE18D9446A005C6799 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 923E3E6F18892C1500ABC5A0 /* cocos2dx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1551A33F158F2AB200E66CFE;
-			remoteInfo = cocos2dx;
-		};
-		923E3E7B18892C2000ABC5A0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 923E3E7518892C1F00ABC5A0 /* cocos2dx-better.xcodeproj */;
+			containerPortal = 921E29C818D9446A005C6799 /* cocos2dx-better.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 92B516E416E86020009F3536;
 			remoteInfo = "cocos2dx-better";
 		};
-		924C891F188CFEF500F66828 /* PBXContainerItemProxy */ = {
+		921E29D018D94476005C6799 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 923E3E7518892C1F00ABC5A0 /* cocos2dx-better.xcodeproj */;
+			containerPortal = 921E29C818D9446A005C6799 /* cocos2dx-better.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 92B516E316E86020009F3536;
 			remoteInfo = "cocos2dx-better";
-		};
-		924C8921188CFEF500F66828 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 923E3E6F18892C1500ABC5A0 /* cocos2dx.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 1551A33E158F2AB200E66CFE;
-			remoteInfo = cocos2dx;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -84,10 +58,9 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* iphone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iphone_Prefix.pch; path = ../iphone_Prefix.pch; sourceTree = "<group>"; };
+		921E29C818D9446A005C6799 /* cocos2dx-better.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "cocos2dx-better.xcodeproj"; path = "../../../cocos2dx-better/proj.ios/cocos2dx-better.xcodeproj"; sourceTree = "<group>"; };
 		923C786118A12DA200DD8D9A /* Helper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Helper.cpp; sourceTree = "<group>"; };
 		923C786218A12DA200DD8D9A /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
-		923E3E6F18892C1500ABC5A0 /* cocos2dx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2dx.xcodeproj; path = "../../../cocos2d-x/cocos2dx/proj.ios/cocos2dx.xcodeproj"; sourceTree = "<group>"; };
-		923E3E7518892C1F00ABC5A0 /* cocos2dx-better.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "cocos2dx-better.xcodeproj"; path = "../../../cocos2dx-better/proj.ios/cocos2dx-better.xcodeproj"; sourceTree = "<group>"; };
 		923E3E7D18892CDC00ABC5A0 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		923E3E7E18892CDC00ABC5A0 /* AppController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppController.mm; sourceTree = "<group>"; };
 		923E3E7F18892CDC00ABC5A0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -108,29 +81,6 @@
 		927B227D189111A6002AE193 /* SendMsgScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SendMsgScene.cpp; sourceTree = "<group>"; };
 		927B227E189111A6002AE193 /* SendMsgScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMsgScene.h; sourceTree = "<group>"; };
 		92984F3D175D9B0700E63472 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		92A1AD9D188E1F3C00298F4F /* CCEditBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCEditBox.cpp; sourceTree = "<group>"; };
-		92A1AD9E188E1F3C00298F4F /* CCEditBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEditBox.h; sourceTree = "<group>"; };
-		92A1AD9F188E1F3C00298F4F /* CCEditBoxImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEditBoxImpl.h; sourceTree = "<group>"; };
-		92A1ADA0188E1F3C00298F4F /* CCEditBoxImplAndroid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCEditBoxImplAndroid.cpp; sourceTree = "<group>"; };
-		92A1ADA1188E1F3C00298F4F /* CCEditBoxImplAndroid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEditBoxImplAndroid.h; sourceTree = "<group>"; };
-		92A1ADA2188E1F3C00298F4F /* CCEditBoxImplIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEditBoxImplIOS.h; sourceTree = "<group>"; };
-		92A1ADA3188E1F3C00298F4F /* CCEditBoxImplIOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCEditBoxImplIOS.mm; sourceTree = "<group>"; };
-		92A1ADA4188E1F3C00298F4F /* CCEditBoxImplMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEditBoxImplMac.h; sourceTree = "<group>"; };
-		92A1ADA5188E1F3C00298F4F /* CCEditBoxImplMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCEditBoxImplMac.mm; sourceTree = "<group>"; };
-		92A1ADA6188E1F3C00298F4F /* CCEditBoxImplNone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCEditBoxImplNone.cpp; sourceTree = "<group>"; };
-		92A1ADA7188E1F3C00298F4F /* CCEditBoxImplTizen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCEditBoxImplTizen.cpp; sourceTree = "<group>"; };
-		92A1ADA8188E1F3C00298F4F /* CCEditBoxImplTizen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEditBoxImplTizen.h; sourceTree = "<group>"; };
-		92A1ADA9188E1F3C00298F4F /* CCEditBoxImplWin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCEditBoxImplWin.cpp; sourceTree = "<group>"; };
-		92A1ADAA188E1F3C00298F4F /* CCEditBoxImplWin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEditBoxImplWin.h; sourceTree = "<group>"; };
-		92A1ADCC188E1F6300298F4F /* CCControl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCControl.cpp; sourceTree = "<group>"; };
-		92A1ADCD188E1F6300298F4F /* CCControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCControl.h; sourceTree = "<group>"; };
-		92A1ADD2188E1F6300298F4F /* CCControlExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCControlExtensions.h; sourceTree = "<group>"; };
-		92A1ADE1188E1F6300298F4F /* CCInvocation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCInvocation.cpp; sourceTree = "<group>"; };
-		92A1ADE2188E1F6300298F4F /* CCInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCInvocation.h; sourceTree = "<group>"; };
-		92A1ADF1188E1F8D00298F4F /* CCControlButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCControlButton.cpp; sourceTree = "<group>"; };
-		92A1ADF2188E1F8D00298F4F /* CCControlButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCControlButton.h; sourceTree = "<group>"; };
-		92A1ADF4188E21BB00298F4F /* CCScale9Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCScale9Sprite.cpp; sourceTree = "<group>"; };
-		92A1ADF5188E21BB00298F4F /* CCScale9Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCScale9Sprite.h; sourceTree = "<group>"; };
 		92A1ADF7188E23BF00298F4F /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		92A1ADFD188E477C00298F4F /* Client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Client.cpp; sourceTree = "<group>"; };
 		92A1ADFE188E477C00298F4F /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
@@ -154,9 +104,8 @@
 				9255B8AD18556E1800797255 /* AVFoundation.framework in Frameworks */,
 				92DFF091182F12E6006C4ECD /* MediaPlayer.framework in Frameworks */,
 				92984F3E175D9B0700E63472 /* CoreText.framework in Frameworks */,
-				924C891E188CFEEF00F66828 /* libcocos2dx-better.a in Frameworks */,
+				921E29D218D9447D005C6799 /* libcocos2dx-better.a in Frameworks */,
 				92A6712116E8BA5F008BE79D /* libsqlite3.dylib in Frameworks */,
-				924C891D188CFEEB00F66828 /* libcocos2dx.a in Frameworks */,
 				92A6710316E89667008BE79D /* libz.dylib in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
@@ -195,7 +144,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				92A1AD81188E1F3C00298F4F /* GUI */,
 				923E3E8518892D0400ABC5A0 /* Classes */,
 				080E96DDFE201D6D7F000001 /* ios */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -208,20 +156,19 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				921E29C818D9446A005C6799 /* cocos2dx-better.xcodeproj */,
 				9255B8B218556E2800797255 /* OpenAL.framework */,
 				9255B8B018556E2000797255 /* AudioToolbox.framework */,
 				9255B8AC18556E1800797255 /* AVFoundation.framework */,
 				92DFF090182F12E6006C4ECD /* MediaPlayer.framework */,
-				92A6710216E89667008BE79D /* libz.dylib */,
-				92A6712016E8BA5F008BE79D /* libsqlite3.dylib */,
-				923E3E7518892C1F00ABC5A0 /* cocos2dx-better.xcodeproj */,
-				923E3E6F18892C1500ABC5A0 /* cocos2dx.xcodeproj */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				BF170DB012928DE900B8313A /* OpenGLES.framework */,
 				92984F3D175D9B0700E63472 /* CoreText.framework */,
 				BF1C47EA1293683800B63C5D /* QuartzCore.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				92A6710216E89667008BE79D /* libz.dylib */,
+				92A6712016E8BA5F008BE79D /* libsqlite3.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -236,18 +183,10 @@
 			path = ../Resources;
 			sourceTree = "<group>";
 		};
-		923E3E7018892C1500ABC5A0 /* Products */ = {
+		921E29C918D9446A005C6799 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				923E3E7418892C1600ABC5A0 /* libcocos2dx.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		923E3E7618892C1F00ABC5A0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				923E3E7C18892C2000ABC5A0 /* libcocos2dx-better.a */,
+				921E29CF18D9446A005C6799 /* libcocos2dx-better.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -285,53 +224,6 @@
 			path = Classes/OpenUDID;
 			sourceTree = SOURCE_ROOT;
 		};
-		92A1AD81188E1F3C00298F4F /* GUI */ = {
-			isa = PBXGroup;
-			children = (
-				92A1ADCB188E1F6300298F4F /* CCControlExtension */,
-				92A1AD9C188E1F3C00298F4F /* CCEditBox */,
-			);
-			name = GUI;
-			path = "../../../cocos2d-x/extensions/GUI";
-			sourceTree = "<group>";
-		};
-		92A1AD9C188E1F3C00298F4F /* CCEditBox */ = {
-			isa = PBXGroup;
-			children = (
-				92A1AD9D188E1F3C00298F4F /* CCEditBox.cpp */,
-				92A1AD9E188E1F3C00298F4F /* CCEditBox.h */,
-				92A1AD9F188E1F3C00298F4F /* CCEditBoxImpl.h */,
-				92A1ADA0188E1F3C00298F4F /* CCEditBoxImplAndroid.cpp */,
-				92A1ADA1188E1F3C00298F4F /* CCEditBoxImplAndroid.h */,
-				92A1ADA2188E1F3C00298F4F /* CCEditBoxImplIOS.h */,
-				92A1ADA3188E1F3C00298F4F /* CCEditBoxImplIOS.mm */,
-				92A1ADA4188E1F3C00298F4F /* CCEditBoxImplMac.h */,
-				92A1ADA5188E1F3C00298F4F /* CCEditBoxImplMac.mm */,
-				92A1ADA6188E1F3C00298F4F /* CCEditBoxImplNone.cpp */,
-				92A1ADA7188E1F3C00298F4F /* CCEditBoxImplTizen.cpp */,
-				92A1ADA8188E1F3C00298F4F /* CCEditBoxImplTizen.h */,
-				92A1ADA9188E1F3C00298F4F /* CCEditBoxImplWin.cpp */,
-				92A1ADAA188E1F3C00298F4F /* CCEditBoxImplWin.h */,
-			);
-			path = CCEditBox;
-			sourceTree = "<group>";
-		};
-		92A1ADCB188E1F6300298F4F /* CCControlExtension */ = {
-			isa = PBXGroup;
-			children = (
-				92A1ADCC188E1F6300298F4F /* CCControl.cpp */,
-				92A1ADCD188E1F6300298F4F /* CCControl.h */,
-				92A1ADF1188E1F8D00298F4F /* CCControlButton.cpp */,
-				92A1ADF2188E1F8D00298F4F /* CCControlButton.h */,
-				92A1ADD2188E1F6300298F4F /* CCControlExtensions.h */,
-				92A1ADF4188E21BB00298F4F /* CCScale9Sprite.cpp */,
-				92A1ADF5188E21BB00298F4F /* CCScale9Sprite.h */,
-				92A1ADE1188E1F6300298F4F /* CCInvocation.cpp */,
-				92A1ADE2188E1F6300298F4F /* CCInvocation.h */,
-			);
-			path = CCControlExtension;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -346,8 +238,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				924C8920188CFEF500F66828 /* PBXTargetDependency */,
-				924C8922188CFEF500F66828 /* PBXTargetDependency */,
+				921E29D118D94476005C6799 /* PBXTargetDependency */,
 			);
 			name = TestCpp;
 			productName = iphone;
@@ -376,12 +267,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 923E3E7618892C1F00ABC5A0 /* Products */;
-					ProjectRef = 923E3E7518892C1F00ABC5A0 /* cocos2dx-better.xcodeproj */;
-				},
-				{
-					ProductGroup = 923E3E7018892C1500ABC5A0 /* Products */;
-					ProjectRef = 923E3E6F18892C1500ABC5A0 /* cocos2dx.xcodeproj */;
+					ProductGroup = 921E29C918D9446A005C6799 /* Products */;
+					ProjectRef = 921E29C818D9446A005C6799 /* cocos2dx-better.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -392,18 +279,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		923E3E7418892C1600ABC5A0 /* libcocos2dx.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libcocos2dx.a;
-			remoteRef = 923E3E7318892C1600ABC5A0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		923E3E7C18892C2000ABC5A0 /* libcocos2dx-better.a */ = {
+		921E29CF18D9446A005C6799 /* libcocos2dx-better.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libcocos2dx-better.a";
-			remoteRef = 923E3E7B18892C2000ABC5A0 /* PBXContainerItemProxy */;
+			remoteRef = 921E29CE18D9446A005C6799 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -426,25 +306,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				927B227F189111A6002AE193 /* SendMsgScene.cpp in Sources */,
-				92A1ADC3188E1F3C00298F4F /* CCEditBoxImplMac.mm in Sources */,
 				923E3E8818892D0400ABC5A0 /* AppDelegate.cpp in Sources */,
-				92A1ADC6188E1F3C00298F4F /* CCEditBoxImplWin.cpp in Sources */,
 				924C8917188CEC0600F66828 /* LoginScene.cpp in Sources */,
-				92A1ADEF188E1F6300298F4F /* CCInvocation.cpp in Sources */,
 				92FB939C1890BE67009476D7 /* Packet.cpp in Sources */,
 				923E3E8318892CDC00ABC5A0 /* main.m in Sources */,
-				92A1ADC2188E1F3C00298F4F /* CCEditBoxImplIOS.mm in Sources */,
-				92A1ADF3188E1F8D00298F4F /* CCControlButton.cpp in Sources */,
 				92A1ADFF188E477C00298F4F /* Client.cpp in Sources */,
 				923C786318A12DA200DD8D9A /* Helper.cpp in Sources */,
-				92A1ADC5188E1F3C00298F4F /* CCEditBoxImplTizen.cpp in Sources */,
 				9264B1C718A28AB400C5BE27 /* OpenUDID.m in Sources */,
-				92A1ADC4188E1F3C00298F4F /* CCEditBoxImplNone.cpp in Sources */,
-				92A1ADC0188E1F3C00298F4F /* CCEditBox.cpp in Sources */,
 				923E3E8418892CDC00ABC5A0 /* RootViewController.mm in Sources */,
-				92A1ADF6188E21BB00298F4F /* CCScale9Sprite.cpp in Sources */,
-				92A1ADC1188E1F3C00298F4F /* CCEditBoxImplAndroid.cpp in Sources */,
-				92A1ADE5188E1F6300298F4F /* CCControl.cpp in Sources */,
 				924C891C188CFE5200F66828 /* AppGlobal.cpp in Sources */,
 				923E3E8218892CDC00ABC5A0 /* AppController.mm in Sources */,
 			);
@@ -453,15 +322,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		924C8920188CFEF500F66828 /* PBXTargetDependency */ = {
+		921E29D118D94476005C6799 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "cocos2dx-better";
-			targetProxy = 924C891F188CFEF500F66828 /* PBXContainerItemProxy */;
-		};
-		924C8922188CFEF500F66828 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = cocos2dx;
-			targetProxy = 924C8921188CFEF500F66828 /* PBXContainerItemProxy */;
+			targetProxy = 921E29D018D94476005C6799 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -557,6 +421,7 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: 小明 张 (L4ZF355VQS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 小明 张 (L4ZF355VQS)";
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -572,6 +437,7 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: 小明 张 (L4ZF355VQS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 小明 张 (L4ZF355VQS)";
 				GCC_C_LANGUAGE_STANDARD = c99;
