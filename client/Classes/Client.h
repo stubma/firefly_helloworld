@@ -1,8 +1,6 @@
 #ifndef __Client__
 #define __Client__
 
-#include "Packet.h"
-
 class Client : public CCObject {
 public:
     typedef enum {
@@ -35,9 +33,6 @@ private:
     // buffer
     CCByteBuffer m_sendBuf;
     
-    // receive buffer
-    CCByteBuffer m_recvBuf;
-    
     // packet array received
     CCArray m_packets;
     
@@ -59,7 +54,6 @@ public:
     static void dispose();
     
 	void send(int socketTag, CCJSONObject* body, Command cmd, EncryptAlgorithm encAlg = NONE);
-    const CCArray& addData(CCByteBuffer& buf);
     
     CCTCPSocketHub* getHub() { return m_hub; }
 };

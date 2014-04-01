@@ -89,73 +89,77 @@ bool Login::init() {
         addChild(m_passwordEdit);
     }
     
-    // add self to callback
-    CCTCPSocketHub* hub = Client::sharedClient()->getHub();
-    hub->registerCallback(1, this);
+    // add notification observer
+    CCNotificationCenter* nc = CCNotificationCenter::sharedNotificationCenter();
+    nc->addObserver(this, callfuncO_selector(Login::onTCPSocketConnected), kCCNotificationTCPSocketConnected, NULL);
+    nc->addObserver(this, callfuncO_selector(Login::onTCPSocketDisonnected), kCCNotificationTCPSocketDisconnected, NULL);
+    nc->addObserver(this, callfuncO_selector(Login::onPacketReceived), kCCNotificationPacketReceived, NULL);
+    
+    // ensure socket is created
+    Client::sharedClient();
     
     return true;
 }
 
-void Login::onTCPSocketConnected(int tag) {
-	// check if any user logged in this device before
-	queryBind();
+void Login::onExit() {
+    CCLayer::onExit();
+    
+    CCNotificationCenter* nc = CCNotificationCenter::sharedNotificationCenter();
+    nc->removeObserver(this, kCCNotificationPacketReceived);
+    nc->removeObserver(this, kCCNotificationTCPSocketConnected);
+    nc->removeObserver(this, kCCNotificationTCPSocketDisconnected);
 }
 
-void Login::onTCPSocketDisconnected(int tag) {
-    CCLOG("disconnected");
+void Login::onTCPSocketConnected(CCTCPSocket* s) {
+    CCLOG("connected: %d", s->getTag());
 }
 
-void Login::onTCPSocketData(int tag, CCByteBuffer& bb) {
-    const CCArray& packets = Client::sharedClient()->addData(bb);
-    CCObject* obj = NULL;
-    CCARRAY_FOREACH(&packets, obj) {
-        Packet* p = (Packet*)obj;
-		switch (p->getHeader().command) {
-			case Client::LOGIN:
-			{
-				CCJSONObject* json = CCJSONObject::create(p->getBody(), p->getBodyLength());
-				Client::ErrCode err = (Client::ErrCode)json->optInt("errno");
-				if(err != Client::E_OK) {
-					string errMsg = json->optString("errmsg");
-					errMsg = CCUtils::decodeHtmlEntities(errMsg);
-					CCLOG("error message: %s", errMsg.c_str());
-					Helper::showToast(errMsg, this);
-					
-					break;
-				} else {
-					// remove self from callback
-					CCTCPSocketHub* hub = Client::sharedClient()->getHub();
-					hub->unregisterCallback(1);
-					
-					// to send msg scene
-					CCDirector::sharedDirector()->replaceScene(SendMsg::scene());
-				}
-				break;
-			}
-			case Client::QUERY_BIND:
-			{
-				CCJSONObject* json = CCJSONObject::create(p->getBody(), p->getBodyLength());
-				CCJSONObject* data = json->optJSONObject("data");
-				CCJSONArray* usernames = data->optJSONArray("usernames");
-				if(usernames && usernames->getLength() > 0) {
-					string firstName = usernames->optString(0);
-					m_usernameEdit->setText(firstName.c_str());
-				}
-				break;
-			}
-			case Client::TEST_PUSH:
-			{
-				CCJSONObject* json = CCJSONObject::create(p->getBody(), p->getBodyLength());
-				CCJSONObject* data = json->optJSONObject("data");
-				string msg = data->optString("message");
-				msg = CCUtils::decodeHtmlEntities(msg);
-				CCLOG("server push: %s", msg.c_str());
-				Helper::showToast(msg, this);
-				break;
-			}
-			default:
-				break;
-		}
+void Login::onTCPSocketDisonnected(CCTCPSocket* s) {
+    CCLOG("disconnected: %d", s->getTag());
+}
+
+void Login::onPacketReceived(CCPacket* p) {
+    switch (p->getHeader().command) {
+        case Client::LOGIN:
+        {
+            CCJSONObject* json = CCJSONObject::create(p->getBody(), p->getBodyLength());
+            Client::ErrCode err = (Client::ErrCode)json->optInt("errno");
+            if(err != Client::E_OK) {
+                string errMsg = json->optString("errmsg");
+                errMsg = CCUtils::decodeHtmlEntities(errMsg);
+                CCLOG("error message: %s", errMsg.c_str());
+                Helper::showToast(errMsg, this);
+                
+                break;
+            } else {
+                // to send msg scene
+                CCDirector::sharedDirector()->replaceScene(SendMsg::scene());
+            }
+            break;
+        }
+        case Client::QUERY_BIND:
+        {
+            CCJSONObject* json = CCJSONObject::create(p->getBody(), p->getBodyLength());
+            CCJSONObject* data = json->optJSONObject("data");
+            CCJSONArray* usernames = data->optJSONArray("usernames");
+            if(usernames && usernames->getLength() > 0) {
+                string firstName = usernames->optString(0);
+                m_usernameEdit->setText(firstName.c_str());
+            }
+            break;
+        }
+        case Client::TEST_PUSH:
+        {
+            CCJSONObject* json = CCJSONObject::create(p->getBody(), p->getBodyLength());
+            CCJSONObject* data = json->optJSONObject("data");
+            string msg = data->optString("message");
+            msg = CCUtils::decodeHtmlEntities(msg);
+            CCLOG("server push: %s", msg.c_str());
+            Helper::showToast(msg, this);
+            break;
+        }
+        default:
+            break;
     }
 }
 
@@ -164,11 +168,11 @@ void Login::onLoginClicked(CCObject *sender) {
     json->addString("username", m_usernameEdit->getText());
     json->addString("password", CCMD5::md5(m_passwordEdit->getText()).c_str());
 	json->addString("device_id", gUDID.c_str());
-    Client::sharedClient()->send(1, json, Client::LOGIN, Client::NOT);
+    Client::sharedClient()->send(1, json, Client::LOGIN, Client::NONE);
 }
 
 void Login::queryBind() {
 	CCJSONObject* json = CCJSONObject::create();
 	json->addString("device_id", gUDID.c_str());
-	Client::sharedClient()->send(1, json, Client::QUERY_BIND, Client::NOT);
+	Client::sharedClient()->send(1, json, Client::QUERY_BIND, Client::NONE);
 }

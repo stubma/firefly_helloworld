@@ -37,7 +37,7 @@ class PackCodec(object):
 
     def selectAlgorithm(self, command, response):
         # for demo purpose, use not for all command
-        return ENC_ALG_NOT
+        return ENC_ALG_NONE
 
     def verifyAlgorithm(self, command, encryptAlgorithm):
         '''

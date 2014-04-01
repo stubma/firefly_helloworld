@@ -69,57 +69,62 @@ bool SendMsg::init() {
         addChild(m_msgEdit);
     }
     
-    // add hub
-    CCTCPSocketHub* hub = Client::sharedClient()->getHub();
-    hub->registerCallback(1, this);
+    // add notification observer
+    CCNotificationCenter* nc = CCNotificationCenter::sharedNotificationCenter();
+    nc->addObserver(this, callfuncO_selector(SendMsg::onTCPSocketConnected), kCCNotificationTCPSocketConnected, NULL);
+    nc->addObserver(this, callfuncO_selector(SendMsg::onTCPSocketDisonnected), kCCNotificationTCPSocketDisconnected, NULL);
+    nc->addObserver(this, callfuncO_selector(SendMsg::onPacketReceived), kCCNotificationPacketReceived, NULL);
     
     return true;
+}
+
+void SendMsg::onExit() {
+    CCLayer::onExit();
+    
+    CCNotificationCenter* nc = CCNotificationCenter::sharedNotificationCenter();
+    nc->removeObserver(this, kCCNotificationPacketReceived);
+    nc->removeObserver(this, kCCNotificationTCPSocketConnected);
+    nc->removeObserver(this, kCCNotificationTCPSocketDisconnected);
 }
 
 void SendMsg::onSendClicked(CCObject* sender) {
     CCJSONObject* json = CCJSONObject::create();
     json->addString("message", m_msgEdit->getText());
-    Client::sharedClient()->send(1, json, Client::TEST, Client::NOT);
+    Client::sharedClient()->send(1, json, Client::TEST, Client::NONE);
 }
 
-void SendMsg::onTCPSocketConnected(int tag) {
+void SendMsg::onTCPSocketConnected(CCTCPSocket* s) {
 }
 
-void SendMsg::onTCPSocketDisconnected(int tag) {
+void SendMsg::onTCPSocketDisonnected(CCTCPSocket* s) {
     // socket disconnected, back to login
-    Client::sharedClient()->getHub()->unregisterCallback(1);
     CCDirector::sharedDirector()->replaceScene(Login::scene());
 }
 
-void SendMsg::onTCPSocketData(int tag, CCByteBuffer& bb) {
-    const CCArray& packets = Client::sharedClient()->addData(bb);
-    CCObject* obj = NULL;
-    CCARRAY_FOREACH(&packets, obj) {
-        Packet* p = (Packet*)obj;
-        if(p->getHeader().command == Client::TEST) {
-            CCJSONObject* json = CCJSONObject::create(p->getBody(), p->getBodyLength());
-            Client::ErrCode err = (Client::ErrCode)json->optInt("errno");
-            if(err != Client::E_OK) {
-                string errMsg = json->optString("errmsg");
-				errMsg = CCUtils::decodeHtmlEntities(errMsg);
-                CCLOG("error message: %s", errMsg.c_str());
-				Helper::showToast(errMsg, this);
-            } else {
-                CCJSONObject* data = json->optJSONObject("data");
-                if(data) {
-                    string reply = data->optString("message");
-					reply = CCUtils::decodeHtmlEntities(reply);
-                    CCLOG("server reply: %s", reply.c_str());
-					Helper::showToast(reply, this);
-                }
+void SendMsg::onPacketReceived(CCPacket* p) {
+    if(p->getHeader().command == Client::TEST) {
+        CCJSONObject* json = CCJSONObject::create(p->getBody(), p->getBodyLength());
+        Client::ErrCode err = (Client::ErrCode)json->optInt("errno");
+        if(err != Client::E_OK) {
+            string errMsg = json->optString("errmsg");
+            errMsg = CCUtils::decodeHtmlEntities(errMsg);
+            CCLOG("error message: %s", errMsg.c_str());
+            Helper::showToast(errMsg, this);
+        } else {
+            CCJSONObject* data = json->optJSONObject("data");
+            if(data) {
+                string reply = data->optString("message");
+                reply = CCUtils::decodeHtmlEntities(reply);
+                CCLOG("server reply: %s", reply.c_str());
+                Helper::showToast(reply, this);
             }
-        } else if(p->getHeader().command == Client::TEST_PUSH) {
-			CCJSONObject* json = CCJSONObject::create(p->getBody(), p->getBodyLength());
-			CCJSONObject* data = json->optJSONObject("data");
-			string msg = data->optString("message");
-			msg = CCUtils::decodeHtmlEntities(msg);
-			CCLOG("server push: %s", msg.c_str());
-			Helper::showToast(msg, this);
-		}
+        }
+    } else if(p->getHeader().command == Client::TEST_PUSH) {
+        CCJSONObject* json = CCJSONObject::create(p->getBody(), p->getBodyLength());
+        CCJSONObject* data = json->optJSONObject("data");
+        string msg = data->optString("message");
+        msg = CCUtils::decodeHtmlEntities(msg);
+        CCLOG("server push: %s", msg.c_str());
+        Helper::showToast(msg, this);
     }
 }

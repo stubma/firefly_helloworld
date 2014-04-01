@@ -10,6 +10,7 @@ Client::Client() {
 }
 
 Client::~Client() {
+    m_hub->stopAll();
     CC_SAFE_RELEASE(m_hub);
     s_instance = NULL;
 }
@@ -27,7 +28,7 @@ Client* Client::sharedClient() {
 
 void Client::checkSocket() {
     if(!m_hub->getSocket(1)) {
-		m_hub->createSocket("192.168.1.104", 11009, 1, kCCSocketDefaultTimeout, true);
+		m_hub->createSocket("192.168.1.106", 11009, 1, kCCSocketDefaultTimeout, true);
 //        m_hub->createSocket("172.16.96.60", 11009, 1, kCCSocketDefaultTimeout, true);
     }
 }
@@ -119,54 +120,4 @@ char* Client::decode(const char* enc, int encLen, EncryptAlgorithm alg, int* out
 		*outPlainLen = plainLen;
 	
 	return plain;
-}
-
-const CCArray& Client::addData(CCByteBuffer& buf) {
-    // append data to recv buffer
-    m_recvBuf.write(buf.getBuffer(), buf.available());
-
-    // clear old array
-    m_packets.removeAllObjects();
-    
-    // check if has any completed packet
-    while(m_recvBuf.available() >= HEADER_LENGTH) {
-        Packet* p = Packet::create();
-        Packet::Header& h = p->getHeader();
-        h.magic[0] = m_recvBuf.read<char>();
-        h.magic[1] = m_recvBuf.read<char>();
-        h.magic[2] = m_recvBuf.read<char>();
-        h.magic[3] = m_recvBuf.read<char>();
-        h.protocolVersion = betoh32(m_recvBuf.read<int>());
-        h.serverVersion = betoh32(m_recvBuf.read<int>());
-		h.command = betoh32(m_recvBuf.read<int>());
-		h.encryptAlgorithm = betoh32(m_recvBuf.read<int>());
-        h.length = betoh32(m_recvBuf.read<int>());
-        
-        if(m_recvBuf.available() >= h.length) {
-			// read body and try to decode
-			char* body = (char*)malloc(h.length * sizeof(char));
-			m_recvBuf.read((uint8*)body, h.length);
-			int plainLen;
-			char* plain = decode(body, h.length, (EncryptAlgorithm)h.encryptAlgorithm, &plainLen);
-			if(plain != body)
-				free(body);
-			
-			// copy to body
-            p->allocateBody(plainLen + 1); // one more 0 bytes make it a c string
-			memcpy(p->getBody(), plain, plainLen);
-			h.length = plainLen;
-			free(plain);
-
-			// push packet to queue
-            m_packets.addObject(p);
-        } else {
-            m_recvBuf.revoke(HEADER_LENGTH);
-            break;
-        }
-    }
-    
-    // compact
-    m_recvBuf.compact();
-    
-    return m_packets;
 }
