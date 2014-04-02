@@ -95,9 +95,6 @@ bool Login::init() {
     nc->addObserver(this, callfuncO_selector(Login::onTCPSocketDisonnected), kCCNotificationTCPSocketDisconnected, NULL);
     nc->addObserver(this, callfuncO_selector(Login::onPacketReceived), kCCNotificationPacketReceived, NULL);
     
-    // ensure socket is created
-    Client::sharedClient();
-    
     return true;
 }
 
@@ -168,11 +165,11 @@ void Login::onLoginClicked(CCObject *sender) {
     json->addString("username", m_usernameEdit->getText());
     json->addString("password", CCMD5::md5(m_passwordEdit->getText()).c_str());
 	json->addString("device_id", gUDID.c_str());
-    Client::sharedClient()->send(1, json, Client::LOGIN, Client::NONE);
+    Client::sharedClient()->send(1, json, Client::LOGIN, Client::NOT);
 }
 
 void Login::queryBind() {
 	CCJSONObject* json = CCJSONObject::create();
 	json->addString("device_id", gUDID.c_str());
-	Client::sharedClient()->send(1, json, Client::QUERY_BIND, Client::NONE);
+	Client::sharedClient()->send(1, json, Client::QUERY_BIND, Client::NOT);
 }

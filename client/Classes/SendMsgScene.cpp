@@ -90,7 +90,7 @@ void SendMsg::onExit() {
 void SendMsg::onSendClicked(CCObject* sender) {
     CCJSONObject* json = CCJSONObject::create();
     json->addString("message", m_msgEdit->getText());
-    Client::sharedClient()->send(1, json, Client::TEST, Client::NONE);
+    Client::sharedClient()->send(1, json, Client::TEST, Client::NOT);
 }
 
 void SendMsg::onTCPSocketConnected(CCTCPSocket* s) {

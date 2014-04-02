@@ -17,11 +17,11 @@ public:
         E_BLOCKED,
         E_DB_ERROR
     } ErrCode;
-	
-	typedef enum {
-		NONE,
-		NOT
-	} EncryptAlgorithm;
+    
+    typedef enum {
+        NONE,
+        NOT
+    } EncryptAlgorithm;
     
 private:
     // singleton
@@ -30,23 +30,11 @@ private:
     // hub
     CCTCPSocketHub* m_hub;
     
-    // buffer
-    CCByteBuffer m_sendBuf;
-    
-    // packet array received
-    CCArray m_packets;
-    
 protected:
     Client();
     
     // ensure socket are all there
     void checkSocket();
-	
-	// encode
-	char* encode(const char* plain, int plainLen, EncryptAlgorithm alg, int* outEncLen);
-	
-	// decode
-	char* decode(const char* enc, int encLen, EncryptAlgorithm alg, int* outPlainLen);
     
 public:
     virtual ~Client();
